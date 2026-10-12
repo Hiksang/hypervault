@@ -1,0 +1,16 @@
+{
+  "schema": "hypervault.pm-comparison.v1",
+  "example": true,
+  "generatedAt": "2026-10-12T00:00:00Z",
+  "asset": "HYPE",
+  "assumptions": [
+    { "name": "Deposit", "value": "100", "unit": "HYPE", "source": "example" },
+    { "name": "Extra spot bought", "value": "20", "unit": "HYPE", "source": "example" }
+  ],
+  "columns": ["separate-margin", "hypervault-pm"],
+  "rows": [
+    { "metric": "Capital locked as perp margin", "unit": "USDC", "separate-margin": 1000, "hypervault-pm": 0, "note": "Example figures only" },
+    { "metric": "Liquidation distance", "unit": "%", "separate-margin": null, "hypervault-pm": null, "note": "Not computed in the example" }
+  ],
+  "caveats": ["Example file: figures are illustrative, not measured."]
+}

@@ -1,0 +1,87 @@
+{
+  "observedAt": "2026-09-19",
+  "scope": "Public mainnet HyperEVM RPC and official Hyperliquid Info API; no transaction was submitted by this project",
+  "network": {
+    "chainId": 999,
+    "coreWriter": "0x3333333333333333333333333333333333333333",
+    "coreWriterRuntimeBytes": 544,
+    "canonicalWhypeRuntimeBytes": 2041
+  },
+  "officialDocumentationConflict": {
+    "hyperEvmOverview": "Says write system contracts are not live on mainnet yet",
+    "interactingWithHyperCore": "Documents CoreWriter actions 1, 15 and 16 and describes the page as testnet EVM",
+    "interpretation": "Mainnet action 1 is demonstrably live, so the overview sentence is stale or over-broad. This does not prove mainnet execution of actions 15 or 16."
+  },
+  "mainnetAction1ExecutionEvidence": {
+    "callerContract": "0xd4b3960c7c2ec61dd0b6e8b90e025c64566c47bd",
+    "callerHasRuntimeCode": true,
+    "transactions": [
+      {
+        "hash": "0xf3d6c7d58c9b357e63132a49e79fe5891c5d41af5b6172b16db9245cb42d2c93",
+        "evmBlock": "0x2c26e83",
+        "receiptStatus": 1,
+        "coreWriterPayloadPrefix": "0x01000001",
+        "decodedPayload": {
+          "asset": 110002,
+          "isBuy": true,
+          "limitPx1e8": 22339000000,
+          "size1e8": 6900000,
+          "reduceOnly": false,
+          "tif": 3,
+          "cloid": 4
+        },
+        "officialInfoApiFill": {
+          "timeMs": 1789794111387,
+          "timeUtc": "2026-09-19T05:01:51.387Z",
+          "coin": "xyz:NVDA",
+          "side": "Buy",
+          "direction": "Open Long",
+          "price": "222.29",
+          "size": "0.069",
+          "cloid": "0x00000000000000000000000000000004"
+        }
+      },
+      {
+        "hash": "0x9eb6097e1b5cbcd856143153dd4c1ab6339e7551220ac6cb83aca6bc1bcdc227",
+        "evmBlock": "0x2c26ea6",
+        "coreWriterPayloadPrefix": "0x01000001",
+        "decodedSummary": "sell reduce-only IOC, cloid 5",
+        "officialInfoApiFillSummary": "Close Long 0.068, matching cloid 5"
+      },
+      {
+        "hash": "0x376d66718d7ef172ebd585694c009dce6e259b8c2a13235d2e10c35b5b7532f3",
+        "evmBlock": "0x2c26eb4",
+        "coreWriterPayloadPrefix": "0x01000001",
+        "decodedSummary": "order with cloid 6",
+        "officialInfoApiFillSummary": "Matching fill with cloid 6"
+      }
+    ]
+  },
+  "mainnetAction15And16Search": {
+    "searchedRecentEvmBlocks": 100000,
+    "action15Prefix": "0x0100000f",
+    "action16Prefix": "0x01000010",
+    "matchingLogsFound": 0,
+    "interpretation": "The current official action table fixes their interfaces, but this scan did not establish mainnet end-to-end execution. Absence in the sampled range is not proof of unsupported actions."
+  },
+  "currentMainnetReadObservations": {
+    "hypeToken": 150,
+    "hypePerpAsset": 159,
+    "hypeSpotIndex": 107,
+    "hypeReserveLtvBps": 6500,
+    "hypeReserveTotalSupply": "10143397.393...",
+    "freshAddressHypeActiveAssetData": {
+      "leverageType": "cross",
+      "leverageValue": 10,
+      "interpretation": "A current observation for an unused address, not a protocol invariant. CoreWriter has no documented leverage-update action."
+    }
+  },
+  "officialSources": {
+    "hyperEvmOverview": "https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm",
+    "coreWriterActions": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/interacting-with-hypercore",
+    "interactionTimings": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/interaction-timings",
+    "activationFee": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/activation-gas-fee",
+    "portfolioMargin": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-margin",
+    "infoEndpoint": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "chainId": 999,
+  "deployer": "0x3e22D0Bc27dB631742B54Fb0Fa356Cbcad3842e0",
+  "owner": "0x3e22D0Bc27dB631742B54Fb0Fa356Cbcad3842e0",
+  "bridge": "0x75798f2797e887be93f2d430e8a4a850ffa610b2",
+  "verifierParams": {
+    "recallTimeoutBlocks": 10000,
+    "idleDustUsdc6": 2000000,
+    "priceWindowSeconds": 600
+  },
+  "modulesFrom": "bridge reused from v1; source and verifier deployed with the vault",
+  "version": "v3",
+  "share": "0x351d11605ec33916a42f7fbd1245a498bdb9c7a6",
+  "accountant": "0x8819b82683fb419db0b61e107de13b3f84ae19ab",
+  "controller": "0xd286784ce886eff134672d9f67242f140a0f060e",
+  "vault": "0x2affc225fa3566ea48Bc48e61b50e7Bbcf770516",
+  "implementation": "0x63688DDBb939aA5690F096529CF1b6f6aa91DDFa",
+  "deployTxs": [
+    "0x02396acfc009ba5ac072ef684d4295dd1b52494716b146c73b2b958ed6fe781b",
+    "0x7edb131e6e7f2bcc8027cecceb3089506ff85e2e205051a64f48b4b73c35cfcf",
+    "0xd742c6450e441a17dcee64f77a82e90f6af012e5780b8a8bb576d3965c858a2b",
+    "0x36fff8469c594d2411d486187d3863775fd9dcde020382de4f0d0c476736643d",
+    "0xbefc46fd7add3f134c7f7f66fc40114780cdb0406fc3e5d26158a09600899bdf",
+    "0x5d89747c06c64a34b02cd3fb47b8242e4c93782e2bc948099a3c9efed33c20b5",
+    "0x0acd11952c07b29457f10d2213de4e0ef1975a325310d4ce02ef88f80ff46cc5",
+    "0x6f387646b8977b5ddf33dcf635c9dd5e90ce2d8b528880580da089a99938e651",
+    "0x702cbe5bf268583b88a9ababc561c5d1b44f3e9159041a930fa28320e56b4863"
+  ],
+  "vaultParams": {
+    "performanceFeeBps": 1000,
+    "minimumDeposit": 10000000,
+    "maximumAssets": 1000000000,
+    "builder": "0x0000000000000000000000000000000000000000",
+    "builderFeeCap": 0
+  },
+  "verifier": "0x9EFB88a5fb03bC1060b35F9Af4baE2B61e270b6e",
+  "source": "0xa6EFFFB6d8320bBc2422C3D2f7600D856ba2D393",
+  "implementationCodehash": "0xdc35f58165b890dca3380971dc00bc0266e1f19e34336c751d9b65b1f060f20c",
+  "configHash": "0xd4f74aaf1789994dc28d888035da567e14848d67f3fe0d211911d0c0a4141e4b",
+  "codehashes": {
+    "source": "0xdfd331b95e78973b1b3e3876f80e8de1da5a09f0c3fd3b5ce1b6f4c9127751dc",
+    "bridge": "0x3726d7861c4b3772d578789ef4e8c5f654cfd6188ffbcb1c00cbb25fbb4a6b8a",
+    "verifier": "0x2d2a72bbb41783c30fdd29ea46bca613ebbf3f90470c0b0cdb3d0bddab050410",
+    "controller": "0xb7349bd621e9381364a1aa8303ebed437704b0fd86847dd0152982a195ffa215",
+    "vault": "0xc804f5ae154092c9b9ed74f406c9312ba8bc76a807c8e9008f0c35df693423c0",
+    "share": "0x343c58c9f2a80eac1a1bbe0b6c852d11527b4600c3a7c299ad9d043df4982cd0",
+    "accountant": "0xdfc70bd3900127dcef4ac483f7d5226ab0fa02bdfb493d927ea5678888a63522"
+  }
+}

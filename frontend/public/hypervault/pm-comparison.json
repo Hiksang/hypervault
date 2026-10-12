@@ -1,0 +1,145 @@
+{
+  "schema": "hypervault.pm-comparison.v1",
+  "generatedAt": "2026-10-11T17:07:35Z",
+  "asset": "HYPE",
+  "assumptions": [
+    {
+      "name": "Mark price",
+      "value": "86.462",
+      "unit": "USD",
+      "source": "HyperCore metaAndAssetCtxs (live)"
+    },
+    {
+      "name": "Average funding (30d)",
+      "value": "9.46",
+      "unit": "% APR",
+      "source": "fundingHistory, 720 hourly samples"
+    },
+    {
+      "name": "USDC borrow rate",
+      "value": "5.00",
+      "unit": "% APY",
+      "source": "allBorrowLendReserveStates (live)"
+    },
+    {
+      "name": "HYPE LTV (PM)",
+      "value": "0.65",
+      "unit": "ratio",
+      "source": "allBorrowLendReserveStates"
+    },
+    {
+      "name": "Perp maintenance margin",
+      "value": "0.05",
+      "unit": "fraction",
+      "source": "half of initial margin at max leverage 10x"
+    },
+    {
+      "name": "Separate-margin short leverage",
+      "value": "2",
+      "unit": "x",
+      "source": "assumption"
+    },
+    {
+      "name": "Reserve",
+      "value": "5.00",
+      "unit": "% of notional",
+      "source": "assumption"
+    },
+    {
+      "name": "Fees",
+      "value": "spot 0.07000% / perp 0.04500%",
+      "unit": "taker, tier 0",
+      "source": "Hyperliquid fee schedule"
+    },
+    {
+      "name": "Holding period",
+      "value": "30",
+      "unit": "days",
+      "source": "assumption"
+    }
+  ],
+  "columns": [
+    "separate-margin",
+    "hypervault-pm"
+  ],
+  "rows": [
+    {
+      "metric": "Spot notional",
+      "unit": "USD",
+      "separate-margin": 10000.0,
+      "hypervault-pm": 10000.0
+    },
+    {
+      "metric": "Perp short notional",
+      "unit": "USD",
+      "separate-margin": 10000.0,
+      "hypervault-pm": 10000.0
+    },
+    {
+      "metric": "USDC borrowed at entry",
+      "unit": "USD",
+      "separate-margin": 0.0,
+      "hypervault-pm": 0.0,
+      "note": "PM borrows only if perp losses exceed the USDC reserve"
+    },
+    {
+      "metric": "Collateral recognized for the short",
+      "unit": "USD",
+      "separate-margin": 5000.0,
+      "hypervault-pm": 6500.0,
+      "note": "PM: spot x LTV 0.65; separate: USDC margin at 2x"
+    },
+    {
+      "metric": "Required self-capital (incl. reserve)",
+      "unit": "USD",
+      "separate-margin": 15750.0,
+      "hypervault-pm": 10500.0
+    },
+    {
+      "metric": "Funding income over 30d",
+      "unit": "USD",
+      "separate-margin": 77.73,
+      "hypervault-pm": 77.73,
+      "note": "30d average funding, past data, not a forecast"
+    },
+    {
+      "metric": "Borrow interest",
+      "unit": "USD",
+      "separate-margin": 0.0,
+      "hypervault-pm": 0.0
+    },
+    {
+      "metric": "Trading fees (open+close, taker)",
+      "unit": "USD",
+      "separate-margin": 23.0,
+      "hypervault-pm": 23.0
+    },
+    {
+      "metric": "Carry after costs over 30d",
+      "unit": "USD",
+      "separate-margin": 54.73,
+      "hypervault-pm": 54.73
+    },
+    {
+      "metric": "Carry / self-capital, annualized",
+      "unit": "%",
+      "separate-margin": 4.23,
+      "hypervault-pm": 6.34,
+      "note": "historical-input illustration only; not an APR offer"
+    },
+    {
+      "metric": "Price rise until liquidation (approx.)",
+      "unit": "%",
+      "separate-margin": 42.86,
+      "hypervault-pm": 200.1,
+      "note": "separate: short leg alone; PM: numerical approximation of the documented PM ratio"
+    }
+  ],
+  "caveats": [
+    "PM eligibility: master account value > $10k or > $5M weighted volume; below that PM falls back to non-PM behaviour.",
+    "The carry in USD is identical in both columns: PM changes the capital tied up, not the funding earned.",
+    "Funding is historical and can turn negative; borrow rates rise with utilization (0.05 + 4.75 x max(0, u - 0.8)).",
+    "Ignores spot/perp basis drift, slippage beyond taker fees, and supply yield on idle PM assets.",
+    "No comparison with a specific competing vault is made here."
+  ]
+}

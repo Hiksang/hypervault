@@ -1,0 +1,1063 @@
+{
+  "schema": "hypervault.strategy.v1",
+  "plans": [
+    {
+      "vault": "USDC",
+      "mode": "executed",
+      "account": "0x46c0e94C07111390d7B1F49147AB397B2d991eAe",
+      "observedAt": "2026-10-11T17:14:17Z",
+      "hypothetical": false,
+      "baseExposure": {
+        "asset": "USDC",
+        "usdc": "11.05858654",
+        "note": "depositor exposure is USDC; spot HYPE is fully paired"
+      },
+      "extraHedge": {
+        "spot": "0.1696208",
+        "short": "0.16",
+        "delta": "0.0096208",
+        "deltaUsd": "0.83"
+      },
+      "actions": [
+        {
+          "kind": "order",
+          "market": "@107",
+          "side": "buy",
+          "size": "0.16",
+          "unit": "base",
+          "limitPx": "86.592",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "carry pair: spot buy then short the filled size"
+        },
+        {
+          "kind": "order",
+          "market": "HYPE",
+          "side": "sell",
+          "size": "FILLED_SIZE_OF_PREVIOUS",
+          "unit": "base",
+          "limitPx": "86.043",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "hedge exactly the filled spot size",
+          "leverage": 2
+        }
+      ],
+      "blocked": [],
+      "risk": {
+        "limits": {
+          "max_notional_usd": "25",
+          "reserve_usdc": "3",
+          "gas_reserve_base": "0.02",
+          "short_leverage": "2",
+          "max_slippage_bps": "30",
+          "min_order_usd": "11",
+          "max_delta_usd": "2",
+          "min_funding_apr": "0.0",
+          "max_borrow_apr": "0.12",
+          "max_pm_ltv_use": "0.30",
+          "book_depth_mult": "5"
+        },
+        "abstraction": "unifiedAccount",
+        "after": {
+          "abstraction": "unifiedAccount",
+          "spotUsdc": "11.07924254",
+          "spotUsdcHold": "6.904392",
+          "spotBase": "0.1696208",
+          "perpAccountValue": "6.903696",
+          "perpSzi": "-0.16",
+          "perpEntry": "86.307",
+          "perpLeverage": {
+            "type": "cross",
+            "value": 2
+          },
+          "borrowLend": {
+            "tokenToState": [],
+            "health": "healthy",
+            "healthFactor": null
+          }
+        }
+      },
+      "market": {
+        "perpCoin": "HYPE",
+        "spotPair": "@107",
+        "perpSzDecimals": 2,
+        "spotSzDecimals": 2,
+        "perpMark": "86.302",
+        "perpOracle": "86.3325",
+        "spotMark": "86.333",
+        "fundingHourly": "0.0000024194",
+        "fundingApr": "0.0211939440",
+        "perpBid": "86.302",
+        "perpBidSz": "49.95",
+        "perpAsk": "86.303",
+        "perpAskSz": "251.43",
+        "spotBid": "86.332",
+        "spotBidSz": "34.82",
+        "spotAsk": "86.333",
+        "spotAskSz": "102.69",
+        "usdcBorrowApr": "0.05",
+        "baseLtv": "0.65",
+        "baseBorrowOracle": "86.326012",
+        "maxLeverage": 10
+      },
+      "results": [
+        {
+          "action": {
+            "kind": "order",
+            "market": "@107",
+            "side": "buy",
+            "size": "0.16",
+            "unit": "base",
+            "limitPx": "86.592",
+            "tif": "Ioc",
+            "reduceOnly": false,
+            "reason": "carry pair: spot buy then short the filled size"
+          },
+          "state": "filled",
+          "totalSz": "0.16",
+          "avgPx": "86.343",
+          "oid": 571291025062,
+          "requested": "0.16",
+          "cloid": "0x66a469a581c4223100a83d9c13af235c",
+          "at": "2026-10-11T17:03:37Z"
+        },
+        {
+          "kind": "updateLeverage",
+          "market": "HYPE",
+          "leverage": 2,
+          "response": {
+            "status": "ok",
+            "response": {
+              "type": "default"
+            }
+          }
+        },
+        {
+          "action": {
+            "kind": "order",
+            "market": "HYPE",
+            "side": "sell",
+            "size": "FILLED_SIZE_OF_PREVIOUS",
+            "unit": "base",
+            "limitPx": "86.043",
+            "tif": "Ioc",
+            "reduceOnly": false,
+            "reason": "hedge exactly the filled spot size",
+            "leverage": 2
+          },
+          "state": "filled",
+          "totalSz": "0.16",
+          "avgPx": "86.307",
+          "oid": 571291048022,
+          "requested": "0.16",
+          "cloid": "0x2e5519672594d36281d3b4a151c7c51a",
+          "at": "2026-10-11T17:03:40Z"
+        }
+      ]
+    },
+    {
+      "vault": "HYPE",
+      "mode": "dry-run",
+      "account": null,
+      "observedAt": "2026-10-11T17:07:36Z",
+      "hypothetical": true,
+      "baseExposure": {
+        "asset": "HYPE",
+        "size": "10",
+        "usd": "864.62",
+        "note": "kept unhedged by design"
+      },
+      "extraHedge": {
+        "spotExtra": "0",
+        "short": "0",
+        "delta": "0 by construction (extra==short)"
+      },
+      "actions": [
+        {
+          "kind": "order",
+          "market": "@107",
+          "side": "buy",
+          "size": "0.28",
+          "unit": "base",
+          "limitPx": "86.742",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "extra leg: borrow USDC (PM), buy extra spot, short filled size"
+        },
+        {
+          "kind": "order",
+          "market": "HYPE",
+          "side": "sell",
+          "size": "FILLED_SIZE_OF_PREVIOUS",
+          "unit": "base",
+          "limitPx": "86.209",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "hedge exactly the filled spot size",
+          "leverage": 2
+        }
+      ],
+      "blocked": [],
+      "risk": {
+        "limits": {
+          "max_notional_usd": "25",
+          "reserve_usdc": "3",
+          "gas_reserve_base": "0.02",
+          "short_leverage": "2",
+          "max_slippage_bps": "30",
+          "min_order_usd": "11",
+          "max_delta_usd": "2",
+          "min_funding_apr": "0.0",
+          "max_borrow_apr": "0.12",
+          "max_pm_ltv_use": "0.30",
+          "book_depth_mult": "5"
+        },
+        "abstraction": "portfolioMargin",
+        "pmBorrowAllowanceUsd": "168.64",
+        "protocolLtv": "0.65"
+      },
+      "market": {
+        "perpCoin": "HYPE",
+        "spotPair": "@107",
+        "perpSzDecimals": 2,
+        "spotSzDecimals": 2,
+        "perpMark": "86.462",
+        "perpOracle": "86.483",
+        "spotMark": "86.483",
+        "fundingHourly": "0.0000125",
+        "fundingApr": "0.1095000",
+        "perpBid": "86.468",
+        "perpBidSz": "74.09",
+        "perpAsk": "86.469",
+        "perpAskSz": "147.02",
+        "spotBid": "86.482",
+        "spotBidSz": "17.67",
+        "spotAsk": "86.483",
+        "spotAskSz": "89.29",
+        "usdcBorrowApr": "0.05",
+        "baseLtv": "0.65",
+        "baseBorrowOracle": "86.483",
+        "maxLeverage": 10
+      },
+      "results": []
+    },
+    {
+      "vault": "BTC",
+      "mode": "dry-run",
+      "account": null,
+      "observedAt": "2026-10-11T17:07:37Z",
+      "hypothetical": true,
+      "baseExposure": {
+        "asset": "UBTC",
+        "size": "0.01",
+        "usd": "837.68",
+        "note": "kept unhedged by design"
+      },
+      "extraHedge": {
+        "spotExtra": "0",
+        "short": "0",
+        "delta": "0 by construction (extra==short)"
+      },
+      "actions": [
+        {
+          "kind": "order",
+          "market": "@142",
+          "side": "buy",
+          "size": "0.00029",
+          "unit": "base",
+          "limitPx": "83941",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "extra leg: borrow USDC (PM), buy extra spot, short filled size"
+        },
+        {
+          "kind": "order",
+          "market": "BTC",
+          "side": "sell",
+          "size": "FILLED_SIZE_OF_PREVIOUS",
+          "unit": "base",
+          "limitPx": "83513",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "hedge exactly the filled spot size",
+          "leverage": 2
+        }
+      ],
+      "blocked": [],
+      "risk": {
+        "limits": {
+          "max_notional_usd": "25",
+          "reserve_usdc": "3",
+          "gas_reserve_base": "0.02",
+          "short_leverage": "2",
+          "max_slippage_bps": "30",
+          "min_order_usd": "11",
+          "max_delta_usd": "2",
+          "min_funding_apr": "0.0",
+          "max_borrow_apr": "0.12",
+          "max_pm_ltv_use": "0.30",
+          "book_depth_mult": "5"
+        },
+        "abstraction": "portfolioMargin",
+        "pmBorrowAllowanceUsd": "125.54",
+        "protocolLtv": "0.5"
+      },
+      "market": {
+        "perpCoin": "BTC",
+        "spotPair": "@142",
+        "perpSzDecimals": 5,
+        "spotSzDecimals": 5,
+        "perpMark": "83768.0",
+        "perpOracle": "83805.8",
+        "spotMark": "83690.0",
+        "fundingHourly": "0.0000066736",
+        "fundingApr": "0.0584607360",
+        "perpBid": "83764.0",
+        "perpBidSz": "14.8885",
+        "perpAsk": "83765.0",
+        "perpAskSz": "4.95808",
+        "spotBid": "83689.0",
+        "spotBidSz": "0.60708",
+        "spotAsk": "83690.0",
+        "spotAskSz": "0.00884",
+        "usdcBorrowApr": "0.05",
+        "baseLtv": "0.5",
+        "baseBorrowOracle": "83691.004",
+        "maxLeverage": 40
+      },
+      "results": []
+    },
+    {
+      "vault": "USDC",
+      "mode": "dry-run",
+      "account": "0x46c0e94C07111390d7B1F49147AB397B2d991eAe",
+      "observedAt": "2026-10-11T18:01:54Z",
+      "hypothetical": false,
+      "baseExposure": {
+        "asset": "USDC",
+        "usdc": "10.99731954",
+        "note": "depositor exposure is USDC; spot HYPE is fully paired"
+      },
+      "extraHedge": {
+        "spot": "0.1696208",
+        "short": "0.16",
+        "delta": "0.0096208",
+        "deltaUsd": "0.84"
+      },
+      "actions": [
+        {
+          "kind": "order",
+          "market": "HYPE",
+          "side": "buy",
+          "size": "0.16",
+          "unit": "base",
+          "limitPx": "87.080",
+          "tif": "Ioc",
+          "reduceOnly": true,
+          "reason": "close hedge first"
+        },
+        {
+          "kind": "order",
+          "market": "@107",
+          "side": "sell",
+          "size": "0.16",
+          "unit": "base",
+          "limitPx": "86.616",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "sell paired spot, keep gas reserve"
+        }
+      ],
+      "blocked": [],
+      "risk": {
+        "limits": {
+          "max_notional_usd": "25",
+          "reserve_usdc": "3",
+          "gas_reserve_base": "0.005",
+          "short_leverage": "2",
+          "max_slippage_bps": "30",
+          "min_order_usd": "11",
+          "max_delta_usd": "2",
+          "min_funding_apr": "0.0",
+          "max_borrow_apr": "0.12",
+          "max_pm_ltv_use": "0.30",
+          "book_depth_mult": "5"
+        },
+        "abstraction": "unifiedAccount"
+      },
+      "market": {
+        "perpCoin": "HYPE",
+        "spotPair": "@107",
+        "perpSzDecimals": 2,
+        "spotSzDecimals": 2,
+        "perpMark": "86.818",
+        "perpOracle": "86.879",
+        "spotMark": "86.879",
+        "fundingHourly": "-0.0000098708",
+        "fundingApr": "-0.0864682080",
+        "perpBid": "86.819",
+        "perpBidSz": "443.22",
+        "perpAsk": "86.82",
+        "perpAskSz": "1037.86",
+        "spotBid": "86.877",
+        "spotBidSz": "57.55",
+        "spotAsk": "86.88",
+        "spotAskSz": "24.59",
+        "usdcBorrowApr": "0.05",
+        "baseLtv": "0.65",
+        "baseBorrowOracle": "86.842694",
+        "maxLeverage": 10
+      },
+      "results": []
+    },
+    {
+      "vault": "USDC",
+      "mode": "executed",
+      "account": "0x46c0e94C07111390d7B1F49147AB397B2d991eAe",
+      "observedAt": "2026-10-11T18:02:22Z",
+      "hypothetical": false,
+      "baseExposure": {
+        "asset": "USDC",
+        "usdc": "24.88117731",
+        "note": "depositor exposure is USDC; spot HYPE is fully paired"
+      },
+      "extraHedge": {
+        "spot": "0.0096208",
+        "short": "0.0",
+        "delta": "0.0096208",
+        "deltaUsd": "0.84"
+      },
+      "actions": [
+        {
+          "kind": "order",
+          "market": "HYPE",
+          "side": "buy",
+          "size": "0.16",
+          "unit": "base",
+          "limitPx": "87.092",
+          "tif": "Ioc",
+          "reduceOnly": true,
+          "reason": "close hedge first"
+        },
+        {
+          "kind": "order",
+          "market": "@107",
+          "side": "sell",
+          "size": "0.16",
+          "unit": "base",
+          "limitPx": "86.621",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "sell paired spot, keep gas reserve"
+        }
+      ],
+      "blocked": [],
+      "risk": {
+        "limits": {
+          "max_notional_usd": "25",
+          "reserve_usdc": "3",
+          "gas_reserve_base": "0.005",
+          "short_leverage": "2",
+          "max_slippage_bps": "30",
+          "min_order_usd": "11",
+          "max_delta_usd": "2",
+          "min_funding_apr": "0.0",
+          "max_borrow_apr": "0.12",
+          "max_pm_ltv_use": "0.30",
+          "book_depth_mult": "5"
+        },
+        "abstraction": "unifiedAccount",
+        "after": {
+          "abstraction": "unifiedAccount",
+          "spotUsdc": "24.88117731",
+          "spotUsdcHold": "0.0",
+          "spotBase": "0.0096208",
+          "perpAccountValue": "0.0",
+          "perpSzi": "0.0",
+          "perpEntry": null,
+          "perpLeverage": null,
+          "borrowLend": {
+            "tokenToState": [],
+            "health": "healthy",
+            "healthFactor": null
+          }
+        }
+      },
+      "market": {
+        "perpCoin": "HYPE",
+        "spotPair": "@107",
+        "perpSzDecimals": 2,
+        "spotSzDecimals": 2,
+        "perpMark": "86.84",
+        "perpOracle": "86.8967",
+        "spotMark": "86.882",
+        "fundingHourly": "-0.000010739",
+        "fundingApr": "-0.094073640",
+        "perpBid": "86.831",
+        "perpBidSz": "57.98",
+        "perpAsk": "86.832",
+        "perpAskSz": "487.65",
+        "spotBid": "86.882",
+        "spotBidSz": "88.97",
+        "spotAsk": "86.883",
+        "spotAskSz": "118.05",
+        "usdcBorrowApr": "0.05",
+        "baseLtv": "0.65",
+        "baseBorrowOracle": "86.882159",
+        "maxLeverage": 10
+      },
+      "results": [
+        {
+          "action": {
+            "kind": "order",
+            "market": "HYPE",
+            "side": "buy",
+            "size": "0.16",
+            "unit": "base",
+            "limitPx": "87.092",
+            "tif": "Ioc",
+            "reduceOnly": true,
+            "reason": "close hedge first"
+          },
+          "state": "filled",
+          "totalSz": "0.16",
+          "avgPx": "86.83",
+          "oid": 571325128695,
+          "requested": "0.16",
+          "cloid": "0x0615da65551b9b742cdcd6a275477c89",
+          "at": "2026-10-11T18:02:16Z"
+        },
+        {
+          "action": {
+            "kind": "order",
+            "market": "@107",
+            "side": "sell",
+            "size": "0.16",
+            "unit": "base",
+            "limitPx": "86.621",
+            "tif": "Ioc",
+            "reduceOnly": false,
+            "reason": "sell paired spot, keep gas reserve"
+          },
+          "state": "filled",
+          "totalSz": "0.16",
+          "avgPx": "86.886",
+          "oid": 571325147078,
+          "requested": "0.16",
+          "cloid": "0xd6ff3fa12aa758438456dd2c9b66af5a",
+          "at": "2026-10-11T18:02:18Z"
+        }
+      ]
+    },
+    {
+      "vault": "USDC",
+      "mode": "executed",
+      "account": "0x2affc225fa3566ea48Bc48e61b50e7Bbcf770516",
+      "observedAt": "2026-10-12T04:34:12Z",
+      "hypothetical": false,
+      "baseExposure": {
+        "asset": "USDC",
+        "usdc": "9.27687197",
+        "note": "depositor exposure is USDC; spot HYPE is fully paired"
+      },
+      "extraHedge": {
+        "spot": "0.12168847",
+        "short": "0.12",
+        "delta": "0.00168847",
+        "deltaUsd": "0.15"
+      },
+      "actions": [
+        {
+          "kind": "order",
+          "market": "@107",
+          "side": "buy",
+          "size": "0.12",
+          "unit": "base",
+          "limitPx": "87.764",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "carry pair: spot buy then short the filled size"
+        },
+        {
+          "kind": "order",
+          "market": "HYPE",
+          "side": "sell",
+          "size": "FILLED_SIZE_OF_PREVIOUS",
+          "unit": "base",
+          "limitPx": "87.274",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "hedge exactly the filled spot size",
+          "leverage": 2
+        }
+      ],
+      "blocked": [],
+      "risk": {
+        "limits": {
+          "max_notional_usd": "25",
+          "reserve_usdc": "3",
+          "gas_reserve_base": "0.02",
+          "short_leverage": "2",
+          "max_slippage_bps": "30",
+          "min_order_usd": "11",
+          "max_delta_usd": "2",
+          "min_funding_apr": "0.0",
+          "max_borrow_apr": "0.12",
+          "max_pm_ltv_use": "0.30",
+          "book_depth_mult": "5"
+        },
+        "abstraction": "unifiedAccount",
+        "after": {
+          "abstraction": "unifiedAccount",
+          "spotUsdc": "9.27687197",
+          "spotUsdcHold": "5.25492",
+          "spotBase": "0.12168847",
+          "perpAccountValue": "5.24916",
+          "perpSzi": "-0.12",
+          "perpEntry": "87.576",
+          "perpLeverage": {
+            "type": "cross",
+            "value": 2
+          },
+          "borrowLend": {
+            "tokenToState": [
+              [
+                0,
+                {
+                  "borrow": {
+                    "basis": "0.0",
+                    "value": "0.0"
+                  },
+                  "supply": {
+                    "basis": "0.0",
+                    "value": "0.0"
+                  }
+                }
+              ],
+              [
+                150,
+                {
+                  "borrow": {
+                    "basis": "0.0",
+                    "value": "0.0"
+                  },
+                  "supply": {
+                    "basis": "0.0",
+                    "value": "0.0"
+                  }
+                }
+              ]
+            ],
+            "health": "healthy",
+            "healthFactor": null
+          }
+        }
+      },
+      "market": {
+        "perpCoin": "HYPE",
+        "spotPair": "@107",
+        "perpSzDecimals": 2,
+        "spotSzDecimals": 2,
+        "perpMark": "87.538",
+        "perpOracle": "87.5015",
+        "spotMark": "87.501",
+        "fundingHourly": "0.0000125",
+        "fundingApr": "0.1095000",
+        "perpBid": "87.537",
+        "perpBidSz": "181.31",
+        "perpAsk": "87.538",
+        "perpAskSz": "9.93",
+        "spotBid": "87.5",
+        "spotBidSz": "9885.96",
+        "spotAsk": "87.501",
+        "spotAskSz": "29.29",
+        "usdcBorrowApr": "0.05",
+        "baseLtv": "0.65",
+        "baseBorrowOracle": "87.501",
+        "maxLeverage": 10
+      },
+      "results": [
+        {
+          "action": {
+            "kind": "order",
+            "market": "@107",
+            "side": "buy",
+            "size": "0.12",
+            "unit": "base",
+            "limitPx": "87.764",
+            "tif": "Ioc",
+            "reduceOnly": false,
+            "reason": "carry pair: spot buy then short the filled size"
+          },
+          "state": "filled",
+          "totalSz": "0.12",
+          "avgPx": "87.514",
+          "oid": 571686419190,
+          "requested": "0.12",
+          "cloid": "0x93719d250e0197c6c47ff0b880c92805",
+          "at": "2026-10-12T04:34:05Z"
+        },
+        {
+          "kind": "updateLeverage",
+          "market": "HYPE",
+          "leverage": 2,
+          "response": {
+            "status": "ok",
+            "response": {
+              "type": "default"
+            }
+          }
+        },
+        {
+          "action": {
+            "kind": "order",
+            "market": "HYPE",
+            "side": "sell",
+            "size": "FILLED_SIZE_OF_PREVIOUS",
+            "unit": "base",
+            "limitPx": "87.274",
+            "tif": "Ioc",
+            "reduceOnly": false,
+            "reason": "hedge exactly the filled spot size",
+            "leverage": 2
+          },
+          "state": "filled",
+          "totalSz": "0.12",
+          "avgPx": "87.576",
+          "oid": 571686458846,
+          "requested": "0.12",
+          "cloid": "0xee2be02b8e2774a2b55ecf9f990f51d0",
+          "at": "2026-10-12T04:34:08Z"
+        }
+      ]
+    },
+    {
+      "vault": "USDC",
+      "mode": "executed",
+      "account": "0xf9c05bf416F6E45bf3658A92C94fE4f8f03a6b4F",
+      "observedAt": "2026-10-12T10:18:01Z",
+      "hypothetical": false,
+      "baseExposure": {
+        "asset": "USDC",
+        "usdc": "8.925234",
+        "note": "depositor exposure is USDC; spot HYPE is fully paired"
+      },
+      "extraHedge": {
+        "spot": "0.11991601",
+        "short": "0.12",
+        "delta": "-0.00008399",
+        "deltaUsd": "-0.01"
+      },
+      "actions": [
+        {
+          "kind": "order",
+          "market": "@107",
+          "side": "buy",
+          "size": "0.12",
+          "unit": "base",
+          "limitPx": "87.095",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "carry pair: spot buy then short the filled size"
+        },
+        {
+          "kind": "order",
+          "market": "HYPE",
+          "side": "sell",
+          "size": "MATCH_SPOT_BALANCE",
+          "unit": "base",
+          "limitPx": "86.523",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "short = spot base held after the fill (fee and prior balance included), nearest size step",
+          "leverage": 2
+        }
+      ],
+      "blocked": [],
+      "risk": {
+        "limits": {
+          "max_notional_usd": "25",
+          "reserve_usdc": "2.5",
+          "gas_reserve_base": "0.02",
+          "short_leverage": "2",
+          "max_slippage_bps": "30",
+          "min_order_usd": "11",
+          "max_delta_usd": "2",
+          "min_funding_apr": "0.0",
+          "max_borrow_apr": "0.12",
+          "max_pm_ltv_use": "0.30",
+          "book_depth_mult": "5"
+        },
+        "abstraction": "unifiedAccount",
+        "baseKeep": "0",
+        "after": {
+          "abstraction": "unifiedAccount",
+          "spotUsdc": "8.925234",
+          "spotUsdcHold": "5.20698",
+          "spotBase": "0.11991601",
+          "perpAccountValue": "5.20698",
+          "perpSzi": "-0.12",
+          "perpEntry": "86.783",
+          "perpLeverage": {
+            "type": "cross",
+            "value": 2
+          },
+          "borrowLend": {
+            "tokenToState": [],
+            "health": "healthy",
+            "healthFactor": null
+          }
+        }
+      },
+      "market": {
+        "perpCoin": "HYPE",
+        "spotPair": "@107",
+        "perpSzDecimals": 2,
+        "spotSzDecimals": 2,
+        "perpMark": "86.818",
+        "perpOracle": "86.8695",
+        "spotMark": "86.834",
+        "fundingHourly": "0.0000125",
+        "fundingApr": "0.1095000",
+        "perpBid": "86.783",
+        "perpBidSz": "3.26",
+        "perpAsk": "86.784",
+        "perpAskSz": "36.66",
+        "spotBid": "86.833",
+        "spotBidSz": "86.45",
+        "spotAsk": "86.834",
+        "spotAskSz": "20.84",
+        "usdcBorrowApr": "0.05",
+        "baseLtv": "0.65",
+        "baseBorrowOracle": "86.834",
+        "maxLeverage": 10
+      },
+      "results": [
+        {
+          "action": {
+            "kind": "order",
+            "market": "@107",
+            "side": "buy",
+            "size": "0.12",
+            "unit": "base",
+            "limitPx": "87.095",
+            "tif": "Ioc",
+            "reduceOnly": false,
+            "reason": "carry pair: spot buy then short the filled size"
+          },
+          "state": "filled",
+          "totalSz": "0.12",
+          "avgPx": "86.834",
+          "oid": 571911932302,
+          "requested": "0.12",
+          "cloid": "0x319b45d0f4def7dbacff02a63f2bf967",
+          "at": "2026-10-12T10:17:51Z"
+        },
+        {
+          "kind": "updateLeverage",
+          "market": "HYPE",
+          "leverage": 2,
+          "response": {
+            "status": "ok",
+            "response": {
+              "type": "default"
+            }
+          }
+        },
+        {
+          "kind": "hedgeSizing",
+          "spotAfter": "0.11991601",
+          "shortBefore": "0.0",
+          "baseKeep": "0",
+          "add": "0.12"
+        },
+        {
+          "action": {
+            "kind": "order",
+            "market": "HYPE",
+            "side": "sell",
+            "size": "MATCH_SPOT_BALANCE",
+            "unit": "base",
+            "limitPx": "86.523",
+            "tif": "Ioc",
+            "reduceOnly": false,
+            "reason": "short = spot base held after the fill (fee and prior balance included), nearest size step",
+            "leverage": 2
+          },
+          "state": "filled",
+          "totalSz": "0.12",
+          "avgPx": "86.783",
+          "oid": 571911979045,
+          "requested": "0.12",
+          "cloid": "0xf3e340aa3a26c1e2f162ac3672ec102f",
+          "at": "2026-10-12T10:17:57Z"
+        }
+      ]
+    },
+    {
+      "vault": "USDC",
+      "mode": "executed",
+      "account": "0x6c4556b8068397AD2F3e69205b7C100CAf234883",
+      "observedAt": "2026-10-12T16:54:38Z",
+      "hypothetical": false,
+      "baseExposure": {
+        "asset": "USDC",
+        "usdc": "8.1024",
+        "note": "depositor exposure is USDC; spot HYPE is fully paired"
+      },
+      "extraHedge": {
+        "spot": "0.129909",
+        "short": "0.13",
+        "delta": "-0.000091",
+        "deltaUsd": "-0.01"
+      },
+      "actions": [
+        {
+          "kind": "order",
+          "market": "@107",
+          "side": "buy",
+          "size": "0.13",
+          "unit": "base",
+          "limitPx": "84.063",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "carry pair: spot buy then short the filled size"
+        },
+        {
+          "kind": "order",
+          "market": "HYPE",
+          "side": "sell",
+          "size": "MATCH_SPOT_BALANCE",
+          "unit": "base",
+          "limitPx": "83.548",
+          "tif": "Ioc",
+          "reduceOnly": false,
+          "reason": "short = spot base held after the fill (fee and prior balance included), nearest size step",
+          "leverage": 2
+        }
+      ],
+      "blocked": [],
+      "risk": {
+        "limits": {
+          "max_notional_usd": "25",
+          "reserve_usdc": "2.0",
+          "gas_reserve_base": "0.02",
+          "short_leverage": "2",
+          "max_slippage_bps": "30",
+          "min_order_usd": "11",
+          "max_delta_usd": "2",
+          "min_funding_apr": "0.0",
+          "max_borrow_apr": "0.12",
+          "max_pm_ltv_use": "0.30",
+          "book_depth_mult": "5"
+        },
+        "abstraction": "unifiedAccount",
+        "baseKeep": "0",
+        "after": {
+          "abstraction": "unifiedAccount",
+          "spotUsdc": "8.1024",
+          "spotUsdcHold": "5.44518",
+          "spotBase": "0.129909",
+          "perpAccountValue": "5.44518",
+          "perpSzi": "-0.13",
+          "perpEntry": "83.772",
+          "perpLeverage": {
+            "type": "cross",
+            "value": 2
+          },
+          "borrowLend": {
+            "tokenToState": [],
+            "health": "healthy",
+            "healthFactor": null
+          }
+        }
+      },
+      "market": {
+        "perpCoin": "HYPE",
+        "spotPair": "@107",
+        "perpSzDecimals": 2,
+        "spotSzDecimals": 2,
+        "perpMark": "83.7685",
+        "perpOracle": "83.7895",
+        "spotMark": "83.812",
+        "fundingHourly": "0.0000125",
+        "fundingApr": "0.1095000",
+        "perpBid": "83.799",
+        "perpBidSz": "28.41",
+        "perpAsk": "83.8",
+        "perpAskSz": "69.6",
+        "spotBid": "83.808",
+        "spotBidSz": "14.3",
+        "spotAsk": "83.812",
+        "spotAskSz": "63.46",
+        "usdcBorrowApr": "0.05",
+        "baseLtv": "0.65",
+        "baseBorrowOracle": "83.806138",
+        "maxLeverage": 10
+      },
+      "results": [
+        {
+          "action": {
+            "kind": "order",
+            "market": "@107",
+            "side": "buy",
+            "size": "0.13",
+            "unit": "base",
+            "limitPx": "84.063",
+            "tif": "Ioc",
+            "reduceOnly": false,
+            "reason": "carry pair: spot buy then short the filled size"
+          },
+          "state": "filled",
+          "totalSz": "0.13",
+          "avgPx": "83.79",
+          "oid": 572230046335,
+          "requested": "0.13",
+          "cloid": "0x6a6258f229c5729593824ac4b2777c96",
+          "at": "2026-10-12T16:54:29Z"
+        },
+        {
+          "kind": "updateLeverage",
+          "market": "HYPE",
+          "leverage": 2,
+          "response": {
+            "status": "ok",
+            "response": {
+              "type": "default"
+            }
+          }
+        },
+        {
+          "kind": "hedgeSizing",
+          "spotAfter": "0.129909",
+          "shortBefore": "0.0",
+          "baseKeep": "0",
+          "add": "0.13"
+        },
+        {
+          "action": {
+            "kind": "order",
+            "market": "HYPE",
+            "side": "sell",
+            "size": "MATCH_SPOT_BALANCE",
+            "unit": "base",
+            "limitPx": "83.548",
+            "tif": "Ioc",
+            "reduceOnly": false,
+            "reason": "short = spot base held after the fill (fee and prior balance included), nearest size step",
+            "leverage": 2
+          },
+          "state": "filled",
+          "totalSz": "0.13",
+          "avgPx": "83.772",
+          "oid": 572230105188,
+          "requested": "0.13",
+          "cloid": "0xe111663b75e1b806d15c80be3bbf6a20",
+          "at": "2026-10-12T16:54:34Z"
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2026-10-12T16:54:38Z"
+}

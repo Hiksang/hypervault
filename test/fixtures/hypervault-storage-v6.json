@@ -1,0 +1,432 @@
+{
+  "storage": [
+    {
+      "astId": 2415,
+      "contract": "src/hypervault/HyperVault.sol:HyperVault",
+      "label": "_status",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 7070,
+      "contract": "src/hypervault/HyperVault.sol:HyperVault",
+      "label": "$",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_struct(Layout)12534_storage"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_enum(ActionKind)12401": {
+      "encoding": "inplace",
+      "label": "enum HyperVaultTypes.ActionKind",
+      "numberOfBytes": "1"
+    },
+    "t_enum(Phase)12394": {
+      "encoding": "inplace",
+      "label": "enum HyperVaultTypes.Phase",
+      "numberOfBytes": "1"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => bool))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_bool)"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_uint256,t_struct(Epoch)12463_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct HyperVaultTypes.Epoch)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Epoch)12463_storage"
+    },
+    "t_mapping(t_uint256,t_struct(Request)12474_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct HyperVaultTypes.Request)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Request)12474_storage"
+    },
+    "t_struct(Epoch)12463_storage": {
+      "encoding": "inplace",
+      "label": "struct HyperVaultTypes.Epoch",
+      "numberOfBytes": "192",
+      "members": [
+        {
+          "astId": 12450,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "requestedShares",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12452,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "unclaimedShares",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12454,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "numerator",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12456,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "denominator",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12458,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "reserve",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12460,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "isSealed",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_bool"
+        },
+        {
+          "astId": 12462,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "settled",
+          "offset": 1,
+          "slot": "5",
+          "type": "t_bool"
+        }
+      ]
+    },
+    "t_struct(Layout)12534_storage": {
+      "encoding": "inplace",
+      "label": "struct HyperVaultTypes.Layout",
+      "numberOfBytes": "736",
+      "members": [
+        {
+          "astId": 12478,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "phase",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_enum(Phase)12394"
+        },
+        {
+          "astId": 12480,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "coreActivated",
+          "offset": 1,
+          "slot": "0",
+          "type": "t_bool"
+        },
+        {
+          "astId": 12482,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "apiWallet",
+          "offset": 2,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 12484,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "performanceFeeBps",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12486,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "minimumDeposit",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12488,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "queuedAllocation",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12490,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "activeEpochId",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12492,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "actionNonce",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12494,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "lastConfirmedCoreBlock",
+          "offset": 0,
+          "slot": "6",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 12496,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "managedPrincipal",
+          "offset": 0,
+          "slot": "7",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12498,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "accountedCash",
+          "offset": 0,
+          "slot": "8",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12500,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "reservedClaimAssets",
+          "offset": 0,
+          "slot": "9",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12502,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "roundingReserve",
+          "offset": 0,
+          "slot": "10",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12504,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "nextRequestId",
+          "offset": 0,
+          "slot": "11",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12506,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "nextEpochId",
+          "offset": 0,
+          "slot": "12",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12509,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "pendingAction",
+          "offset": 0,
+          "slot": "13",
+          "type": "t_struct(PendingAction)12448_storage"
+        },
+        {
+          "astId": 12513,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "usedAgents",
+          "offset": 0,
+          "slot": "18",
+          "type": "t_mapping(t_address,t_bool)"
+        },
+        {
+          "astId": 12518,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "epochs",
+          "offset": 0,
+          "slot": "19",
+          "type": "t_mapping(t_uint256,t_struct(Epoch)12463_storage)"
+        },
+        {
+          "astId": 12523,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "requests",
+          "offset": 0,
+          "slot": "20",
+          "type": "t_mapping(t_uint256,t_struct(Request)12474_storage)"
+        },
+        {
+          "astId": 12527,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "controllerRequest",
+          "offset": 0,
+          "slot": "21",
+          "type": "t_mapping(t_address,t_uint256)"
+        },
+        {
+          "astId": 12533,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "operators",
+          "offset": 0,
+          "slot": "22",
+          "type": "t_mapping(t_address,t_mapping(t_address,t_bool))"
+        }
+      ]
+    },
+    "t_struct(PendingAction)12448_storage": {
+      "encoding": "inplace",
+      "label": "struct HyperVaultTypes.PendingAction",
+      "numberOfBytes": "160",
+      "members": [
+        {
+          "astId": 12436,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "id",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12438,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "intentHash",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_bytes32"
+        },
+        {
+          "astId": 12440,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "submittedCoreBlock",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 12443,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "kind",
+          "offset": 8,
+          "slot": "2",
+          "type": "t_enum(ActionKind)12401"
+        },
+        {
+          "astId": 12445,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "assets",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12447,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "agent",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_address"
+        }
+      ]
+    },
+    "t_struct(Request)12474_storage": {
+      "encoding": "inplace",
+      "label": "struct HyperVaultTypes.Request",
+      "numberOfBytes": "160",
+      "members": [
+        {
+          "astId": 12465,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "controller",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 12467,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "epoch",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12469,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "shares",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12471,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "consumedShares",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 12473,
+          "contract": "src/hypervault/HyperVault.sol:HyperVault",
+          "label": "paidAssets",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        }
+      ]
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint64": {
+      "encoding": "inplace",
+      "label": "uint64",
+      "numberOfBytes": "8"
+    }
+  }
+}

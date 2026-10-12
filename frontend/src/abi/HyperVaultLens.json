@@ -1,0 +1,206 @@
+[
+  {
+    "type": "function",
+    "name": "account",
+    "inputs": [
+      {
+        "name": "vault",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "user",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "a",
+        "type": "tuple",
+        "internalType": "struct HyperVaultLens.Account",
+        "components": [
+          {
+            "name": "phase",
+            "type": "uint8",
+            "internalType": "enum HyperVaultTypes.Phase"
+          },
+          {
+            "name": "navOk",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "nav",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "realized",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "totalSupply",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "price",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "feeShares",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "feeAssets",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "windowLow",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "oracleOnly",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "availableCash",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "maxDeposit",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "minimumDeposit",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "maximumAssets",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "shares",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "value",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "redeemNowShares",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "redeemNowAssets",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "redeemNowBlock",
+            "type": "uint8",
+            "internalType": "enum HyperVaultLens.Block"
+          },
+          {
+            "name": "requestId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "pendingShares",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "claimableShares",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "claimableAssets",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "maxRedeemNow",
+    "inputs": [
+      {
+        "name": "vault",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "holder",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "shares",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "assets",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "reason",
+        "type": "uint8",
+        "internalType": "enum HyperVaultLens.Block"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "previewRedeemNow",
+    "inputs": [
+      {
+        "name": "vault",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "shares",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "assets",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "reason",
+        "type": "uint8",
+        "internalType": "enum HyperVaultLens.Block"
+      }
+    ],
+    "stateMutability": "view"
+  }
+]

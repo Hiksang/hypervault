@@ -1,0 +1,1750 @@
+{
+  "schema": 1,
+  "observedAt": "2026-10-04T10:40:09.672599+00:00",
+  "network": "mainnet",
+  "rpc": "https://rpc.hyperliquid.xyz/evm",
+  "info": "https://api.hyperliquid.xyz/info",
+  "scope": "read-only evidence; selected HYPE/USDC and default perp DEX, NOT full account coverage",
+  "evmBlock": "0x2d6d90c",
+  "evmBlockHash": "0x4732a2d3bc3da30978dc04aa85cd25983cdfda06a2803f389d0d56305fae274e",
+  "evmTimestamp": 1791110408,
+  "blockHashStable": true,
+  "endHeader": {
+    "startedAt": "2026-10-04T10:40:09.462648+00:00",
+    "ok": true,
+    "value": {
+      "hash": "0x4732a2d3bc3da30978dc04aa85cd25983cdfda06a2803f389d0d56305fae274e",
+      "parentHash": "0xfc835c66752766ffb7e880ee575dca49d068ff7dba7f5470d19af9f412e24e9c",
+      "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+      "miner": "0x0000000000000000000000000000000000000000",
+      "stateRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "transactionsRoot": "0x70a1e629a2637947798b18563fbd3aa10561a05a4fc353db3ef3380ae568ca57",
+      "receiptsRoot": "0x4191e8df181762403e6e491d17a6f7a851d510b7df837bd3bf0136289bdfdde1",
+      "logsBloom": "0x04000000000000000000000000000000000400000004000000000000000000000000000000000000000080000000000000001000000000000000000000040000000020000000000000000400000000000000000000040000000000000000000000000002000000000000000000000200000000000100000000000002000000004000000000000000000000000020000000000000000000000040000000000000000000000000000000000100000000000000000200000000000000000000000000000000000000200000000000000000000000000000000000002100000040000000000000000000000000000000000000000000008000100000000000000000",
+      "difficulty": "0x0",
+      "number": "0x2d6d90c",
+      "gasLimit": "0x2dc6c0",
+      "gasUsed": "0x1bc4e",
+      "timestamp": "0x6ac22d08",
+      "extraData": "0x",
+      "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "nonce": "0x0000000000000000",
+      "baseFeePerGas": "0x5f5e100",
+      "withdrawalsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+      "blobGasUsed": "0x0",
+      "excessBlobGas": "0x0",
+      "parentBeaconBlockRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "size": "0x428",
+      "uncles": [],
+      "transactions": [
+        "0x4c4690cd085e1b12ce69c40d637969d8f91a41fc69556271df2c968185190c43",
+        "0xa57384865128d3aa43fe67732a05ab2063f74c6aac839f1770a18172277545e6"
+      ],
+      "withdrawals": []
+    },
+    "finishedAt": "2026-10-04T10:40:09.672551+00:00"
+  },
+  "infoBlockPinned": false,
+  "productionNavReady": false,
+  "activeDepositsAuthorized": false,
+  "metadata": {
+    "blockPinned": false,
+    "tokens": [
+      {
+        "name": "HYPE",
+        "szDecimals": 2,
+        "weiDecimals": 8,
+        "index": 150,
+        "tokenId": "0x0d01dc56dcaaca66ad901c959b4011ec",
+        "isCanonical": false,
+        "evmContract": null,
+        "fullName": "Hyperliquid",
+        "deployerTradingFeeShare": "0.0"
+      },
+      {
+        "name": "USDC",
+        "szDecimals": 8,
+        "weiDecimals": 8,
+        "index": 0,
+        "tokenId": "0x6d1e7cde53ba9467b783cb7c530ce054",
+        "isCanonical": true,
+        "evmContract": {
+          "address": "0x6b9e773128f453f5c2c60935ee2de2cbc5390a24",
+          "evm_extra_wei_decimals": -2
+        },
+        "fullName": null,
+        "deployerTradingFeeShare": "0.0"
+      }
+    ],
+    "spotPair": {
+      "tokens": [
+        150,
+        0
+      ],
+      "name": "@107",
+      "index": 107,
+      "isCanonical": false
+    },
+    "perp": {
+      "asset": 159,
+      "szDecimals": 2,
+      "name": "HYPE",
+      "maxLeverage": 10,
+      "marginTableId": 52
+    }
+  },
+  "sharedCore": {
+    "coreBlock": {
+      "startedAt": "2026-10-04T10:40:08.339253+00:00",
+      "ok": true,
+      "value": {
+        "to": "0x0000000000000000000000000000000000000809",
+        "input": "0x",
+        "raw": "0x0000000000000000000000000000000000000000000000000000000045d0ff6c",
+        "decoded": {
+          "number": 1171324780
+        }
+      },
+      "finishedAt": "2026-10-04T10:40:08.400631+00:00"
+    },
+    "perpInfo": {
+      "startedAt": "2026-10-04T10:40:08.339605+00:00",
+      "ok": true,
+      "value": {
+        "to": "0x000000000000000000000000000000000000080a",
+        "input": "0x000000000000000000000000000000000000000000000000000000000000009f",
+        "raw": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000340000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000044859504500000000000000000000000000000000000000000000000000000000",
+        "decoded": {
+          "marginTableId": 52,
+          "szDecimals": 2,
+          "maxLeverage": 10,
+          "onlyIsolated": false
+        }
+      },
+      "finishedAt": "2026-10-04T10:40:08.399560+00:00"
+    },
+    "mark": {
+      "startedAt": "2026-10-04T10:40:08.339981+00:00",
+      "ok": true,
+      "value": {
+        "to": "0x0000000000000000000000000000000000000806",
+        "input": "0x000000000000000000000000000000000000000000000000000000000000009f",
+        "raw": "0x00000000000000000000000000000000000000000000000000000000000dd21d",
+        "decoded": {
+          "price": 905757
+        }
+      },
+      "finishedAt": "2026-10-04T10:40:08.400368+00:00"
+    },
+    "oracle": {
+      "startedAt": "2026-10-04T10:40:08.340230+00:00",
+      "ok": true,
+      "value": {
+        "to": "0x0000000000000000000000000000000000000807",
+        "input": "0x000000000000000000000000000000000000000000000000000000000000009f",
+        "raw": "0x00000000000000000000000000000000000000000000000000000000000dd054",
+        "decoded": {
+          "price": 905300
+        }
+      },
+      "finishedAt": "2026-10-04T10:40:08.400113+00:00"
+    },
+    "spotPrice": {
+      "startedAt": "2026-10-04T10:40:08.399600+00:00",
+      "ok": true,
+      "value": {
+        "to": "0x0000000000000000000000000000000000000808",
+        "input": "0x000000000000000000000000000000000000000000000000000000000000006b",
+        "raw": "0x00000000000000000000000000000000000000000000000000000000056560d0",
+        "decoded": {
+          "price": 90530000
+        }
+      },
+      "finishedAt": "2026-10-04T10:40:08.610634+00:00"
+    },
+    "tokenInfo:150": {
+      "startedAt": "2026-10-04T10:40:08.400135+00:00",
+      "ok": true,
+      "value": {
+        "to": "0x000000000000000000000000000000000000080c",
+        "input": "0x0000000000000000000000000000000000000000000000000000000000000096",
+        "raw": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000448595045000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000006b00000000000000000000000000000000000000000000000000000000000000cf00000000000000000000000000000000000000000000000000000000000000e800000000000000000000000000000000000000000000000000000000000000ff",
+        "decoded": {
+          "szDecimals": 2,
+          "weiDecimals": 8,
+          "evmExtraWeiDecimals": 0
+        }
+      },
+      "finishedAt": "2026-10-04T10:40:08.618648+00:00"
+    },
+    "reserve:150": {
+      "startedAt": "2026-10-04T10:40:08.400392+00:00",
+      "ok": true,
+      "value": {
+        "to": "0x0000000000000000000000000000000000000812",
+        "input": "0x0000000000000000000000000000000000000000000000000000000000000096",
+        "raw": "0x00000000000000000000000000000000000000000000000000000000000001f400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004a361d56731b8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000056560d000000000000000000000000000000000000000000000000000000000000019640000000000000000000000000000000000000000000000000004a361d56731b80000000000000000000000000000000000000000000000000000000000000000",
+        "decoded": {
+          "borrowYearlyRateBps": 500,
+          "supplyYearlyRateBps": 0,
+          "balance": 1305540494307768,
+          "utilizationBps": 0,
+          "oraclePx": 90530000,
+          "ltvBps": 6500,
+          "totalSupplied": 1305540494307768,
+          "totalBorrowed": 0
+        }
+      },
+      "finishedAt": "2026-10-04T10:40:08.620391+00:00"
+    },
+    "tokenInfo:0": {
+      "startedAt": "2026-10-04T10:40:08.400657+00:00",
+      "ok": true,
+      "value": {
+        "to": "0x000000000000000000000000000000000000080c",
+        "input": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "raw": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006b9e773128f453f5c2c60935ee2de2cbc5390a2400000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000008fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe000000000000000000000000000000000000000000000000000000000000000455534443000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decoded": {
+          "szDecimals": 8,
+          "weiDecimals": 8,
+          "evmExtraWeiDecimals": -2
+        }
+      },
+      "finishedAt": "2026-10-04T10:40:08.620195+00:00"
+    },
+    "reserve:0": {
+      "startedAt": "2026-10-04T10:40:08.610660+00:00",
+      "ok": true,
+      "value": {
+        "to": "0x0000000000000000000000000000000000000812",
+        "input": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "raw": "0x00000000000000000000000000000000000000000000000000000000000001f40000000000000000000000000000000000000000000000000000000000000151000000000000000000000000000000000000000000000000002f207c5009351e0000000000000000000000000000000000000000000000000000000000001d530000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000bd0b42ee01ea71000000000000000000000000000000000000000000000000008deac80c9a1890",
+        "decoded": {
+          "borrowYearlyRateBps": 500,
+          "supplyYearlyRateBps": 337,
+          "balance": 13265042196215070,
+          "utilizationBps": 7507,
+          "oraclePx": 1,
+          "ltvBps": 0,
+          "totalSupplied": 53211152687164017,
+          "totalBorrowed": 39946116641986704
+        }
+      },
+      "finishedAt": "2026-10-04T10:40:08.667714+00:00"
+    }
+  },
+  "accounts": {
+    "0x8c625ff57d8a4374784c7eff585dfdc42ccec974": {
+      "infoBefore": {
+        "userAbstraction": {
+          "startedAt": "2026-10-04T10:40:07.720477+00:00",
+          "ok": true,
+          "value": "disabled",
+          "finishedAt": "2026-10-04T10:40:07.795231+00:00"
+        },
+        "spotClearinghouseState": {
+          "startedAt": "2026-10-04T10:40:07.720669+00:00",
+          "ok": true,
+          "value": {
+            "balances": [
+              {
+                "coin": "USDC",
+                "token": 0,
+                "total": "100.0",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              },
+              {
+                "coin": "HYPE",
+                "token": 150,
+                "total": "0.00000011",
+                "hold": "0.0",
+                "entryNtl": "0.00000994"
+              }
+            ]
+          },
+          "finishedAt": "2026-10-04T10:40:07.799952+00:00"
+        },
+        "borrowLendUserState": {
+          "startedAt": "2026-10-04T10:40:07.720930+00:00",
+          "ok": true,
+          "value": {
+            "tokenToState": [],
+            "health": "healthy",
+            "healthFactor": null
+          },
+          "finishedAt": "2026-10-04T10:40:07.802934+00:00"
+        },
+        "clearinghouseState": {
+          "startedAt": "2026-10-04T10:40:07.721139+00:00",
+          "ok": true,
+          "value": {
+            "marginSummary": {
+              "accountValue": "0.0",
+              "totalNtlPos": "0.0",
+              "totalRawUsd": "0.0",
+              "totalMarginUsed": "0.0"
+            },
+            "crossMarginSummary": {
+              "accountValue": "0.0",
+              "totalNtlPos": "0.0",
+              "totalRawUsd": "0.0",
+              "totalMarginUsed": "0.0"
+            },
+            "crossMaintenanceMarginUsed": "0.0",
+            "withdrawable": "0.0",
+            "assetPositions": [],
+            "time": 1791110407517
+          },
+          "finishedAt": "2026-10-04T10:40:07.801010+00:00"
+        }
+      },
+      "infoAfter": {
+        "userAbstraction": {
+          "startedAt": "2026-10-04T10:40:09.127926+00:00",
+          "ok": true,
+          "value": "disabled",
+          "finishedAt": "2026-10-04T10:40:09.194829+00:00"
+        },
+        "spotClearinghouseState": {
+          "startedAt": "2026-10-04T10:40:09.128179+00:00",
+          "ok": true,
+          "value": {
+            "balances": [
+              {
+                "coin": "USDC",
+                "token": 0,
+                "total": "100.0",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              },
+              {
+                "coin": "HYPE",
+                "token": 150,
+                "total": "0.00000011",
+                "hold": "0.0",
+                "entryNtl": "0.00000994"
+              }
+            ]
+          },
+          "finishedAt": "2026-10-04T10:40:09.209704+00:00"
+        },
+        "borrowLendUserState": {
+          "startedAt": "2026-10-04T10:40:09.128376+00:00",
+          "ok": true,
+          "value": {
+            "tokenToState": [],
+            "health": "healthy",
+            "healthFactor": null
+          },
+          "finishedAt": "2026-10-04T10:40:09.226531+00:00"
+        },
+        "clearinghouseState": {
+          "startedAt": "2026-10-04T10:40:09.128552+00:00",
+          "ok": true,
+          "value": {
+            "marginSummary": {
+              "accountValue": "0.0",
+              "totalNtlPos": "0.0",
+              "totalRawUsd": "0.0",
+              "totalMarginUsed": "0.0"
+            },
+            "crossMarginSummary": {
+              "accountValue": "0.0",
+              "totalNtlPos": "0.0",
+              "totalRawUsd": "0.0",
+              "totalMarginUsed": "0.0"
+            },
+            "crossMaintenanceMarginUsed": "0.0",
+            "withdrawable": "0.0",
+            "assetPositions": [],
+            "time": 1791110408994
+          },
+          "finishedAt": "2026-10-04T10:40:09.209305+00:00"
+        }
+      },
+      "core": {
+        "exists": {
+          "startedAt": "2026-10-04T10:40:08.618671+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000810",
+            "input": "0x0000000000000000000000008c625ff57d8a4374784c7eff585dfdc42ccec974",
+            "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+            "decoded": {
+              "exists": true
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.680081+00:00"
+        },
+        "position": {
+          "startedAt": "2026-10-04T10:40:08.620209+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000813",
+            "input": "0x0000000000000000000000008c625ff57d8a4374784c7eff585dfdc42ccec974000000000000000000000000000000000000000000000000000000000000009f",
+            "raw": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000000",
+            "decoded": {
+              "szi": 0,
+              "entryNtl": 0,
+              "isolatedRawUsd": 0,
+              "leverage": 10,
+              "isIsolated": false
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.678380+00:00"
+        },
+        "margin": {
+          "startedAt": "2026-10-04T10:40:08.620412+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x000000000000000000000000000000000000080f",
+            "input": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000008c625ff57d8a4374784c7eff585dfdc42ccec974",
+            "raw": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "decoded": {
+              "accountValue": 0,
+              "marginUsed": 0,
+              "ntlPos": 0,
+              "rawUsd": 0
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.681404+00:00"
+        },
+        "spot:150": {
+          "startedAt": "2026-10-04T10:40:08.667740+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000801",
+            "input": "0x0000000000000000000000008c625ff57d8a4374784c7eff585dfdc42ccec9740000000000000000000000000000000000000000000000000000000000000096",
+            "raw": "0x000000000000000000000000000000000000000000000000000000000000000b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003e2",
+            "decoded": {
+              "total": 11,
+              "hold": 0,
+              "entryNtl": 994
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.718354+00:00"
+        },
+        "lending:150": {
+          "startedAt": "2026-10-04T10:40:08.678395+00:00",
+          "ok": false,
+          "error": "RuntimeError: {'code': -32003, 'message': 'EVM error: PrecompileError'}",
+          "finishedAt": "2026-10-04T10:40:08.738557+00:00"
+        },
+        "spot:0": {
+          "startedAt": "2026-10-04T10:40:08.680092+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000801",
+            "input": "0x0000000000000000000000008c625ff57d8a4374784c7eff585dfdc42ccec9740000000000000000000000000000000000000000000000000000000000000000",
+            "raw": "0x00000000000000000000000000000000000000000000000000000002540be40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "decoded": {
+              "total": 10000000000,
+              "hold": 0,
+              "entryNtl": 0
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.738410+00:00"
+        },
+        "lending:0": {
+          "startedAt": "2026-10-04T10:40:08.681413+00:00",
+          "ok": false,
+          "error": "RuntimeError: {'code': -32003, 'message': 'EVM error: PrecompileError'}",
+          "finishedAt": "2026-10-04T10:40:08.740110+00:00"
+        }
+      },
+      "unitComparisons": {
+        "spot:150:total": {
+          "raw": 11,
+          "apiBefore": "0.00000011",
+          "apiAfter": "0.00000011",
+          "classification": "ExactNonzeroMatch",
+          "candidateDecimals": [
+            8
+          ],
+          "provesUnits": false
+        },
+        "spot:150:hold": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "spot:150:entryNtl": {
+          "raw": 994,
+          "apiBefore": "0.00000994",
+          "apiAfter": "0.00000994",
+          "classification": "ExactNonzeroMatch",
+          "candidateDecimals": [
+            8
+          ],
+          "provesUnits": false
+        },
+        "lending:150:borrowBasis": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:150:borrowValue": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:150:supplyBasis": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:150:supplyValue": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "spot:0:total": {
+          "raw": 10000000000,
+          "apiBefore": "100.0",
+          "apiAfter": "100.0",
+          "classification": "ExactNonzeroMatch",
+          "candidateDecimals": [
+            8
+          ],
+          "provesUnits": false
+        },
+        "spot:0:hold": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "spot:0:entryNtl": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:0:borrowBasis": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:0:borrowValue": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:0:supplyBasis": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:0:supplyValue": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "margin:accountValue": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "margin:marginUsed": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "margin:ntlPos": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "margin:rawUsd": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        }
+      },
+      "pmObservedInBothApiReads": false
+    },
+    "0xab213e43714ce4a5863d155fe805bdb9d9572742": {
+      "infoBefore": {
+        "userAbstraction": {
+          "startedAt": "2026-10-04T10:40:07.795273+00:00",
+          "ok": true,
+          "value": "unifiedAccount",
+          "finishedAt": "2026-10-04T10:40:07.871096+00:00"
+        },
+        "spotClearinghouseState": {
+          "startedAt": "2026-10-04T10:40:07.799977+00:00",
+          "ok": true,
+          "value": {
+            "balances": [
+              {
+                "coin": "USDC",
+                "token": 0,
+                "total": "0.000001",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              },
+              {
+                "coin": "USDE",
+                "token": 235,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              },
+              {
+                "coin": "USDT0",
+                "token": 268,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              },
+              {
+                "coin": "USDH",
+                "token": 360,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              }
+            ],
+            "tokenToAvailableAfterMaintenance": [
+              [
+                0,
+                "0.000001"
+              ]
+            ]
+          },
+          "finishedAt": "2026-10-04T10:40:07.879563+00:00"
+        },
+        "borrowLendUserState": {
+          "startedAt": "2026-10-04T10:40:07.801027+00:00",
+          "ok": true,
+          "value": {
+            "tokenToState": [],
+            "health": "healthy",
+            "healthFactor": null
+          },
+          "finishedAt": "2026-10-04T10:40:07.879723+00:00"
+        },
+        "clearinghouseState": {
+          "startedAt": "2026-10-04T10:40:07.802951+00:00",
+          "ok": true,
+          "value": {
+            "marginSummary": {
+              "accountValue": "0.0",
+              "totalNtlPos": "0.0",
+              "totalRawUsd": "0.0",
+              "totalMarginUsed": "0.0"
+            },
+            "crossMarginSummary": {
+              "accountValue": "0.0",
+              "totalNtlPos": "0.0",
+              "totalRawUsd": "0.0",
+              "totalMarginUsed": "0.0"
+            },
+            "crossMaintenanceMarginUsed": "0.0",
+            "withdrawable": "0.0",
+            "assetPositions": [],
+            "time": 1791110407664
+          },
+          "finishedAt": "2026-10-04T10:40:07.879329+00:00"
+        }
+      },
+      "infoAfter": {
+        "userAbstraction": {
+          "startedAt": "2026-10-04T10:40:09.194851+00:00",
+          "ok": true,
+          "value": "unifiedAccount",
+          "finishedAt": "2026-10-04T10:40:09.268136+00:00"
+        },
+        "spotClearinghouseState": {
+          "startedAt": "2026-10-04T10:40:09.209323+00:00",
+          "ok": true,
+          "value": {
+            "balances": [
+              {
+                "coin": "USDC",
+                "token": 0,
+                "total": "0.000001",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              },
+              {
+                "coin": "USDE",
+                "token": 235,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              },
+              {
+                "coin": "USDT0",
+                "token": 268,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              },
+              {
+                "coin": "USDH",
+                "token": 360,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              }
+            ],
+            "tokenToAvailableAfterMaintenance": [
+              [
+                0,
+                "0.000001"
+              ]
+            ]
+          },
+          "finishedAt": "2026-10-04T10:40:09.280623+00:00"
+        },
+        "borrowLendUserState": {
+          "startedAt": "2026-10-04T10:40:09.209721+00:00",
+          "ok": true,
+          "value": {
+            "tokenToState": [],
+            "health": "healthy",
+            "healthFactor": null
+          },
+          "finishedAt": "2026-10-04T10:40:09.284551+00:00"
+        },
+        "clearinghouseState": {
+          "startedAt": "2026-10-04T10:40:09.226552+00:00",
+          "ok": true,
+          "value": {
+            "marginSummary": {
+              "accountValue": "0.0",
+              "totalNtlPos": "0.0",
+              "totalRawUsd": "0.0",
+              "totalMarginUsed": "0.0"
+            },
+            "crossMarginSummary": {
+              "accountValue": "0.0",
+              "totalNtlPos": "0.0",
+              "totalRawUsd": "0.0",
+              "totalMarginUsed": "0.0"
+            },
+            "crossMaintenanceMarginUsed": "0.0",
+            "withdrawable": "0.0",
+            "assetPositions": [],
+            "time": 1791110409075
+          },
+          "finishedAt": "2026-10-04T10:40:09.327388+00:00"
+        }
+      },
+      "core": {
+        "exists": {
+          "startedAt": "2026-10-04T10:40:08.718382+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000810",
+            "input": "0x000000000000000000000000ab213e43714ce4a5863d155fe805bdb9d9572742",
+            "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+            "decoded": {
+              "exists": true
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.778030+00:00"
+        },
+        "position": {
+          "startedAt": "2026-10-04T10:40:08.738423+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000813",
+            "input": "0x000000000000000000000000ab213e43714ce4a5863d155fe805bdb9d9572742000000000000000000000000000000000000000000000000000000000000009f",
+            "raw": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000000",
+            "decoded": {
+              "szi": 0,
+              "entryNtl": 0,
+              "isolatedRawUsd": 0,
+              "leverage": 10,
+              "isIsolated": false
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.800519+00:00"
+        },
+        "margin": {
+          "startedAt": "2026-10-04T10:40:08.738571+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x000000000000000000000000000000000000080f",
+            "input": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ab213e43714ce4a5863d155fe805bdb9d9572742",
+            "raw": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "decoded": {
+              "accountValue": 0,
+              "marginUsed": 0,
+              "ntlPos": 0,
+              "rawUsd": 0
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.800295+00:00"
+        },
+        "spot:150": {
+          "startedAt": "2026-10-04T10:40:08.740121+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000801",
+            "input": "0x000000000000000000000000ab213e43714ce4a5863d155fe805bdb9d95727420000000000000000000000000000000000000000000000000000000000000096",
+            "raw": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "decoded": {
+              "total": 0,
+              "hold": 0,
+              "entryNtl": 0
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.801120+00:00"
+        },
+        "lending:150": {
+          "startedAt": "2026-10-04T10:40:08.778056+00:00",
+          "ok": false,
+          "error": "RuntimeError: {'code': -32003, 'message': 'EVM error: PrecompileError'}",
+          "finishedAt": "2026-10-04T10:40:08.835158+00:00"
+        },
+        "spot:0": {
+          "startedAt": "2026-10-04T10:40:08.800319+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000801",
+            "input": "0x000000000000000000000000ab213e43714ce4a5863d155fe805bdb9d95727420000000000000000000000000000000000000000000000000000000000000000",
+            "raw": "0x000000000000000000000000000000000000000000000000000000000000006400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "decoded": {
+              "total": 100,
+              "hold": 0,
+              "entryNtl": 0
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.862897+00:00"
+        },
+        "lending:0": {
+          "startedAt": "2026-10-04T10:40:08.800540+00:00",
+          "ok": false,
+          "error": "RuntimeError: {'code': -32003, 'message': 'EVM error: PrecompileError'}",
+          "finishedAt": "2026-10-04T10:40:08.862553+00:00"
+        }
+      },
+      "unitComparisons": {
+        "spot:150:total": {
+          "raw": 0,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "spot:150:hold": {
+          "raw": 0,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "spot:150:entryNtl": {
+          "raw": 0,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:150:borrowBasis": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:150:borrowValue": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:150:supplyBasis": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:150:supplyValue": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "spot:0:total": {
+          "raw": 100,
+          "apiBefore": "0.000001",
+          "apiAfter": "0.000001",
+          "classification": "ExactNonzeroMatch",
+          "candidateDecimals": [
+            8
+          ],
+          "provesUnits": false
+        },
+        "spot:0:hold": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "spot:0:entryNtl": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:0:borrowBasis": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:0:borrowValue": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:0:supplyBasis": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:0:supplyValue": {
+          "raw": null,
+          "apiBefore": null,
+          "apiAfter": null,
+          "classification": "MissingEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "margin:accountValue": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "margin:marginUsed": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "margin:ntlPos": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "margin:rawUsd": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        }
+      },
+      "pmObservedInBothApiReads": false
+    },
+    "0x760a4290d854a9dd69dd63bf6cbe9503505a0266": {
+      "infoBefore": {
+        "userAbstraction": {
+          "startedAt": "2026-10-04T10:40:07.871141+00:00",
+          "ok": true,
+          "value": "portfolioMargin",
+          "finishedAt": "2026-10-04T10:40:08.094944+00:00"
+        },
+        "spotClearinghouseState": {
+          "startedAt": "2026-10-04T10:40:07.879365+00:00",
+          "ok": true,
+          "value": {
+            "portfolioMarginEnabled": true,
+            "balances": [
+              {
+                "coin": "USDC",
+                "token": 0,
+                "total": "-53898.40694247",
+                "hold": "-79802.99782646",
+                "entryNtl": "0.0",
+                "spotHold": "-53898.40694247",
+                "ltv": "0.0",
+                "borrowed": "89371.85088748"
+              },
+              {
+                "coin": "HYPE",
+                "token": 150,
+                "total": "1959.34874775",
+                "hold": "1519.12764155",
+                "entryNtl": "0.0",
+                "ltv": "0.65",
+                "supplied": "1959.34874775"
+              },
+              {
+                "coin": "UBTC",
+                "token": 197,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0",
+                "ltv": "0.5"
+              },
+              {
+                "coin": "USDE",
+                "token": 235,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              },
+              {
+                "coin": "USDT0",
+                "token": 268,
+                "total": "0.0",
+                "hold": "-25910.55031056",
+                "entryNtl": "0.0",
+                "spotHold": "0.0",
+                "ltv": "0.0"
+              },
+              {
+                "coin": "UENA",
+                "token": 338,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              },
+              {
+                "coin": "USDH",
+                "token": 360,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0",
+                "ltv": "0.0"
+              }
+            ],
+            "portfolioMarginRatio": "0.4615972246",
+            "tokenToPortfolioBorrowRatio": [
+              [
+                0,
+                "0.001787437"
+              ]
+            ],
+            "tokenToPortfolioSupplyRatio": [
+              [
+                150,
+                "0.0019593487"
+              ]
+            ],
+            "tokenToAvailableAfterMaintenance": [
+              [
+                0,
+                "83566.48792799"
+              ],
+              [
+                150,
+                "1118.88559195"
+              ],
+              [
+                197,
+                "0.0"
+              ],
+              [
+                268,
+                "83585.71264189"
+              ],
+              [
+                360,
+                "0.0"
+              ]
+            ]
+          },
+          "finishedAt": "2026-10-04T10:40:08.111009+00:00"
+        },
+        "borrowLendUserState": {
+          "startedAt": "2026-10-04T10:40:07.879582+00:00",
+          "ok": true,
+          "value": {
+            "tokenToState": [
+              [
+                0,
+                {
+                  "borrow": {
+                    "basis": "89371.74189829",
+                    "value": "89371.85088747"
+                  },
+                  "supply": {
+                    "basis": "0.0",
+                    "value": "0.0"
+                  }
+                }
+              ],
+              [
+                150,
+                {
+                  "borrow": {
+                    "basis": "0.0",
+                    "value": "0.0"
+                  },
+                  "supply": {
+                    "basis": "1959.34874775",
+                    "value": "1959.34874775"
+                  }
+                }
+              ]
+            ],
+            "health": "healthy",
+            "healthFactor": "1.2900806713"
+          },
+          "finishedAt": "2026-10-04T10:40:08.103768+00:00"
+        },
+        "clearinghouseState": {
+          "startedAt": "2026-10-04T10:40:07.879738+00:00",
+          "ok": true,
+          "value": {
+            "marginSummary": {
+              "accountValue": "35473.443945",
+              "totalNtlPos": "177469.497795",
+              "totalRawUsd": "212942.94174",
+              "totalMarginUsed": "35493.899559"
+            },
+            "crossMarginSummary": {
+              "accountValue": "35473.443945",
+              "totalNtlPos": "177469.497795",
+              "totalRawUsd": "212942.94174",
+              "totalMarginUsed": "35493.899559"
+            },
+            "crossMaintenanceMarginUsed": "8873.474889",
+            "withdrawable": "0.0",
+            "assetPositions": [
+              {
+                "type": "oneWay",
+                "position": {
+                  "coin": "HYPE",
+                  "szi": "-1959.35",
+                  "leverage": {
+                    "type": "cross",
+                    "value": 5
+                  },
+                  "entryPx": "82.2664",
+                  "positionValue": "177469.497795",
+                  "unrealizedPnl": "-16280.660825",
+                  "returnOnEquity": "-0.5050182485",
+                  "liquidationPx": "131.1948499009",
+                  "marginUsed": "35493.899559",
+                  "maxLeverage": 10,
+                  "cumFunding": {
+                    "allTime": "-1407.522139",
+                    "sinceOpen": "-1407.522139",
+                    "sinceChange": "-364.561065"
+                  }
+                }
+              }
+            ],
+            "time": 1791110407868
+          },
+          "finishedAt": "2026-10-04T10:40:08.110931+00:00"
+        }
+      },
+      "infoAfter": {
+        "userAbstraction": {
+          "startedAt": "2026-10-04T10:40:09.268190+00:00",
+          "ok": true,
+          "value": "portfolioMargin",
+          "finishedAt": "2026-10-04T10:40:09.363706+00:00"
+        },
+        "spotClearinghouseState": {
+          "startedAt": "2026-10-04T10:40:09.280668+00:00",
+          "ok": true,
+          "value": {
+            "portfolioMarginEnabled": true,
+            "balances": [
+              {
+                "coin": "USDC",
+                "token": 0,
+                "total": "-53898.40712301",
+                "hold": "-79802.997826",
+                "entryNtl": "0.0",
+                "spotHold": "-53898.40712301",
+                "ltv": "0.0",
+                "borrowed": "89371.85106801"
+              },
+              {
+                "coin": "HYPE",
+                "token": 150,
+                "total": "1959.34874775",
+                "hold": "1519.12764463",
+                "entryNtl": "0.0",
+                "ltv": "0.65",
+                "supplied": "1959.34874775"
+              },
+              {
+                "coin": "UBTC",
+                "token": 197,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0",
+                "ltv": "0.5"
+              },
+              {
+                "coin": "USDE",
+                "token": 235,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              },
+              {
+                "coin": "USDT0",
+                "token": 268,
+                "total": "0.0",
+                "hold": "-25909.51351055",
+                "entryNtl": "0.0",
+                "spotHold": "0.0",
+                "ltv": "0.0"
+              },
+              {
+                "coin": "UENA",
+                "token": 338,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0"
+              },
+              {
+                "coin": "USDH",
+                "token": 360,
+                "total": "0.0",
+                "hold": "0.0",
+                "entryNtl": "0.0",
+                "ltv": "0.0"
+              }
+            ],
+            "portfolioMarginRatio": "0.4615972258",
+            "tokenToPortfolioBorrowRatio": [
+              [
+                0,
+                "0.001787437"
+              ]
+            ],
+            "tokenToPortfolioSupplyRatio": [
+              [
+                150,
+                "0.0019593487"
+              ]
+            ],
+            "tokenToAvailableAfterMaintenance": [
+              [
+                0,
+                "83566.48774699"
+              ],
+              [
+                150,
+                "1118.88558952"
+              ],
+              [
+                197,
+                "0.0"
+              ],
+              [
+                268,
+                "83582.36839698"
+              ],
+              [
+                360,
+                "0.0"
+              ]
+            ]
+          },
+          "finishedAt": "2026-10-04T10:40:09.385323+00:00"
+        },
+        "borrowLendUserState": {
+          "startedAt": "2026-10-04T10:40:09.285671+00:00",
+          "ok": true,
+          "value": {
+            "tokenToState": [
+              [
+                0,
+                {
+                  "borrow": {
+                    "basis": "89371.74189829",
+                    "value": "89371.851068"
+                  },
+                  "supply": {
+                    "basis": "0.0",
+                    "value": "0.0"
+                  }
+                }
+              ],
+              [
+                150,
+                {
+                  "borrow": {
+                    "basis": "0.0",
+                    "value": "0.0"
+                  },
+                  "supply": {
+                    "basis": "1959.34874775",
+                    "value": "1959.34874775"
+                  }
+                }
+              ]
+            ],
+            "health": "healthy",
+            "healthFactor": "1.2900806687"
+          },
+          "finishedAt": "2026-10-04T10:40:09.427784+00:00"
+        },
+        "clearinghouseState": {
+          "startedAt": "2026-10-04T10:40:09.327464+00:00",
+          "ok": true,
+          "value": {
+            "marginSummary": {
+              "accountValue": "35473.443945",
+              "totalNtlPos": "177469.497795",
+              "totalRawUsd": "212942.94174",
+              "totalMarginUsed": "35493.899559"
+            },
+            "crossMarginSummary": {
+              "accountValue": "35473.443945",
+              "totalNtlPos": "177469.497795",
+              "totalRawUsd": "212942.94174",
+              "totalMarginUsed": "35493.899559"
+            },
+            "crossMaintenanceMarginUsed": "8873.474889",
+            "withdrawable": "0.0",
+            "assetPositions": [
+              {
+                "type": "oneWay",
+                "position": {
+                  "coin": "HYPE",
+                  "szi": "-1959.35",
+                  "leverage": {
+                    "type": "cross",
+                    "value": 5
+                  },
+                  "entryPx": "82.2664",
+                  "positionValue": "177469.497795",
+                  "unrealizedPnl": "-16280.660825",
+                  "returnOnEquity": "-0.5050182485",
+                  "liquidationPx": "131.1948498105",
+                  "marginUsed": "35493.899559",
+                  "maxLeverage": 10,
+                  "cumFunding": {
+                    "allTime": "-1407.522139",
+                    "sinceOpen": "-1407.522139",
+                    "sinceChange": "-364.561065"
+                  }
+                }
+              }
+            ],
+            "time": 1791110409194
+          },
+          "finishedAt": "2026-10-04T10:40:09.448837+00:00"
+        }
+      },
+      "core": {
+        "exists": {
+          "startedAt": "2026-10-04T10:40:08.801155+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000810",
+            "input": "0x000000000000000000000000760a4290d854a9dd69dd63bf6cbe9503505a0266",
+            "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+            "decoded": {
+              "exists": true
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.862757+00:00"
+        },
+        "position": {
+          "startedAt": "2026-10-04T10:40:08.835186+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000813",
+            "input": "0x000000000000000000000000760a4290d854a9dd69dd63bf6cbe9503505a0266000000000000000000000000000000000000000000000000000000000000009f",
+            "raw": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd02a100000000000000000000000000000000000000000000000000000025879a766a000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000050000000000000000000000000000000000000000000000000000000000000000",
+            "decoded": {
+              "szi": -195935,
+              "entryNtl": 161188836970,
+              "isolatedRawUsd": 0,
+              "leverage": 5,
+              "isIsolated": false
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.885849+00:00"
+        },
+        "margin": {
+          "startedAt": "2026-10-04T10:40:08.862578+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x000000000000000000000000000000000000080f",
+            "input": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000760a4290d854a9dd69dd63bf6cbe9503505a0266",
+            "raw": "0x000000000000000000000000000000000000000000000000000000084261cc69000000000000000000000000000000000000000000000000000000084399ed27000000000000000000000000000000000000000000000000000000295201a1c30000000000000000000000000000000000000000000000000000003194636e2c",
+            "decoded": {
+              "accountValue": 35473443945,
+              "marginUsed": 35493899559,
+              "ntlPos": 177469497795,
+              "rawUsd": 212942941740
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.918035+00:00"
+        },
+        "spot:150": {
+          "startedAt": "2026-10-04T10:40:08.862771+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000801",
+            "input": "0x000000000000000000000000760a4290d854a9dd69dd63bf6cbe9503505a02660000000000000000000000000000000000000000000000000000000000000096",
+            "raw": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "decoded": {
+              "total": 0,
+              "hold": 0,
+              "entryNtl": 0
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.923567+00:00"
+        },
+        "lending:150": {
+          "startedAt": "2026-10-04T10:40:08.862909+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000811",
+            "input": "0x000000000000000000000000760a4290d854a9dd69dd63bf6cbe9503505a02660000000000000000000000000000000000000000000000000000000000000096",
+            "raw": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002d9ea0ec970000000000000000000000000000000000000000000000000000002d9ea0ec97",
+            "decoded": {
+              "borrowBasis": 0,
+              "borrowValue": 0,
+              "supplyBasis": 195934874775,
+              "supplyValue": 195934874775
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:08.923660+00:00"
+        },
+        "spot:0": {
+          "startedAt": "2026-10-04T10:40:08.885882+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000801",
+            "input": "0x000000000000000000000000760a4290d854a9dd69dd63bf6cbe9503505a02660000000000000000000000000000000000000000000000000000000000000000",
+            "raw": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "decoded": {
+              "total": 0,
+              "hold": 0,
+              "entryNtl": 0
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:09.091819+00:00"
+        },
+        "lending:0": {
+          "startedAt": "2026-10-04T10:40:08.918061+00:00",
+          "ok": true,
+          "value": {
+            "to": "0x0000000000000000000000000000000000000811",
+            "input": "0x000000000000000000000000760a4290d854a9dd69dd63bf6cbe9503505a02660000000000000000000000000000000000000000000000000000000000000000",
+            "raw": "0x00000000000000000000000000000000000000000000000000000820d917c70500000000000000000000000000000000000000000000000000000820d9be4cac00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "decoded": {
+              "borrowBasis": 8937174189829,
+              "borrowValue": 8937185103020,
+              "supplyBasis": 0,
+              "supplyValue": 0
+            }
+          },
+          "finishedAt": "2026-10-04T10:40:09.127184+00:00"
+        }
+      },
+      "unitComparisons": {
+        "spot:150:total": {
+          "raw": 0,
+          "apiBefore": "1959.34874775",
+          "apiAfter": "1959.34874775",
+          "classification": "NoCandidateMatch",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "spot:150:hold": {
+          "raw": 0,
+          "apiBefore": "1519.12764155",
+          "apiAfter": "1519.12764463",
+          "classification": "NoCandidateMatch",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "spot:150:entryNtl": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:150:borrowBasis": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:150:borrowValue": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:150:supplyBasis": {
+          "raw": 195934874775,
+          "apiBefore": "1959.34874775",
+          "apiAfter": "1959.34874775",
+          "classification": "ExactNonzeroMatch",
+          "candidateDecimals": [
+            8
+          ],
+          "provesUnits": false
+        },
+        "lending:150:supplyValue": {
+          "raw": 195934874775,
+          "apiBefore": "1959.34874775",
+          "apiAfter": "1959.34874775",
+          "classification": "ExactNonzeroMatch",
+          "candidateDecimals": [
+            8
+          ],
+          "provesUnits": false
+        },
+        "spot:0:total": {
+          "raw": 0,
+          "apiBefore": "-53898.40694247",
+          "apiAfter": "-53898.40712301",
+          "classification": "NoCandidateMatch",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "spot:0:hold": {
+          "raw": 0,
+          "apiBefore": "-79802.99782646",
+          "apiAfter": "-79802.997826",
+          "classification": "NoCandidateMatch",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "spot:0:entryNtl": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:0:borrowBasis": {
+          "raw": 8937174189829,
+          "apiBefore": "89371.74189829",
+          "apiAfter": "89371.74189829",
+          "classification": "ExactNonzeroMatch",
+          "candidateDecimals": [
+            8
+          ],
+          "provesUnits": false
+        },
+        "lending:0:borrowValue": {
+          "raw": 8937185103020,
+          "apiBefore": "89371.85088747",
+          "apiAfter": "89371.851068",
+          "classification": "BracketCompatibleNotProof",
+          "candidateDecimals": [
+            8
+          ],
+          "provesUnits": false
+        },
+        "lending:0:supplyBasis": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "lending:0:supplyValue": {
+          "raw": 0,
+          "apiBefore": "0.0",
+          "apiAfter": "0.0",
+          "classification": "ZeroHasNoScaleEvidence",
+          "candidateDecimals": [],
+          "provesUnits": false
+        },
+        "margin:accountValue": {
+          "raw": 35473443945,
+          "apiBefore": "35473.443945",
+          "apiAfter": "35473.443945",
+          "classification": "ExactNonzeroMatch",
+          "candidateDecimals": [
+            6
+          ],
+          "provesUnits": false
+        },
+        "margin:marginUsed": {
+          "raw": 35493899559,
+          "apiBefore": "35493.899559",
+          "apiAfter": "35493.899559",
+          "classification": "ExactNonzeroMatch",
+          "candidateDecimals": [
+            6
+          ],
+          "provesUnits": false
+        },
+        "margin:ntlPos": {
+          "raw": 177469497795,
+          "apiBefore": "177469.497795",
+          "apiAfter": "177469.497795",
+          "classification": "ExactNonzeroMatch",
+          "candidateDecimals": [
+            6
+          ],
+          "provesUnits": false
+        },
+        "margin:rawUsd": {
+          "raw": 212942941740,
+          "apiBefore": "212942.94174",
+          "apiAfter": "212942.94174",
+          "classification": "ExactNonzeroMatch",
+          "candidateDecimals": [
+            6
+          ],
+          "provesUnits": false
+        }
+      },
+      "pmObservedInBothApiReads": true
+    }
+  },
+  "reserveInfoBefore": {
+    "reserve:150": {
+      "startedAt": "2026-10-04T10:40:08.094985+00:00",
+      "ok": true,
+      "value": {
+        "borrowYearlyRate": "0.05",
+        "supplyYearlyRate": "0.0",
+        "balance": "13055404.9430776797",
+        "utilization": "0.0",
+        "oraclePx": "90.53",
+        "ltv": "0.65",
+        "totalSupplied": "13055404.9430776797",
+        "totalBorrowed": "0.0"
+      },
+      "finishedAt": "2026-10-04T10:40:08.212389+00:00"
+    },
+    "reserve:0": {
+      "startedAt": "2026-10-04T10:40:08.103825+00:00",
+      "ok": true,
+      "value": {
+        "borrowYearlyRate": "0.05",
+        "supplyYearlyRate": "0.0337819245",
+        "balance": "132650445.8764687777",
+        "utilization": "0.7507094327",
+        "oraclePx": "1.0",
+        "ltv": "0.0",
+        "totalSupplied": "532111526.6827668548",
+        "totalBorrowed": "399461142.3166666627"
+      },
+      "finishedAt": "2026-10-04T10:40:08.188214+00:00"
+    }
+  },
+  "reserveInfoAfter": {
+    "reserve:150": {
+      "startedAt": "2026-10-04T10:40:09.363797+00:00",
+      "ok": true,
+      "value": {
+        "borrowYearlyRate": "0.05",
+        "supplyYearlyRate": "0.0",
+        "balance": "13055404.9430776797",
+        "utilization": "0.0",
+        "oraclePx": "90.53",
+        "ltv": "0.65",
+        "totalSupplied": "13055404.9430776797",
+        "totalBorrowed": "0.0"
+      },
+      "finishedAt": "2026-10-04T10:40:09.436748+00:00"
+    },
+    "reserve:0": {
+      "startedAt": "2026-10-04T10:40:09.385391+00:00",
+      "ok": true,
+      "value": {
+        "borrowYearlyRate": "0.05",
+        "supplyYearlyRate": "0.0337820167",
+        "balance": "132649319.005535081",
+        "utilization": "0.7507114822",
+        "oraclePx": "1.0",
+        "ltv": "0.0",
+        "totalSupplied": "532111381.1181916595",
+        "totalBorrowed": "399462123.6230449677"
+      },
+      "finishedAt": "2026-10-04T10:40:09.461860+00:00"
+    }
+  },
+  "completePinnedReadSet": false
+}

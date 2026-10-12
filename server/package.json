@@ -1,0 +1,24 @@
+{
+  "name": "core-vault-chat",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env --experimental-strip-types src/main.ts",
+    "test": "node --experimental-strip-types --test --test-reporter=spec \"test/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write src test package.json tsconfig.json",
+    "format:check": "prettier --check src test package.json tsconfig.json"
+  },
+  "dependencies": {
+    "viem": "2.57.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "prettier": "3.6.2",
+    "typescript": "~5.9.3"
+  }
+}

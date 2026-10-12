@@ -1,0 +1,570 @@
+{
+  "storage": [
+    {
+      "astId": 1150,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "_balances",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 1156,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "_allowances",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))"
+    },
+    {
+      "astId": 1158,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "_totalSupply",
+      "offset": 0,
+      "slot": "2",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 1160,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "_name",
+      "offset": 0,
+      "slot": "3",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 1162,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "_symbol",
+      "offset": 0,
+      "slot": "4",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 3279,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "_status",
+      "offset": 0,
+      "slot": "5",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 10288,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "performanceFeeBps",
+      "offset": 0,
+      "slot": "6",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 10293,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "accountedCash",
+      "offset": 0,
+      "slot": "7",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 10295,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "reservedClaimAssets",
+      "offset": 0,
+      "slot": "8",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 10297,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "roundingReserve",
+      "offset": 0,
+      "slot": "9",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 10300,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "nextRequestId",
+      "offset": 0,
+      "slot": "10",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 10303,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "nextEpochId",
+      "offset": 0,
+      "slot": "11",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 10308,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "epochs",
+      "offset": 0,
+      "slot": "12",
+      "type": "t_mapping(t_uint256,t_struct(Epoch)10242_storage)"
+    },
+    {
+      "astId": 10313,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "requests",
+      "offset": 0,
+      "slot": "13",
+      "type": "t_mapping(t_uint256,t_struct(Request)10269_storage)"
+    },
+    {
+      "astId": 10317,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "controllerRequest",
+      "offset": 0,
+      "slot": "14",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 10321,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "basisUsdc",
+      "offset": 0,
+      "slot": "15",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 10325,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "lossCarry",
+      "offset": 0,
+      "slot": "16",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 10329,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "feeRemainder",
+      "offset": 0,
+      "slot": "17",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 10331,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "platformRemainder",
+      "offset": 0,
+      "slot": "18",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 10337,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "_operators",
+      "offset": 0,
+      "slot": "19",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_bool))"
+    },
+    {
+      "astId": 10339,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "_escrowing",
+      "offset": 0,
+      "slot": "20",
+      "type": "t_bool"
+    },
+    {
+      "astId": 7724,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "minimumDeposit",
+      "offset": 0,
+      "slot": "21",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 7737,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "phase",
+      "offset": 0,
+      "slot": "22",
+      "type": "t_enum(Phase)7639"
+    },
+    {
+      "astId": 7739,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "coreActivated",
+      "offset": 1,
+      "slot": "22",
+      "type": "t_bool"
+    },
+    {
+      "astId": 7741,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "apiWallet",
+      "offset": 2,
+      "slot": "22",
+      "type": "t_address"
+    },
+    {
+      "astId": 7743,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "activeEpochId",
+      "offset": 0,
+      "slot": "23",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 7745,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "actionNonce",
+      "offset": 0,
+      "slot": "24",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 7747,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "lastConfirmedCoreBlock",
+      "offset": 0,
+      "slot": "25",
+      "type": "t_uint64"
+    },
+    {
+      "astId": 7749,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "managedPrincipal",
+      "offset": 0,
+      "slot": "26",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 7752,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "pendingAction",
+      "offset": 0,
+      "slot": "27",
+      "type": "t_struct(PendingAction)7693_storage"
+    },
+    {
+      "astId": 7756,
+      "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+      "label": "usedAgents",
+      "offset": 0,
+      "slot": "32",
+      "type": "t_mapping(t_address,t_bool)"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_enum(ActionKind)7646": {
+      "encoding": "inplace",
+      "label": "enum ManagedUsdcVault.ActionKind",
+      "numberOfBytes": "1"
+    },
+    "t_enum(Phase)7639": {
+      "encoding": "inplace",
+      "label": "enum ManagedUsdcVault.Phase",
+      "numberOfBytes": "1"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => bool))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_bool)"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => uint256))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_uint256)"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_uint256,t_struct(Epoch)10242_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct ManagedRedeem.Epoch)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Epoch)10242_storage"
+    },
+    "t_mapping(t_uint256,t_struct(Request)10269_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct ManagedRedeem.Request)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Request)10269_storage"
+    },
+    "t_string_storage": {
+      "encoding": "bytes",
+      "label": "string",
+      "numberOfBytes": "32"
+    },
+    "t_struct(Epoch)10242_storage": {
+      "encoding": "inplace",
+      "label": "struct ManagedRedeem.Epoch",
+      "numberOfBytes": "192",
+      "members": [
+        {
+          "astId": 10229,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "requestedShares",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10231,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "unclaimedShares",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10233,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "numerator",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10235,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "denominator",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10237,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "reserve",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10239,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "isSealed",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_bool"
+        },
+        {
+          "astId": 10241,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "settled",
+          "offset": 1,
+          "slot": "5",
+          "type": "t_bool"
+        }
+      ]
+    },
+    "t_struct(PendingAction)7693_storage": {
+      "encoding": "inplace",
+      "label": "struct ManagedUsdcVault.PendingAction",
+      "numberOfBytes": "160",
+      "members": [
+        {
+          "astId": 7681,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "id",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 7683,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "intentHash",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_bytes32"
+        },
+        {
+          "astId": 7685,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "submittedCoreBlock",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 7688,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "kind",
+          "offset": 8,
+          "slot": "2",
+          "type": "t_enum(ActionKind)7646"
+        },
+        {
+          "astId": 7690,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "assets",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 7692,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "agent",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_address"
+        }
+      ]
+    },
+    "t_struct(Request)10269_storage": {
+      "encoding": "inplace",
+      "label": "struct ManagedRedeem.Request",
+      "numberOfBytes": "384",
+      "members": [
+        {
+          "astId": 10244,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "controller",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 10246,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "epoch",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10248,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "shares",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10250,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "basis",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10252,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "consumedShares",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10254,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "paidNet",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10256,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "paidFee",
+          "offset": 0,
+          "slot": "6",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10258,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "paidPlatform",
+          "offset": 0,
+          "slot": "7",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10260,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "gross",
+          "offset": 0,
+          "slot": "8",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10262,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "fee",
+          "offset": 0,
+          "slot": "9",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10264,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "platformFee",
+          "offset": 0,
+          "slot": "10",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 10266,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "priced",
+          "offset": 0,
+          "slot": "11",
+          "type": "t_bool"
+        },
+        {
+          "astId": 10268,
+          "contract": "src/ManagedUsdcVault.sol:ManagedUsdcVault",
+          "label": "feeBps",
+          "offset": 1,
+          "slot": "11",
+          "type": "t_uint16"
+        }
+      ]
+    },
+    "t_uint16": {
+      "encoding": "inplace",
+      "label": "uint16",
+      "numberOfBytes": "2"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint64": {
+      "encoding": "inplace",
+      "label": "uint64",
+      "numberOfBytes": "8"
+    }
+  }
+}

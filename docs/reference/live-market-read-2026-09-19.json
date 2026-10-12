@@ -1,0 +1,37 @@
+{
+  "observedAt": "2026-09-18T22:07:13Z",
+  "scope": "read-only latest-block sample; no CoreWriter execution validated",
+  "mainnet": {
+    "rpc": "https://rpc.hyperliquid.xyz/evm",
+    "evmBlock": 46271487,
+    "baseFeePerGasWei": 100000000,
+    "recallGasCostCoreWeiAtObservedBaseFee": 2000,
+    "perpAsset": 159,
+    "spotIndex": 107,
+    "spotActionAsset": 10107,
+    "perpOracleRaw": 919965,
+    "perpBboRaw": [920320, 920330],
+    "spotPxRaw": 91996000,
+    "spotBboRaw": [91996000, 91997000]
+  },
+  "testnet": {
+    "rpc": "https://rpc.hyperliquid-testnet.xyz/evm",
+    "evmBlock": 64635043,
+    "baseFeePerGasWei": 100000000,
+    "recallGasCostCoreWeiAtObservedBaseFee": 2000,
+    "perpAsset": 135,
+    "spotIndex": 1035,
+    "spotActionAsset": 11035,
+    "perpOracleRaw": 290715,
+    "perpBboRaw": [110000, 700000],
+    "spotPxRaw": 25253000,
+    "spotBboRaw": [25253000, 32890000]
+  },
+  "units": {
+    "hypeSzDecimals": 2,
+    "perpHumanPrice": "raw / 1e4",
+    "spotHumanPrice": "raw / 1e6",
+    "coreWriterOrderPrice": "human * 1e8",
+    "coreWriterOrderSize": "human * 1e8"
+  }
+}

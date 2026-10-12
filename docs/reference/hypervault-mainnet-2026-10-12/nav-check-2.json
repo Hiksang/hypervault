@@ -1,0 +1,19 @@
+{
+ "evmBlock": 48272967,
+ "precompile": {
+  "spotUsdc": "4.17554654",
+  "perpDex0AccountValue": "6.89152",
+  "spotHype": "0.1696208"
+ },
+ "hypeReservePx(API, near-time)": "86.367",
+ "precompileSum": "25.7167061736",
+ "sourceEvaluateUsdc": "25.7194261736",
+ "verifierNavUsdc(incl. EVM cash 0.1)": "25.819426",
+ "api(HTTP, not block-pinned)": {
+  "spotUsdcTotal_unified_incl_margin_hold": "11.06706654",
+  "perpAccountValue": "6.89152",
+  "unrealizedPnl": "-0.01184"
+ },
+ "finding": "Precompile ledgers are disjoint in Unified mode: spot USDC excludes perp margin, perp accountValue includes uPnL; no double count.",
+ "diff_source_minus_precompileSum": "0.0027200000"
+}

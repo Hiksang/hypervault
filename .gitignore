@@ -1,0 +1,32 @@
+# Secrets: never commit. The owner/agent keys live outside the repo (~/.config/hypervault).
+.env
+.env.*
+**/.env
+**/.env.*
+*.key
+*.pem
+
+# Build output and caches
+node_modules/
+out/
+cache/
+dist/
+__pycache__/
+*.pyc
+
+# Foundry broadcasts (deployment logs; dry runs can hold simulation data)
+broadcast/
+
+# Local operator state (ledgers, monitor state, deployment notes, session memory)
+.omc/
+
+# Local AI-tool and editor folders
+.agents/
+.claude/
+.commandcode/
+skills-lock.json
+.vercel/
+.DS_Store
+
+# Brand source exports (the app ships its own copies under frontend/public)
+output/

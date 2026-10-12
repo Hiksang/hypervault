@@ -1,0 +1,103 @@
+{
+  "source": "https://stats-data.hyperliquid.xyz/Mainnet/leaderboard",
+  "observedAt": "2026-09-21T01:47:01.468996+00:00",
+  "selection": "24 evenly spaced leaderboard accounts with reported accountValue between 10000 and 25000000; API is not block pinned",
+  "accounts": [
+    {
+      "account": "0x8c625ff57d8a4374784c7eff585dfdc42ccec974",
+      "abstraction": "disabled"
+    },
+    {
+      "account": "0xab213e43714ce4a5863d155fe805bdb9d9572742",
+      "abstraction": "unifiedAccount"
+    },
+    {
+      "account": "0x7bedd1556856ee82d0c11ea82c4825c7a7b046f3",
+      "abstraction": "unifiedAccount"
+    },
+    {
+      "account": "0x745d8ac047ac7ce524a053bff8ce9acfc07b20a2",
+      "abstraction": "unifiedAccount"
+    },
+    {
+      "account": "0xcf9381f613f160a9a17e936b8de511344fed393a",
+      "abstraction": "unifiedAccount"
+    },
+    {
+      "account": "0xaef3420a9b634fd01eca4cbdbee411aa8caef87e",
+      "abstraction": "unifiedAccount"
+    },
+    {
+      "account": "0x1a9a4932f36b3641f5f63e98f77f8a1f28d85dad",
+      "abstraction": "unifiedAccount"
+    },
+    {
+      "account": "0xe46aae69cf2607b68c03ecdf6d94e776287e73b0",
+      "abstraction": "unifiedAccount"
+    },
+    {
+      "account": "0x8dc34ec570b92888f77adc3edfe74c8e987fb655",
+      "abstraction": "portfolioMargin"
+    },
+    {
+      "account": "0x2068d14ee50772dd6e89c6f64f32adad0cc936ef",
+      "abstraction": "unifiedAccount"
+    },
+    {
+      "account": "0x5ac1aedcd31beeebd7e7ae0073d2bfd63b24c6f4",
+      "abstraction": "unifiedAccount"
+    },
+    {
+      "account": "0x760a4290d854a9dd69dd63bf6cbe9503505a0266",
+      "abstraction": "portfolioMargin"
+    },
+    {
+      "account": "0x9bdf1245ca2427e94634871a67457c7d46d1359f",
+      "abstraction": "unifiedAccount"
+    },
+    {
+      "account": "0x86fd0b493ba15de3ec3bcbf9bcf9322c84338ed0",
+      "abstraction": "unifiedAccount"
+    },
+    {
+      "account": "0xa3bb964ec038a698a440b60ee0684b0223e3f5ec",
+      "abstraction": "portfolioMargin"
+    },
+    {
+      "account": "0x0605a67596b97947af0ce77469bc72019e5175ee",
+      "abstraction": "default"
+    },
+    {
+      "account": "0x2306550badda46f764230a2ea81621f38dc0d182",
+      "abstraction": "portfolioMargin"
+    },
+    {
+      "account": "0x3e81399a05327d8bbb983a304cdd928ead05170b",
+      "abstraction": "default"
+    },
+    {
+      "account": "0x5ae81473cc2a43aed64aecc4efa91dd2fe32ade5",
+      "abstraction": "unifiedAccount"
+    },
+    {
+      "account": "0x75b58aa82407435d7506b5096855c76114e70616",
+      "abstraction": "default"
+    },
+    {
+      "account": "0x90b15e56673becd54f69f614cf6b71262caa9f61",
+      "abstraction": "default"
+    },
+    {
+      "account": "0xacaa2969d2b128cd3bcf4b52829ecfac71f30d3b",
+      "abstraction": "default"
+    },
+    {
+      "account": "0xc78609b13db82f63fcc13f151730fd8d5d357840",
+      "abstraction": "default"
+    },
+    {
+      "account": "0xe2a3e34920050bc56a1ffc9b55a9d75b3b1ad1f2",
+      "abstraction": "default"
+    }
+  ]
+}

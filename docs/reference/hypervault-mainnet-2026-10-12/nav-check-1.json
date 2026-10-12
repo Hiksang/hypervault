@@ -1,0 +1,16 @@
+{
+ "evmBlock": 48270846,
+ "verifierNavUsdc": "11.764561",
+ "navCoreBlock": "1180074820",
+ "sourceCoreValueUsdc": "11.68456106711",
+ "evmCashUsdc": "0.08",
+ "api": {
+  "coreUsdc": "0.40703",
+  "coreHype": "0.12990901",
+  "hypeReserveOraclePx": "86.811",
+  "hypeSpotMid": "86.8675",
+  "coreValueAtReserve": "11.68456106711",
+  "coreValueAtMid": "11.691900926175"
+ },
+ "diffVsReserveUsdc": "0E-11"
+}

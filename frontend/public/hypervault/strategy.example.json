@@ -1,0 +1,20 @@
+{
+  "schema": "hypervault.strategy.v1",
+  "example": true,
+  "generatedAt": "2026-10-12T00:00:00Z",
+  "plans": [
+    {
+      "vault": "HYPE",
+      "mode": "dry-run",
+      "observedAt": "2026-10-12T00:00:00Z",
+      "baseExposure": { "asset": "HYPE", "quantity": "100", "hedged": false },
+      "extraHedge": { "extraSpot": "20", "perpShort": "20", "borrowedUsdc": "800" },
+      "actions": [
+        { "kind": "spot", "market": "HYPE/USDC", "side": "buy", "size": "20", "unit": "HYPE", "reason": "Extra spot funded by PM borrow" },
+        { "kind": "perp", "market": "HYPE", "side": "sell", "size": "20", "unit": "HYPE", "reason": "Short only the extra quantity" }
+      ],
+      "blocked": [],
+      "risk": { "pmLtv": "example" }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "observedAt": "2026-10-11T07:30:11.687256+00:00",
+  "block": "48237883",
+  "readOnly": true,
+  "results": [
+    {
+      "address": "0x192826e470bd65FDC2CB472eDd834D096233049b",
+      "signature": "getAuthorizedOracles()(address[])",
+      "args": [],
+      "returncode": 0,
+      "output": "[0x26fE3019B55F65f454c6b5f8BAEeA1Ed405544c9]",
+      "error": ""
+    },
+    {
+      "address": "0x192826e470bd65FDC2CB472eDd834D096233049b",
+      "signature": "isActiveOracle(address)(bool)",
+      "args": [
+        "0x26fE3019B55F65f454c6b5f8BAEeA1Ed405544c9"
+      ],
+      "returncode": 0,
+      "output": "true",
+      "error": ""
+    },
+    {
+      "address": "0x192826e470bd65FDC2CB472eDd834D096233049b",
+      "signature": "MIN_VALID_ORACLES()(uint256)",
+      "args": [],
+      "returncode": 0,
+      "output": "1",
+      "error": ""
+    },
+    {
+      "address": "0x192826e470bd65FDC2CB472eDd834D096233049b",
+      "signature": "MIN_UPDATE_INTERVAL()(uint256)",
+      "args": [],
+      "returncode": 0,
+      "output": "86400 [8.64e4]",
+      "error": ""
+    },
+    {
+      "address": "0x192826e470bd65FDC2CB472eDd834D096233049b",
+      "signature": "MAX_ORACLE_STALENESS()(uint256)",
+      "args": [],
+      "returncode": 0,
+      "output": "3600",
+      "error": ""
+    },
+    {
+      "address": "0x192826e470bd65FDC2CB472eDd834D096233049b",
+      "signature": "sanityChecker()(address)",
+      "args": [],
+      "returncode": 0,
+      "output": "0x8B641D61f1e8811038bC99ADA1685b261DA2797D",
+      "error": ""
+    },
+    {
+      "address": "0x192826e470bd65FDC2CB472eDd834D096233049b",
+      "signature": "rewardShareTracker()(address)",
+      "args": [],
+      "returncode": 0,
+      "output": "0xE5FbA07C7b3CfbC29633f3D3Ab38b36007F35983",
+      "error": ""
+    },
+    {
+      "address": "0x26fE3019B55F65f454c6b5f8BAEeA1Ed405544c9",
+      "signature": "defaultOracle()(address)",
+      "args": [],
+      "returncode": 0,
+      "output": "0xefbcCc6E33DA1C1ef638cBc0F044968D0f590fED",
+      "error": ""
+    }
+  ]
+}

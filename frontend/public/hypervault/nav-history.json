@@ -1,0 +1,322 @@
+{
+  "schema": "hypervault.navHistory.v1",
+  "vault": "0x6c4556b8068397AD2F3e69205b7C100CAf234883",
+  "contractVersion": "v6",
+  "generatedAt": "2026-10-12T19:43:56Z",
+  "unit": "USDC; price = USDC per whole share",
+  "note": "Monitor and ledger snapshots, not continuous. A point with price null means no shares existed; returns are not measured across such gaps.",
+  "points": [
+    {
+      "t": 1791824135,
+      "nav": 19.486009,
+      "supply": 19.5,
+      "price": 0.999282512857307,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791824210,
+      "nav": 19.48602,
+      "supply": 19.5,
+      "price": 0.9992830769598423,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791824252,
+      "nav": 19.486025,
+      "supply": 19.5,
+      "price": 0.9992833333700856,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791824515,
+      "nav": 19.486153,
+      "supply": 19.5,
+      "price": 0.999289897472313,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791824777,
+      "nav": 19.486166,
+      "supply": 19.5,
+      "price": 0.9992905641389456,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791825042,
+      "nav": 19.486154,
+      "supply": 19.5,
+      "price": 0.9992899487543615,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791825314,
+      "nav": 19.486139,
+      "supply": 19.5,
+      "price": 0.9992891795236318,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791825597,
+      "nav": 19.486167,
+      "supply": 19.5,
+      "price": 0.9992906154209941,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791825867,
+      "nav": 19.48616,
+      "supply": 19.5,
+      "price": 0.9992902564466535,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791826135,
+      "nav": 19.486168,
+      "supply": 19.5,
+      "price": 0.9992906667030427,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791826420,
+      "nav": 19.486159,
+      "supply": 19.5,
+      "price": 0.9992902051646049,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791826694,
+      "nav": 19.486164,
+      "supply": 19.5,
+      "price": 0.9992904615748481,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791826968,
+      "nav": 19.486162,
+      "supply": 19.5,
+      "price": 0.9992903590107507,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791827244,
+      "nav": 19.486149,
+      "supply": 19.5,
+      "price": 0.9992896923441185,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791827541,
+      "nav": 19.486132,
+      "supply": 19.5,
+      "price": 0.9992888205492914,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791827864,
+      "nav": 19.486143,
+      "supply": 19.5,
+      "price": 0.9992893846518265,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791828138,
+      "nav": 19.486279,
+      "supply": 19.5,
+      "price": 0.9992963590104431,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791828418,
+      "nav": 19.486287,
+      "supply": 19.5,
+      "price": 0.9992967692668323,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791828705,
+      "nav": 19.486277,
+      "supply": 19.5,
+      "price": 0.9992962564463459,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791828975,
+      "nav": 19.486292,
+      "supply": 19.5,
+      "price": 0.9992970256770756,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791829253,
+      "nav": 19.486286,
+      "supply": 19.5,
+      "price": 0.9992967179847836,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791829536,
+      "nav": 19.286293,
+      "supply": 19.299658904,
+      "price": 0.999307453910251,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791829816,
+      "nav": 19.286295,
+      "supply": 19.299658904,
+      "price": 0.9993075575390202,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791830095,
+      "nav": 19.2863,
+      "supply": 19.299658904,
+      "price": 0.999307816610943,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791830357,
+      "nav": 19.286294,
+      "supply": 19.299658904,
+      "price": 0.9993075057246357,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791830622,
+      "nav": 19.286297,
+      "supply": 19.299658904,
+      "price": 0.9993076611677892,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791830892,
+      "nav": 19.286311,
+      "supply": 19.299658904,
+      "price": 0.9993083865691729,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791831162,
+      "nav": 19.286298,
+      "supply": 19.299658904,
+      "price": 0.9993077129821738,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791831440,
+      "nav": 19.286297,
+      "supply": 19.299658904,
+      "price": 0.9993076611677892,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791831708,
+      "nav": 39.286418,
+      "supply": 39.313395936,
+      "price": 0.9993137724515662,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791832014,
+      "nav": 39.286421,
+      "supply": 39.313395936,
+      "price": 0.9993138487614308,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791832298,
+      "nav": 39.253915,
+      "supply": 39.313395936,
+      "price": 0.9984870059410833,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791832559,
+      "nav": 39.225732,
+      "supply": 39.313395936,
+      "price": 0.9977701256357289,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791832824,
+      "nav": 39.223977,
+      "supply": 39.313395936,
+      "price": 0.9977254843648955,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791833100,
+      "nav": 39.228063,
+      "supply": 39.313395936,
+      "price": 0.9978294184005794,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791833370,
+      "nav": 49.235149,
+      "supply": 49.333178629,
+      "price": 0.9980129067346315,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791833647,
+      "nav": 49.237931,
+      "supply": 49.333178629,
+      "price": 0.9980692988022201,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791833948,
+      "nav": 49.22234,
+      "supply": 49.333178629,
+      "price": 0.9977532640337895,
+      "phase": "Active",
+      "source": "monitor"
+    },
+    {
+      "t": 1791834236,
+      "nav": 49.220542,
+      "supply": 49.333178629,
+      "price": 0.9977168179742912,
+      "phase": "Active",
+      "source": "monitor"
+    }
+  ]
+}

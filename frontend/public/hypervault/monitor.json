@@ -1,0 +1,215 @@
+{
+  "schema": "hypervault.monitor.v1",
+  "generatedAt": "2026-10-12T19:43:56Z",
+  "lastSuccessAt": "2026-10-12T19:43:56Z",
+  "runId": "run-1791834206",
+  "network": "hyperliquid-mainnet",
+  "vault": "0x6c4556b8068397AD2F3e69205b7C100CAf234883",
+  "rules": [
+    {
+      "id": "nav-ledger",
+      "title": "Verifier NAV vs EVM cash + Core API equity",
+      "unit": "USDC",
+      "threshold": "|diff| <= max(0.50, 0.5%)",
+      "observed": "nav=49.2205 api=49.0904 diff=+0.1301",
+      "status": "ok",
+      "rationale": "Onchain NAV (read precompiles over the registered scope) must match an independent API view; a gap means unregistered holdings, a stale read or a valuation bug.",
+      "action": "Pause deposits (owner) and inspect scope / unregistered holdings before the next allocation."
+    },
+    {
+      "id": "evm-ledger",
+      "title": "EVM USDC balance covers accounted cash + claim reserve",
+      "unit": "USDC",
+      "threshold": "balance >= accountedCash",
+      "observed": "balance=4.923713 accounted=4.923713",
+      "status": "ok",
+      "rationale": "A shortfall means the Vault's books exceed its real ERC-20 balance.",
+      "action": "Stop all owner actions; investigate."
+    },
+    {
+      "id": "unregistered",
+      "title": "Core holdings outside the registered scope",
+      "unit": "USD",
+      "threshold": "warn > 1, alert >= 10",
+      "observed": "{}",
+      "status": "ok",
+      "rationale": "Holdings outside the scope are invisible to NAV and can dilute depositors (scope completeness is owner-trusted).",
+      "action": "Register the venue via source.configure or bring the holding back into scope."
+    },
+    {
+      "id": "abstraction",
+      "title": "Core account abstraction mode",
+      "unit": "mode",
+      "threshold": "== unifiedAccount",
+      "observed": "unifiedAccount",
+      "status": "ok",
+      "rationale": "Margin behaviour and borrowing depend on the mode; PM falls back when ineligible or caps hit.",
+      "action": "If unexpected, stop new expansion; confirm the CoreWriter action and eligibility."
+    },
+    {
+      "id": "borrow",
+      "title": "USDC borrow and borrow APR",
+      "unit": "USDC / APR",
+      "threshold": "APR <= 12%",
+      "observed": "borrowed=29.93890968 usdcBorrowApr=0.05",
+      "status": "ok",
+      "rationale": "Borrow cost above funding makes the carry negative. Borrowing is automatic in PM and manual (borrowLend, API wallet) in Standard/Unified; both are expected paths.",
+      "action": "Stop expansion; reduce the extra leg if borrow APR exceeds funding."
+    },
+    {
+      "id": "blp-health",
+      "title": "Borrow health: borrowed vs supplied collateral",
+      "unit": "ratio",
+      "threshold": "liquidation usage warn >= 0.70, alert >= 0.85 (or health factor < 1.05)",
+      "observed": "usage=0.611 healthFactor=1.289 borrowed=$29.94 collateralDropToLiquidation=38.9%",
+      "status": "ok",
+      "rationale": "Partial liquidation starts when borrowed value exceeds collateral x (1+LTV)/2 (HYPE 82.5%, BTC 75%). Health factor < 100% only stops new borrows. Price falls, interest and withdrawals move it.",
+      "action": "Repay USDC or supply more collateral (API wallet borrowLend); stop new borrows."
+    },
+    {
+      "id": "funding",
+      "title": "Funding on the hedge perp (now, 24h and 7d average)",
+      "unit": "APR",
+      "threshold": "warn: 24h avg < 0 while short; alert: 7d avg < 0 while short",
+      "observed": "now 10.95% \u00b7 24h 8.16% \u00b7 7d 8.15% (short open: True)",
+      "status": "ok",
+      "rationale": "Shorts pay when funding is negative; a negative 7-day average means the carry has inverted, not a blip (HYPE 90d: ~9% of hours negative).",
+      "action": "24h negative: stop adding. 7d negative: unwind the hedge leg (strategy --unwind) or park in USDC."
+    },
+    {
+      "id": "delta",
+      "title": "Hedge delta |spot - short| x mark",
+      "unit": "USD",
+      "threshold": "<= 2",
+      "observed": "56.89 (spot +0.0 / short 0.68)",
+      "status": "alert",
+      "rationale": "Unhedged size is directional exposure the product does not intend.",
+      "action": "Rebalance with the strategy runner (dry-run first)."
+    },
+    {
+      "id": "pending",
+      "title": "Pending Core action age",
+      "unit": "seconds",
+      "threshold": "warn > 300, alert > 1800",
+      "observed": "none",
+      "status": "ok",
+      "rationale": "Core actions are asynchronous; a pending action closes deposits and blocks the next owner action.",
+      "action": "Run sync after a later Core block; for a recall that never arrives, abandonRecall + timeout."
+    },
+    {
+      "id": "gas",
+      "title": "Gas: owner EVM HYPE and Vault Core HYPE (Core->EVM transfer gas)",
+      "unit": "HYPE",
+      "threshold": "owner >= 0.02; vault core >= 0.002",
+      "observed": "owner=0.0297 vaultCore=0.0",
+      "status": "warn",
+      "rationale": "Without gas the owner cannot sync/recall; Core->EVM transfers pay 200k gas in HYPE on Core.",
+      "action": "Top up the owner; keep a HYPE reserve on the Vault's Core spot."
+    },
+    {
+      "id": "margin",
+      "title": "Maintenance margin / collateral (Unified: USDC balance + uPnL)",
+      "unit": "ratio",
+      "threshold": "warn > 0.5, alert > 0.8",
+      "observed": "0.193 (maint 2.844576 / collateral 14.7310)",
+      "status": "ok",
+      "rationale": "Liquidation at 1.0. In Unified mode the perp DEX account value is only the margin assigned to the position; the collateral is the whole USDC balance, so the ratio uses it.",
+      "action": "Reduce the hedge or add USDC margin."
+    },
+    {
+      "id": "price-history",
+      "title": "Latest share-price record age",
+      "unit": "seconds",
+      "threshold": "<= priceWindow/2 (keeper records every priceWindow/8)",
+      "observed": "recorded now (0xfdaa7686df\u2026)",
+      "status": "ok",
+      "rationale": "Deposits and exit settlement require recent price history (half a window).",
+      "action": "Run the keeper (recordPrice is permissionless)."
+    },
+    {
+      "id": "buffer",
+      "title": "Free EVM cash vs target buffer",
+      "unit": "USDC",
+      "threshold": "free >= max(1, 10% NAV, requested-share value)",
+      "observed": "free=4.923713 target=4.922048",
+      "status": "ok",
+      "rationale": "Free cash is the only liquidity outside Core; the vault does not enforce a buffer (owner policy).",
+      "action": "Allocate less, or recall to restore the buffer before more requests arrive."
+    },
+    {
+      "id": "redeem-sla",
+      "title": "Oldest unsettled redeem request in the open epoch",
+      "unit": "hours",
+      "threshold": "warn > 24, alert > 72",
+      "observed": "no waiting request",
+      "status": "ok",
+      "rationale": "Active redemptions are paid only after the owner exits; the published commitment is settlement within 72 hours of a request.",
+      "action": "Owner: beginExit, unwind, recall and settle the epoch."
+    },
+    {
+      "id": "withdrawals",
+      "title": "Redeem queue: reserved claims covered by cash",
+      "unit": "USDC",
+      "threshold": "reserved <= EVM balance",
+      "observed": "reserved=0.0",
+      "status": "ok",
+      "rationale": "Settled claims must be payable from EVM cash.",
+      "action": "Owner must recall before claims can be paid."
+    }
+  ],
+  "errors": [],
+  "facts": {
+    "phase": "Active",
+    "availableCash": 4923713,
+    "reserved": 0,
+    "evmUsdc": 4923713,
+    "accountedCash": 4923713,
+    "pendingId": 0,
+    "pendingKind": "None",
+    "apiWallet": "0xc404051969963FAd364A7eC761e16fF98d61D8aA",
+    "navUsdc": "49.220484",
+    "apiEquityUsdc": "49.09038795057041",
+    "navCoreBlock": "1181446447",
+    "registeredTokens": [
+      0,
+      150
+    ],
+    "abstraction": "unifiedAccount",
+    "blpHealth": {
+      "borrowedUsd": "29.938909680",
+      "borrowCapacityUsd": "38.5934741598707665",
+      "liquidationCapacityUsd": "48.98402489522058825",
+      "healthFactor": "1.289074137046889494474068636",
+      "liquidationUsage": "0.6111974208742729129001442107",
+      "dropToLiquidation": "0.3888025791257270870998557893"
+    },
+    "funding": {
+      "nowApr": "0.1095000",
+      "avg24hApr": "0.08156717050000000000000000000",
+      "avg7dApr": "0.08150199714285714285714285712"
+    },
+    "lastPriceRecordAge": 281,
+    "priceWindow": 600,
+    "keeper": {
+      "recordPrice": "0xfdaa7686dfa931948dbb7526088ec24cb6fbdf63d71d698621d25ebd51b84e73",
+      "evmBlock": 48370518
+    }
+  },
+  "ai": {
+    "generatedAt": "2026-10-12T19:39:08Z",
+    "inputDigest": "sha256:cca1c7f98c4184fcaa1a50a09db909aadfaf4a1434485b8a8010d4072d64e14e",
+    "model": "claude-haiku-5-5",
+    "status": "ok",
+    "summary": "13 of 15 rules are ok, no rule is unobservable, and NAV reconciles within tolerance (nav-ledger diff +0.1538 USDC). Two rules need attention: delta is in alert (hedge |spot - short| x mark = 56.92 USD against a limit of 2, with spot +0.0 and short 0.68), and gas is in warn (Vault Core HYPE 0.0 against a minimum of 0.002).",
+    "causes": [
+      "delta: the perp short (0.68) has no matching spot leg (0.0), so the hedge is one-sided. Likely the spot position was reduced or never fully established while the short remained, and no rebalance has run since.",
+      "gas: Vault Core HYPE is 0.0, below the 0.002 minimum, so no HYPE reserve is held on the Vault's Core spot balance. Core->EVM transfers need that HYPE for gas. The owner EVM balance (0.0297) is above its 0.02 floor, so the gap is the Core-side reserve, not the owner wallet."
+    ],
+    "impact": "Depositors carry directional exposure on the unhedged ~56.92 USD, which the product does not intend. Accounting still reconciles, but with no HYPE on Core the owner may be unable to complete Core->EVM transfers or recalls until the reserve is topped up.",
+    "responseCandidates": [
+      "delta: run the strategy rebalance in dry-run first, then apply it to bring spot and short back in line.",
+      "gas: top up the Vault's Core spot with HYPE to at least 0.002 and keep a standing reserve.",
+      "gas: keep the owner EVM HYPE at or above 0.02 (currently 0.0297 and passing)."
+    ]
+  }
+}

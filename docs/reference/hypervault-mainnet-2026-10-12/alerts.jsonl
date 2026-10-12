@@ -1,0 +1,5 @@
+{"at": "2026-10-11T16:22:13Z", "rule": "abstraction", "status": "alert", "observed": "default"}
+{"at": "2026-10-11T16:30:44Z", "rule": "delta", "status": "alert", "observed": "11.29 (spot +0.12990901 / short 0)"}
+{"at": "2026-10-11T16:33:35Z", "rule": "nav-ledger", "status": "alert", "observed": "nav=10.9132 api=11.7748 diff=-0.8615"}
+{"at": "2026-10-11T17:04:38Z", "rule": "margin", "status": "alert", "observed": "1.002"}
+{"at": "2026-10-11T18:04:36Z", "rule": "nav-ledger", "status": "alert", "observed": "nav=24.9812 api=25.8149 diff=-0.8338"}

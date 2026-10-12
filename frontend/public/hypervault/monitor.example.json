@@ -1,0 +1,52 @@
+{
+  "schema": "hypervault.monitor.v1",
+  "example": true,
+  "generatedAt": "2026-10-12T00:00:00Z",
+  "lastSuccessAt": "2026-10-12T00:00:00Z",
+  "runId": "example-run",
+  "network": "local",
+  "vault": "0x0000000000000000000000000000000000000000",
+  "rules": [
+    {
+      "id": "nav-readable",
+      "title": "NAV readable from precompiles",
+      "unit": "bool",
+      "threshold": "true",
+      "observed": "true",
+      "status": "ok",
+      "rationale": "Deposits and settlement need a priced NAV.",
+      "action": "None"
+    },
+    {
+      "id": "pm-ltv",
+      "title": "Portfolio Margin borrow / collateral",
+      "unit": "%",
+      "threshold": "<= 40",
+      "observed": "42",
+      "status": "warn",
+      "rationale": "Example threshold, not a launch parameter.",
+      "action": "Notify the owner to reduce the extra spot and its hedge"
+    },
+    {
+      "id": "funding",
+      "title": "Perp funding paid by the short",
+      "unit": "%/8h",
+      "threshold": "< 0",
+      "observed": null,
+      "status": "unobservable",
+      "rationale": "Funding history was not readable in this run.",
+      "action": "Retry next run"
+    }
+  ],
+  "errors": [],
+  "ai": {
+    "status": "ok",
+    "model": "example-model",
+    "generatedAt": "2026-10-12T00:00:00Z",
+    "inputDigest": "sha256:example",
+    "summary": "Example summary text.",
+    "causes": ["Example cause"],
+    "impact": "Example impact.",
+    "responseCandidates": ["Example response the owner may consider"]
+  }
+}

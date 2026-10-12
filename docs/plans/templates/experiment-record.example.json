@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "planning-example-1",
+  "status": "NOT_RUN",
+  "experimentId": null,
+  "requirementIds": [],
+  "backlogIds": [],
+  "hypothesis": null,
+  "expectedObservation": null,
+  "environment": {
+    "kind": null,
+    "network": null,
+    "chainId": null,
+    "account": null,
+    "projectControlConfirmed": false,
+    "deploymentManifestHash": null
+  },
+  "scope": {
+    "tokens": [],
+    "markets": [],
+    "dexes": [],
+    "excludedOrUnknownScope": []
+  },
+  "before": {
+    "evmBlockNumber": null,
+    "evmBlockHash": null,
+    "coreBlock": null,
+    "observedAtUtc": null,
+    "rawPath": null,
+    "sha256": null,
+    "readErrors": []
+  },
+  "intent": {
+    "cycleId": null,
+    "actionId": null,
+    "cloid": null,
+    "payloadHash": null,
+    "transactionHashes": [],
+    "operation": null,
+    "amountBaseUnits": null,
+    "unitDescriptor": null,
+    "uncontrolledExternalChanges": []
+  },
+  "after": {
+    "evmBlockNumber": null,
+    "evmBlockHash": null,
+    "coreBlock": null,
+    "observedAtUtc": null,
+    "rawPath": null,
+    "sha256": null,
+    "headerRechecked": false,
+    "readErrors": []
+  },
+  "httpDiagnostics": {
+    "blockPinned": false,
+    "observations": []
+  },
+  "reconciliation": {
+    "ledgerPath": null,
+    "unexplainedDifferences": [],
+    "differencesReviewed": false,
+    "actionFinalityEvidence": null,
+    "actualClaimReceivedBaseUnits": null
+  },
+  "conclusion": {
+    "result": "NOT_RUN",
+    "established": [],
+    "notEstablished": [],
+    "limitations": [],
+    "retestRequired": true
+  },
+  "productionNavReady": false,
+  "activeDepositsAuthorized": false
+}

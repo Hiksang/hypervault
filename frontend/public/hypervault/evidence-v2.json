@@ -1,0 +1,3929 @@
+{
+  "schema": "hypervault.evidence.v1",
+  "contractVersion": "v2",
+  "network": "hyperliquid-mainnet",
+  "chainId": 999,
+  "generatedAt": "2026-10-12T00:53:56Z",
+  "vault": {
+    "name": "HyperVault USDC v2 (prototype)",
+    "share": "0xfe226ffa798dbce825b0f2aafe5218e0e134c065",
+    "accountant": "0x92221ddeba71ba16b08710e8b4c6e11238362a1b",
+    "asset": "USDC",
+    "address": "0x4Dd7a7ECB3Bc91792b83e0Ee5fFb5b0E7fF9C58B",
+    "controller": "0xc6caa4b5482f04000c33fa2920a2387edac93fac",
+    "implementation": "0x44B7464749AEfC58AA353031275aD2c1C1C0d5ed",
+    "implementationCodehash": "0x06e6e1f26b3f2c059cfe5ae98e3376c6fd3aaa344dace7d7b0f51de1d2868310",
+    "configHash": "0x76cc79466b621d6cb8b5caba6600e2ccfc98cebb595379de8525142f16dd0e6f",
+    "source": "0xf4094199a3a9556c0719e5ab75fdc6fa4f590dc1",
+    "bridge": "0x75798f2797e887be93f2d430e8a4a850ffa610b2",
+    "verifier": "0x72abc2bc36231e413974be2ee65bcd59afed5b5c"
+  },
+  "steps": [
+    {
+      "id": "deploy-vault",
+      "title": "Deploy share token, accountant, upgrade controller, HyperVault implementation, proxy; bind",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0x802520901b3555568a48b4c78b8bea802c8c1bdf14aafe1d38212c9cdafa7f29",
+      "evmBlock": 48299157,
+      "note": "[\"0xe0bb5f961d5690f0f3360b9568e08fe460ce1208ff8b4fc5c0a7180aee87c7fa\", \"0x6551fd6651cf73db7939e18f5b782f78f71beb9801d74d7c0f06f342197ea3aa\", \"0xa6391ebf418876af4e1c2c7191f25e1eb4e2418e6e10d55f5a8aa1fb2784972d\", \"0x91681bcefa2865bbd3f6d28ad0a59bbe1f761941ef298129e83bd0283e989a1c\", \"0x10e8aea5ece2eb88d38380a9328be3d4a59097120eab85f0c86c23c448059866\", \"0xc286809c341164608eec7a68614e10bd7d674cb4507569dcecb1a1b6ea4cb2ea\", \"0x802520901b3555568a48b4c78b8bea802c8c1bdf14aafe1d38212c9cdafa7f29\"]",
+      "observedAt": "2026-10-12T00:14:10Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "after": {
+        "observedAt": "2026-10-12T00:14:01Z",
+        "evmBlock": 48299158,
+        "vault.phaseName": "Uninitialized",
+        "vault.availableCash": "0",
+        "vault.accountedCash": "0",
+        "vault.totalSupply": "0",
+        "vault.evmUsdc": 0,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "0",
+        "vault.verifierNav": "BLOCKED: cast call failed: Error: server returned an error response: error code 3: execution reverted, data: \"0x271a26f1\"",
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "0",
+          "rate": "0",
+          "updatedAt": "0"
+        },
+        "core.spot": {},
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 25302423,
+        "owner.shares": "0",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      }
+    },
+    {
+      "id": "verify-deployment",
+      "title": "Verify addresses, codehash, config hash and controller bind",
+      "status": "done",
+      "layer": "evm",
+      "observedAt": "2026-10-12T00:14:25Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "after": {
+        "observedAt": null,
+        "evmBlock": null
+      }
+    },
+    {
+      "id": "bootstrap",
+      "title": "Owner bootstrap: seed principal, founder shares, Core activation request",
+      "status": "done",
+      "layer": "both",
+      "txHash": "0xeeefd7706eb42346e59716021bcc7e623d3189b8abff8250f6b8552bdc4d25f6",
+      "evmBlock": 48299207,
+      "note": "approve tx 0x3d5bdf8b9bebb9353f24ec55ccb37e432a3deac7f398ada5bba170374f6fc809; activation is asynchronous (AwaitingActivation)",
+      "observedAt": "2026-10-12T00:15:07Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:14:37Z",
+        "evmBlock": 48299193,
+        "vault.phaseName": "Uninitialized",
+        "vault.availableCash": "0",
+        "vault.accountedCash": "0",
+        "vault.totalSupply": "0",
+        "vault.evmUsdc": 0,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "0",
+        "vault.verifierNav": "BLOCKED: cast call failed: Error: server returned an error response: error code 3: execution reverted, data: \"0x271a26f1\"",
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "0",
+          "rate": "0",
+          "updatedAt": "0"
+        },
+        "core.spot": {},
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 25302423,
+        "owner.shares": "0",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:14:56Z",
+        "evmBlock": 48299213,
+        "vault.phaseName": "AwaitingActivation",
+        "vault.availableCash": "12000000",
+        "vault.accountedCash": "12000000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 12000000,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "1",
+          "submittedCoreBlock": "1180464793",
+          "kind": "Control",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": "BLOCKED: cast call failed: Error: server returned an error response: error code 3: execution reverted, data: \"0x271a26f1\"",
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764090"
+        },
+        "core.spot": {
+          "USDC": "0.0"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 12302423,
+        "owner.shares": "12000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      }
+    },
+    {
+      "id": "finalize-activation",
+      "title": "Confirm Core activation in a later Core block",
+      "status": "done",
+      "layer": "both",
+      "txHash": "0x4e9e7f3b529db0d588b2709b3177aec8952f1c72e227f034094bcbbc5357a337",
+      "evmBlock": 48299264,
+      "observedAt": "2026-10-12T00:16:07Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:15:35Z",
+        "evmBlock": 48299252,
+        "vault.phaseName": "AwaitingActivation",
+        "vault.availableCash": "12000000",
+        "vault.accountedCash": "12000000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 12000000,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "1",
+          "submittedCoreBlock": "1180464793",
+          "kind": "Control",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": "BLOCKED: cast call failed: Error: server returned an error response: error code 3: execution reverted, data: \"0x271a26f1\"",
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764090"
+        },
+        "core.spot": {
+          "USDC": "0.0"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 12302423,
+        "owner.shares": "12000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:15:49Z",
+        "evmBlock": 48299267,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "12000000",
+        "vault.accountedCash": "12000000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 12000000,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": "BLOCKED: cast call failed: Error: server returned an error response: error code 3: execution reverted, data: \"0x271a26f1\"",
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764090"
+        },
+        "core.spot": {
+          "USDC": "0.0"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 12302423,
+        "owner.shares": "12000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180465601
+    },
+    {
+      "id": "configure-scope",
+      "title": "Register valuation scope: USDC, perp DEX 0",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0xce79d81f0d53554cde422f81c27da6f82997c926c33be374216d181522262cbb",
+      "evmBlock": 48299297,
+      "observedAt": "2026-10-12T00:16:28Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:16:07Z",
+        "evmBlock": 48299286,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "12000000",
+        "vault.accountedCash": "12000000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 12000000,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": "BLOCKED: cast call failed: Error: server returned an error response: error code 3: execution reverted, data: \"0x271a26f1\"",
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764090"
+        },
+        "core.spot": {
+          "USDC": "0.0"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 12302423,
+        "owner.shares": "12000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:16:18Z",
+        "evmBlock": 48299297,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "12000000",
+        "vault.accountedCash": "12000000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 12000000,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12000000",
+          "coreBlock": "1180466184"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764090"
+        },
+        "core.spot": {
+          "USDC": "0.0"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 12302423,
+        "owner.shares": "12000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180465601
+    },
+    {
+      "id": "share-transfer",
+      "title": "owner transfers 3000000000 hvUSDC shares to demo-user (ERC-20)",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0xfb78752803cfdd0317f9574f2d5baee1fa6b69fe78ab40a357e11c5257a2ad36",
+      "evmBlock": 48299345,
+      "observedAt": "2026-10-12T00:17:17Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:16:54Z",
+        "evmBlock": 48299332,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "12000000",
+        "vault.accountedCash": "12000000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 12000000,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12000000",
+          "coreBlock": "1180466623"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764090"
+        },
+        "core.spot": {
+          "USDC": "0.0"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 12302423,
+        "owner.shares": "12000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:17:07Z",
+        "evmBlock": 48299347,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "12000000",
+        "vault.accountedCash": "12000000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 12000000,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12000000",
+          "coreBlock": "1180466792"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764090"
+        },
+        "core.spot": {
+          "USDC": "0.0"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 12302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180465601
+    },
+    {
+      "id": "allocate-to-core",
+      "title": "Owner executes queued Core allocation of 10.8 USDC",
+      "status": "pending",
+      "layer": "both",
+      "txHash": "0x9967fc6326e4ae34291f766dfb83f2351078cb4ada19b4d036a22c2c84630815",
+      "evmBlock": 48299374,
+      "note": "EVM->Core via Circle CoreDepositWallet.deposit",
+      "observedAt": "2026-10-12T00:17:47Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:17:22Z",
+        "evmBlock": 48299362,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "12000000",
+        "vault.accountedCash": "12000000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 12000000,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12000000",
+          "coreBlock": "1180467023"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764090"
+        },
+        "core.spot": {
+          "USDC": "0.0"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 12302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:17:38Z",
+        "evmBlock": 48299377,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "2",
+          "submittedCoreBlock": "1180467062",
+          "kind": "Deposit",
+          "assets": "10800000",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12000000",
+          "coreBlock": "1180467244"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764090"
+        },
+        "core.spot": {
+          "USDC": "10.8"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 12302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180465601
+    },
+    {
+      "id": "sync-deposit-2",
+      "title": "Confirm pending Deposit action #2 from a later Core block",
+      "status": "done",
+      "layer": "both",
+      "txHash": "0x000994388310708169fd991290414abbe207f586301dd0d6ca462398f6b49fda",
+      "evmBlock": 48299414,
+      "observedAt": "2026-10-12T00:18:28Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:18:02Z",
+        "evmBlock": 48299402,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "2",
+          "submittedCoreBlock": "1180467062",
+          "kind": "Deposit",
+          "assets": "10800000",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12000000",
+          "coreBlock": "1180467569"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764090"
+        },
+        "core.spot": {
+          "USDC": "10.8"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 12302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:18:17Z",
+        "evmBlock": 48299417,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12000000",
+          "coreBlock": "1180467799"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764090"
+        },
+        "core.spot": {
+          "USDC": "10.8"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 12302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180467607
+    },
+    {
+      "id": "checkpoint-baseline",
+      "title": "Checkpoint: crystallize HWM fee and refresh the rate (anyone)",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0x36c91ed7dfd8245d2d4e75353977975a735ac751f8c4ac608eb41f419be271c8",
+      "evmBlock": 48299876,
+      "observedAt": "2026-10-12T00:26:07Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:25:29Z",
+        "evmBlock": 48299857,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12000000",
+          "coreBlock": "1180473969"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764090"
+        },
+        "core.spot": {
+          "USDC": "10.8"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 10000000,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:25:52Z",
+        "evmBlock": 48299880,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12000000",
+          "coreBlock": "1180474275"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764748"
+        },
+        "core.spot": {
+          "USDC": "10.8"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 10000000,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180467607
+    },
+    {
+      "id": "synthetic-profit-donation",
+      "title": "SYNTHETIC PROFIT for the fee demo: owner sends 0.5 USDC on Core to the Vault's Core account (+0.002 HYPE recall gas, outside the USDC scope)",
+      "status": "failed",
+      "layer": "core",
+      "note": "{\"usdcSpotSend\": {\"status\": \"err\", \"response\": \"Action disabled when unified account is active\"}, \"hypeSpotSend\": {\"status\": \"err\", \"response\": \"Action disabled when unified account is active\"}, \"why\": \"Not trading profit. A Core-side transfer raises NAV so the HWM fee can be shown live.\"}",
+      "observedAt": "2026-10-12T00:27:06Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:26:30Z",
+        "evmBlock": 48299919,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12000000",
+          "coreBlock": "1180474814"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764748"
+        },
+        "core.spot": {
+          "USDC": "10.8"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 10000000,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:26:51Z",
+        "evmBlock": 48299940,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12000000",
+          "coreBlock": "1180475081"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764748"
+        },
+        "core.spot": {
+          "USDC": "10.8"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 10000000,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180467607
+    },
+    {
+      "id": "synthetic-profit-donation-2",
+      "title": "SYNTHETIC PROFIT for the fee demo (sendAsset): owner sends 0.5 USDC on Core to the Vault's Core account (+0.002 HYPE recall gas, outside the USDC scope)",
+      "status": "done",
+      "layer": "core",
+      "note": "{\"usdcSendAsset\": {\"status\": \"ok\", \"response\": {\"type\": \"default\"}}, \"hypeSendAsset\": {\"status\": \"ok\", \"response\": {\"type\": \"default\"}}, \"why\": \"Not trading profit. A Core-side transfer raises NAV so the HWM fee can be shown live. spotSend was refused for the owner's Unified account.\"}",
+      "observedAt": "2026-10-12T00:27:50Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:27:13Z",
+        "evmBlock": 48299963,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12000000",
+          "coreBlock": "1180475400"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764748"
+        },
+        "core.spot": {
+          "USDC": "10.8"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 10000000,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:27:35Z",
+        "evmBlock": 48299985,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12500000",
+          "coreBlock": "1180475708"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764748"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 10000000,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180467607
+    },
+    {
+      "id": "checkpoint-right-after-rise",
+      "title": "Checkpoint: crystallize HWM fee and refresh the rate (anyone)",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0x81f6dd23af98b26f4388fd8a655cf1300dd7753f2edabb4e434292d386edc99b",
+      "evmBlock": 48300026,
+      "observedAt": "2026-10-12T00:28:34Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:27:58Z",
+        "evmBlock": 48300008,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12500000",
+          "coreBlock": "1180476011"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764748"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 10000000,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:28:19Z",
+        "evmBlock": 48300030,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12500000",
+          "coreBlock": "1180476320"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764895"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 10000000,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180467607
+    },
+    {
+      "id": "spike-guard-observed",
+      "title": "Right after the +0.5 USDC rise: deposits closed (maxDeposit 0), fee 0, rate held at the window low 1.000",
+      "status": "done",
+      "layer": "evm",
+      "note": "{\"liveNav\":\"12.5 USDC (Core valuation)\",\"windowLow\":\"1.000e27 (records before the rise)\",\"quote\":{\"feeShares\":0,\"price\":\"1.000e27\"},\"maxDepositDemoUser\":0,\"checkpointTx\":\"0x81f6dd23af98b26f4388fd8a655cf1300dd7753f2edabb4e434292d386edc99b\"}",
+      "observedAt": "2026-10-12T00:29:13Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "after": {
+        "observedAt": "2026-10-12T00:28:58Z",
+        "evmBlock": 48300069,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12500000",
+          "coreBlock": "1180476840"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764895"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 10000000,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180467607
+    },
+    {
+      "id": "checkpoint-fee-crystallized",
+      "title": "Checkpoint: crystallize HWM fee and refresh the rate (anyone)",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0x9a34dcf9172fb8b1e6a1074f0206c2a95db45f4771fd76cdb370853f97115a67",
+      "evmBlock": 48300782,
+      "observedAt": "2026-10-12T00:40:56Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:40:22Z",
+        "evmBlock": 48300765,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12000000000",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12000000",
+        "vault.verifierNav": {
+          "assets": "12500000",
+          "coreBlock": "1180486450"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1000000000000000000000000000",
+          "rate": "1000000000000000000000000000",
+          "updatedAt": "1791764895"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9000000000",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 10000000,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:40:42Z",
+        "evmBlock": 48300785,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12048191803",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12499999",
+        "vault.verifierNav": {
+          "assets": "12500000",
+          "coreBlock": "1180486704"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080251662287413346600",
+          "updatedAt": "1791765639"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 10000000,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180467607
+    },
+    {
+      "id": "deposit-demo-user-active",
+      "title": "demo-user deposits 10.0 USDC (Active); shares minted at the verified price",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0x43b3564e006ab4ad2555eb4a8c0848c39cd9ec55bd33acc280cd0c507f39188c",
+      "evmBlock": 48300886,
+      "note": "{\"pricedAt\": {\"totalAssets\": \"12499999\", \"totalSupply\": \"12048191803\", \"previewDeposit\": \"9638553471\", \"phase\": \"Active\"}}",
+      "observedAt": "2026-10-12T00:42:36Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:41:51Z",
+        "evmBlock": 48300855,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "1200000",
+        "vault.accountedCash": "1200000",
+        "vault.totalSupply": "12048191803",
+        "vault.evmUsdc": 1200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "12499999",
+        "vault.verifierNav": {
+          "assets": "12500000",
+          "coreBlock": "1180487686"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080251662287413346600",
+          "updatedAt": "1791765639"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 10000000,
+        "demo-user.shares": "3000000000",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:42:21Z",
+        "evmBlock": 48300886,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "11200000",
+        "vault.accountedCash": "11200000",
+        "vault.totalSupply": "21686745274",
+        "vault.evmUsdc": 11200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "22499999",
+        "vault.verifierNav": {
+          "assets": "22500000",
+          "coreBlock": "1180488095"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080251662287413346600",
+          "updatedAt": "1791765741"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "12638553471",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180467607
+    },
+    {
+      "id": "request-redeem-demo-user",
+      "title": "demo-user requests redeem of all shares (12638553471)",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0x52345a4bd7542bcaa158401ad8d3ea712d324f9871a54f731b17064730abcc44",
+      "evmBlock": 48300944,
+      "observedAt": "2026-10-12T00:43:36Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:43:01Z",
+        "evmBlock": 48300927,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "11200000",
+        "vault.accountedCash": "11200000",
+        "vault.totalSupply": "21686745274",
+        "vault.evmUsdc": 11200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "22499999",
+        "vault.verifierNav": {
+          "assets": "22500000",
+          "coreBlock": "1180488644"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080251662287413346600",
+          "updatedAt": "1791765741"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "12638553471",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:43:22Z",
+        "evmBlock": 48300948,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "11200000",
+        "vault.accountedCash": "11200000",
+        "vault.totalSupply": "21686745274",
+        "vault.evmUsdc": 11200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "22499999",
+        "vault.verifierNav": {
+          "assets": "22500000",
+          "coreBlock": "1180488924"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080251662287413346600",
+          "updatedAt": "1791765741"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "1"
+      },
+      "coreBlock": 1180467607
+    },
+    {
+      "id": "begin-exit",
+      "title": "Owner seals epoch 1 and begins exit",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0xa6608fe666e8b95aa7359cf5593e512a56d1f87bf338d789d5f79f017a9add4b",
+      "evmBlock": 48300981,
+      "observedAt": "2026-10-12T00:44:14Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:43:39Z",
+        "evmBlock": 48300965,
+        "vault.phaseName": "Active",
+        "vault.availableCash": "11200000",
+        "vault.accountedCash": "11200000",
+        "vault.totalSupply": "21686745274",
+        "vault.evmUsdc": 11200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "22499999",
+        "vault.verifierNav": {
+          "assets": "22500000",
+          "coreBlock": "1180489167"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080251662287413346600",
+          "updatedAt": "1791765741"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "1"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:43:59Z",
+        "evmBlock": 48300985,
+        "vault.phaseName": "Exiting",
+        "vault.availableCash": "11200000",
+        "vault.accountedCash": "11200000",
+        "vault.totalSupply": "21686745274",
+        "vault.evmUsdc": 11200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "22499999",
+        "vault.verifierNav": {
+          "assets": "22500000",
+          "coreBlock": "1180489442"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080251662287413346600",
+          "updatedAt": "1791765741"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "1"
+      },
+      "coreBlock": 1180467607
+    },
+    {
+      "id": "recall-from-core",
+      "title": "CoreWriter sendAsset: recall 11.3 USDC Core->EVM",
+      "status": "pending",
+      "layer": "both",
+      "txHash": "0x8657ff511fe5d0fd7f4e1ea786564b384d5d73ad7db29b67bd445d49a2dbd7a1",
+      "evmBlock": 48301036,
+      "observedAt": "2026-10-12T00:45:08Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:44:32Z",
+        "evmBlock": 48301019,
+        "vault.phaseName": "Exiting",
+        "vault.availableCash": "11200000",
+        "vault.accountedCash": "11200000",
+        "vault.totalSupply": "21686745274",
+        "vault.evmUsdc": 11200000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "22499999",
+        "vault.verifierNav": {
+          "assets": "22500000",
+          "coreBlock": "1180489907"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080251662287413346600",
+          "updatedAt": "1791765741"
+        },
+        "core.spot": {
+          "USDC": "11.3",
+          "HYPE": "0.002"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "1"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:44:53Z",
+        "evmBlock": 48301040,
+        "vault.phaseName": "Exiting",
+        "vault.availableCash": "11200000",
+        "vault.accountedCash": "11200000",
+        "vault.totalSupply": "21686745274",
+        "vault.evmUsdc": 22500000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "3",
+          "submittedCoreBlock": "1180489945",
+          "kind": "Recall",
+          "assets": "11300000",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "22499999",
+        "vault.verifierNav": {
+          "assets": "11200000",
+          "coreBlock": "1180490183"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080251662287413346600",
+          "updatedAt": "1791765741"
+        },
+        "core.spot": {
+          "USDC": "0.0",
+          "HYPE": "0.00196318"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "1"
+      },
+      "coreBlock": 1180467607
+    },
+    {
+      "id": "sync-recall-3",
+      "title": "Confirm pending Recall action #3 from a later Core block",
+      "status": "done",
+      "layer": "both",
+      "txHash": "0xa13d262ff0ea1ca0312992376c52d5a3aa18c466b6420d2221e35aab5e14d329",
+      "evmBlock": 48301096,
+      "observedAt": "2026-10-12T00:46:09Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:45:26Z",
+        "evmBlock": 48301074,
+        "vault.phaseName": "Exiting",
+        "vault.availableCash": "11200000",
+        "vault.accountedCash": "11200000",
+        "vault.totalSupply": "21686745274",
+        "vault.evmUsdc": 22500000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "3",
+          "submittedCoreBlock": "1180489945",
+          "kind": "Recall",
+          "assets": "11300000",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "22499999",
+        "vault.verifierNav": {
+          "assets": "11200000",
+          "coreBlock": "1180490714"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080251662287413346600",
+          "updatedAt": "1791765741"
+        },
+        "core.spot": {
+          "USDC": "0.0",
+          "HYPE": "0.00196318"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "1"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:45:52Z",
+        "evmBlock": 48301100,
+        "vault.phaseName": "Exiting",
+        "vault.availableCash": "22500000",
+        "vault.accountedCash": "22500000",
+        "vault.totalSupply": "21686745274",
+        "vault.evmUsdc": 22500000,
+        "vault.managedPrincipal": "10800000",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "22499999",
+        "vault.verifierNav": {
+          "assets": "22500000",
+          "coreBlock": "1180491035"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080251662287413346600",
+          "updatedAt": "1791765741"
+        },
+        "core.spot": {
+          "USDC": "0.0",
+          "HYPE": "0.00196318"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "1"
+      },
+      "coreBlock": 1180490769
+    },
+    {
+      "id": "settle-epoch",
+      "title": "Settle the epoch at EVM cash after flat-Core verification (fee checked at cash: price = mark, no fee)",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0x1a3e28194060805d73312ef55847994b94e79e8d0ff68c7ee66fdedf95481c19",
+      "evmBlock": 48301157,
+      "note": "{\"EpochSettled\": {\"shares\": 12638553471, \"grossAssets\": 13112500}, \"recordedAfter\": \"the runner's receipt parse failed (cast printed two JSON documents); tx found by its EpochSettled log; parser fixed\"}",
+      "observedAt": "2026-10-12T00:50:35Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "after": {
+        "observedAt": "2026-10-12T00:50:07Z",
+        "evmBlock": 48301360,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "9387500",
+        "vault.accountedCash": "22500000",
+        "vault.totalSupply": "9048191803",
+        "vault.evmUsdc": 22500000,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "9387500",
+        "vault.verifierNav": {
+          "assets": "9387500",
+          "coreBlock": "1180494772"
+        },
+        "vault.reservedClaimAssets": "13112500",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080266766531360028397",
+          "updatedAt": "1791766008"
+        },
+        "core.spot": {
+          "USDC": "0.0",
+          "HYPE": "0.00196318"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "1"
+      },
+      "coreBlock": 1180490769
+    },
+    {
+      "id": "claim-demo-user",
+      "title": "demo-user claims settled redeem (12638553471 shares)",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0xe3cb57a0ad4d904ef557ca0e7215bbdec407e3bd0ffa28d9453da08aa1c765f6",
+      "evmBlock": 48301486,
+      "observedAt": "2026-10-12T00:52:27Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:52:00Z",
+        "evmBlock": 48301475,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "9387500",
+        "vault.accountedCash": "22500000",
+        "vault.totalSupply": "9048191803",
+        "vault.evmUsdc": 22500000,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "9387500",
+        "vault.verifierNav": {
+          "assets": "9387500",
+          "coreBlock": "1180496124"
+        },
+        "vault.reservedClaimAssets": "13112500",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080266766531360028397",
+          "updatedAt": "1791766008"
+        },
+        "core.spot": {
+          "USDC": "0.0",
+          "HYPE": "0.00196318"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 0,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "1"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:52:15Z",
+        "evmBlock": 48301490,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "9387500",
+        "vault.accountedCash": "9387500",
+        "vault.totalSupply": "9048191803",
+        "vault.evmUsdc": 9387500,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "9387500",
+        "vault.verifierNav": {
+          "assets": "9387500",
+          "coreBlock": "1180496362"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080266766531360028397",
+          "updatedAt": "1791766008"
+        },
+        "core.spot": {
+          "USDC": "0.0",
+          "HYPE": "0.00196318"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 13112500,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180490769
+    },
+    {
+      "id": "request-redeem-owner",
+      "title": "owner requests redeem of all shares (9048191803)",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0x83acfbea9a90e2524ee5768a33e4ec6e3753abe4ac57fcf0ae8a3ceff83d4fd2",
+      "evmBlock": 48301521,
+      "observedAt": "2026-10-12T00:53:01Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:52:32Z",
+        "evmBlock": 48301507,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "9387500",
+        "vault.accountedCash": "9387500",
+        "vault.totalSupply": "9048191803",
+        "vault.evmUsdc": 9387500,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "9387500",
+        "vault.verifierNav": {
+          "assets": "9387500",
+          "coreBlock": "1180496603"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500080266766531360028397",
+          "updatedAt": "1791766008"
+        },
+        "core.spot": {
+          "USDC": "0.0",
+          "HYPE": "0.00196318"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "9048191803",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 13112500,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:52:50Z",
+        "evmBlock": 48301524,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "0",
+        "vault.accountedCash": "9387500",
+        "vault.totalSupply": "0",
+        "vault.evmUsdc": 9387500,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "0",
+        "vault.verifierNav": {
+          "assets": "0",
+          "coreBlock": "1180496852"
+        },
+        "vault.reservedClaimAssets": "9387500",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500106859736640384231211",
+          "updatedAt": "1791766366"
+        },
+        "core.spot": {
+          "USDC": "0.0",
+          "HYPE": "0.00196318"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "0",
+        "owner.requestId": "2",
+        "demo-user.evmUsdc": 13112500,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180490769
+    },
+    {
+      "id": "claim-owner",
+      "title": "owner claims settled redeem (9048191803 shares)",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0xdd793e33509493ba9d4954efc36fe011b7628a22d83cc998a9ed3569e1eb8796",
+      "evmBlock": 48301550,
+      "observedAt": "2026-10-12T00:53:28Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+      "before": {
+        "observedAt": "2026-10-12T00:53:02Z",
+        "evmBlock": 48301538,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "0",
+        "vault.accountedCash": "9387500",
+        "vault.totalSupply": "0",
+        "vault.evmUsdc": 9387500,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "0",
+        "vault.verifierNav": {
+          "assets": "0",
+          "coreBlock": "1180497013"
+        },
+        "vault.reservedClaimAssets": "9387500",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500106859736640384231211",
+          "updatedAt": "1791766366"
+        },
+        "core.spot": {
+          "USDC": "0.0",
+          "HYPE": "0.00196318"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 1302423,
+        "owner.shares": "0",
+        "owner.requestId": "2",
+        "demo-user.evmUsdc": 13112500,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      },
+      "after": {
+        "observedAt": "2026-10-12T00:53:18Z",
+        "evmBlock": 48301554,
+        "vault.phaseName": "Idle",
+        "vault.availableCash": "0",
+        "vault.accountedCash": "0",
+        "vault.totalSupply": "0",
+        "vault.evmUsdc": 0,
+        "vault.managedPrincipal": "0",
+        "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+        "vault.pendingAction": {
+          "id": "0",
+          "submittedCoreBlock": "0",
+          "kind": "None",
+          "assets": "0",
+          "agent": "0x0000000000000000000000000000000000000000"
+        },
+        "vault.totalAssets": "0",
+        "vault.verifierNav": {
+          "assets": "0",
+          "coreBlock": "1180497251"
+        },
+        "vault.reservedClaimAssets": "0",
+        "vault.accountant": {
+          "highWaterMark": "1037500080251662287413346600",
+          "rate": "1037500106859736640384231211",
+          "updatedAt": "1791766366"
+        },
+        "core.spot": {
+          "USDC": "0.0",
+          "HYPE": "0.00196318"
+        },
+        "core.perp.accountValue": "0.0",
+        "core.perp.positions": [],
+        "core.abstraction": "default",
+        "owner.evmUsdc": 10689923,
+        "owner.shares": "0",
+        "owner.requestId": "0",
+        "demo-user.evmUsdc": 13112500,
+        "demo-user.shares": "0",
+        "demo-user.requestId": "0"
+      },
+      "coreBlock": 1180490769
+    },
+    {
+      "id": "run-summary",
+      "title": "v2 run 1 result: in 22.5 = out 22.5; fee 0.05 USDC (10% of the 0.5 synthetic gain) as 48,191,803 shares; demo-user 3 transferred shares + 10 deposit -> 13.1125",
+      "status": "done",
+      "layer": "evm",
+      "note": "{\"demoUser\":{\"transferredShares\":3000000000,\"deposit\":\"10.0 at price 1.0375 -> 9638553471 shares\",\"paid\":\"13.1125 = 3 x 1.0375 + 10.0\"},\"owner\":{\"shares\":\"9e9 + 48191803 fee shares\",\"paid\":\"9.3875 = 9 x 1.0375 + 0.05 fee\"},\"fee\":\"0.049999 USDC charged only after the window low caught up (spike guard observed first)\",\"coreGasHype\":\"0.00003682 for the recall\",\"synthetic\":\"the 0.5 USDC gain is an owner transfer on Core, not trading profit\",\"fundsReturned\":\"demo-user 13.1125 USDC sent back to owner\"}",
+      "observedAt": "2026-10-12T00:53:56Z",
+      "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units"
+    }
+  ],
+  "runs": [
+    {
+      "id": "v2-run1",
+      "title": "v2 Run 1 \u2014 HyperVault v2 (share token + accountant): transferable shares, HWM fee checkpoint, Active deposit, async redeem by a share recipient",
+      "steps": [
+        {
+          "id": "deploy-vault",
+          "title": "Deploy share token, accountant, upgrade controller, HyperVault implementation, proxy; bind",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0x802520901b3555568a48b4c78b8bea802c8c1bdf14aafe1d38212c9cdafa7f29",
+          "evmBlock": 48299157,
+          "note": "[\"0xe0bb5f961d5690f0f3360b9568e08fe460ce1208ff8b4fc5c0a7180aee87c7fa\", \"0x6551fd6651cf73db7939e18f5b782f78f71beb9801d74d7c0f06f342197ea3aa\", \"0xa6391ebf418876af4e1c2c7191f25e1eb4e2418e6e10d55f5a8aa1fb2784972d\", \"0x91681bcefa2865bbd3f6d28ad0a59bbe1f761941ef298129e83bd0283e989a1c\", \"0x10e8aea5ece2eb88d38380a9328be3d4a59097120eab85f0c86c23c448059866\", \"0xc286809c341164608eec7a68614e10bd7d674cb4507569dcecb1a1b6ea4cb2ea\", \"0x802520901b3555568a48b4c78b8bea802c8c1bdf14aafe1d38212c9cdafa7f29\"]",
+          "observedAt": "2026-10-12T00:14:10Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "after": {
+            "observedAt": "2026-10-12T00:14:01Z",
+            "evmBlock": 48299158,
+            "vault.phaseName": "Uninitialized",
+            "vault.availableCash": "0",
+            "vault.accountedCash": "0",
+            "vault.totalSupply": "0",
+            "vault.evmUsdc": 0,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "0",
+            "vault.verifierNav": "BLOCKED: cast call failed: Error: server returned an error response: error code 3: execution reverted, data: \"0x271a26f1\"",
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "0",
+              "rate": "0",
+              "updatedAt": "0"
+            },
+            "core.spot": {},
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 25302423,
+            "owner.shares": "0",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          }
+        },
+        {
+          "id": "verify-deployment",
+          "title": "Verify addresses, codehash, config hash and controller bind",
+          "status": "done",
+          "layer": "evm",
+          "observedAt": "2026-10-12T00:14:25Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "after": {
+            "observedAt": null,
+            "evmBlock": null
+          }
+        },
+        {
+          "id": "bootstrap",
+          "title": "Owner bootstrap: seed principal, founder shares, Core activation request",
+          "status": "done",
+          "layer": "both",
+          "txHash": "0xeeefd7706eb42346e59716021bcc7e623d3189b8abff8250f6b8552bdc4d25f6",
+          "evmBlock": 48299207,
+          "note": "approve tx 0x3d5bdf8b9bebb9353f24ec55ccb37e432a3deac7f398ada5bba170374f6fc809; activation is asynchronous (AwaitingActivation)",
+          "observedAt": "2026-10-12T00:15:07Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:14:37Z",
+            "evmBlock": 48299193,
+            "vault.phaseName": "Uninitialized",
+            "vault.availableCash": "0",
+            "vault.accountedCash": "0",
+            "vault.totalSupply": "0",
+            "vault.evmUsdc": 0,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "0",
+            "vault.verifierNav": "BLOCKED: cast call failed: Error: server returned an error response: error code 3: execution reverted, data: \"0x271a26f1\"",
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "0",
+              "rate": "0",
+              "updatedAt": "0"
+            },
+            "core.spot": {},
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 25302423,
+            "owner.shares": "0",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:14:56Z",
+            "evmBlock": 48299213,
+            "vault.phaseName": "AwaitingActivation",
+            "vault.availableCash": "12000000",
+            "vault.accountedCash": "12000000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 12000000,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "1",
+              "submittedCoreBlock": "1180464793",
+              "kind": "Control",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": "BLOCKED: cast call failed: Error: server returned an error response: error code 3: execution reverted, data: \"0x271a26f1\"",
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764090"
+            },
+            "core.spot": {
+              "USDC": "0.0"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 12302423,
+            "owner.shares": "12000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          }
+        },
+        {
+          "id": "finalize-activation",
+          "title": "Confirm Core activation in a later Core block",
+          "status": "done",
+          "layer": "both",
+          "txHash": "0x4e9e7f3b529db0d588b2709b3177aec8952f1c72e227f034094bcbbc5357a337",
+          "evmBlock": 48299264,
+          "observedAt": "2026-10-12T00:16:07Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:15:35Z",
+            "evmBlock": 48299252,
+            "vault.phaseName": "AwaitingActivation",
+            "vault.availableCash": "12000000",
+            "vault.accountedCash": "12000000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 12000000,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "1",
+              "submittedCoreBlock": "1180464793",
+              "kind": "Control",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": "BLOCKED: cast call failed: Error: server returned an error response: error code 3: execution reverted, data: \"0x271a26f1\"",
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764090"
+            },
+            "core.spot": {
+              "USDC": "0.0"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 12302423,
+            "owner.shares": "12000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:15:49Z",
+            "evmBlock": 48299267,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "12000000",
+            "vault.accountedCash": "12000000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 12000000,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": "BLOCKED: cast call failed: Error: server returned an error response: error code 3: execution reverted, data: \"0x271a26f1\"",
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764090"
+            },
+            "core.spot": {
+              "USDC": "0.0"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 12302423,
+            "owner.shares": "12000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180465601
+        },
+        {
+          "id": "configure-scope",
+          "title": "Register valuation scope: USDC, perp DEX 0",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0xce79d81f0d53554cde422f81c27da6f82997c926c33be374216d181522262cbb",
+          "evmBlock": 48299297,
+          "observedAt": "2026-10-12T00:16:28Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:16:07Z",
+            "evmBlock": 48299286,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "12000000",
+            "vault.accountedCash": "12000000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 12000000,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": "BLOCKED: cast call failed: Error: server returned an error response: error code 3: execution reverted, data: \"0x271a26f1\"",
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764090"
+            },
+            "core.spot": {
+              "USDC": "0.0"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 12302423,
+            "owner.shares": "12000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:16:18Z",
+            "evmBlock": 48299297,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "12000000",
+            "vault.accountedCash": "12000000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 12000000,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12000000",
+              "coreBlock": "1180466184"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764090"
+            },
+            "core.spot": {
+              "USDC": "0.0"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 12302423,
+            "owner.shares": "12000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180465601
+        },
+        {
+          "id": "share-transfer",
+          "title": "owner transfers 3000000000 hvUSDC shares to demo-user (ERC-20)",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0xfb78752803cfdd0317f9574f2d5baee1fa6b69fe78ab40a357e11c5257a2ad36",
+          "evmBlock": 48299345,
+          "observedAt": "2026-10-12T00:17:17Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:16:54Z",
+            "evmBlock": 48299332,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "12000000",
+            "vault.accountedCash": "12000000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 12000000,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12000000",
+              "coreBlock": "1180466623"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764090"
+            },
+            "core.spot": {
+              "USDC": "0.0"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 12302423,
+            "owner.shares": "12000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:17:07Z",
+            "evmBlock": 48299347,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "12000000",
+            "vault.accountedCash": "12000000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 12000000,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12000000",
+              "coreBlock": "1180466792"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764090"
+            },
+            "core.spot": {
+              "USDC": "0.0"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 12302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180465601
+        },
+        {
+          "id": "allocate-to-core",
+          "title": "Owner executes queued Core allocation of 10.8 USDC",
+          "status": "pending",
+          "layer": "both",
+          "txHash": "0x9967fc6326e4ae34291f766dfb83f2351078cb4ada19b4d036a22c2c84630815",
+          "evmBlock": 48299374,
+          "note": "EVM->Core via Circle CoreDepositWallet.deposit",
+          "observedAt": "2026-10-12T00:17:47Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:17:22Z",
+            "evmBlock": 48299362,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "12000000",
+            "vault.accountedCash": "12000000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 12000000,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12000000",
+              "coreBlock": "1180467023"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764090"
+            },
+            "core.spot": {
+              "USDC": "0.0"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 12302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:17:38Z",
+            "evmBlock": 48299377,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "2",
+              "submittedCoreBlock": "1180467062",
+              "kind": "Deposit",
+              "assets": "10800000",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12000000",
+              "coreBlock": "1180467244"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764090"
+            },
+            "core.spot": {
+              "USDC": "10.8"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 12302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180465601
+        },
+        {
+          "id": "sync-deposit-2",
+          "title": "Confirm pending Deposit action #2 from a later Core block",
+          "status": "done",
+          "layer": "both",
+          "txHash": "0x000994388310708169fd991290414abbe207f586301dd0d6ca462398f6b49fda",
+          "evmBlock": 48299414,
+          "observedAt": "2026-10-12T00:18:28Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:18:02Z",
+            "evmBlock": 48299402,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "2",
+              "submittedCoreBlock": "1180467062",
+              "kind": "Deposit",
+              "assets": "10800000",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12000000",
+              "coreBlock": "1180467569"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764090"
+            },
+            "core.spot": {
+              "USDC": "10.8"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 12302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:18:17Z",
+            "evmBlock": 48299417,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12000000",
+              "coreBlock": "1180467799"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764090"
+            },
+            "core.spot": {
+              "USDC": "10.8"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 12302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180467607
+        },
+        {
+          "id": "checkpoint-baseline",
+          "title": "Checkpoint: crystallize HWM fee and refresh the rate (anyone)",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0x36c91ed7dfd8245d2d4e75353977975a735ac751f8c4ac608eb41f419be271c8",
+          "evmBlock": 48299876,
+          "observedAt": "2026-10-12T00:26:07Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:25:29Z",
+            "evmBlock": 48299857,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12000000",
+              "coreBlock": "1180473969"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764090"
+            },
+            "core.spot": {
+              "USDC": "10.8"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 10000000,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:25:52Z",
+            "evmBlock": 48299880,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12000000",
+              "coreBlock": "1180474275"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764748"
+            },
+            "core.spot": {
+              "USDC": "10.8"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 10000000,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180467607
+        },
+        {
+          "id": "synthetic-profit-donation",
+          "title": "SYNTHETIC PROFIT for the fee demo: owner sends 0.5 USDC on Core to the Vault's Core account (+0.002 HYPE recall gas, outside the USDC scope)",
+          "status": "failed",
+          "layer": "core",
+          "note": "{\"usdcSpotSend\": {\"status\": \"err\", \"response\": \"Action disabled when unified account is active\"}, \"hypeSpotSend\": {\"status\": \"err\", \"response\": \"Action disabled when unified account is active\"}, \"why\": \"Not trading profit. A Core-side transfer raises NAV so the HWM fee can be shown live.\"}",
+          "observedAt": "2026-10-12T00:27:06Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:26:30Z",
+            "evmBlock": 48299919,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12000000",
+              "coreBlock": "1180474814"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764748"
+            },
+            "core.spot": {
+              "USDC": "10.8"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 10000000,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:26:51Z",
+            "evmBlock": 48299940,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12000000",
+              "coreBlock": "1180475081"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764748"
+            },
+            "core.spot": {
+              "USDC": "10.8"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 10000000,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180467607
+        },
+        {
+          "id": "synthetic-profit-donation-2",
+          "title": "SYNTHETIC PROFIT for the fee demo (sendAsset): owner sends 0.5 USDC on Core to the Vault's Core account (+0.002 HYPE recall gas, outside the USDC scope)",
+          "status": "done",
+          "layer": "core",
+          "note": "{\"usdcSendAsset\": {\"status\": \"ok\", \"response\": {\"type\": \"default\"}}, \"hypeSendAsset\": {\"status\": \"ok\", \"response\": {\"type\": \"default\"}}, \"why\": \"Not trading profit. A Core-side transfer raises NAV so the HWM fee can be shown live. spotSend was refused for the owner's Unified account.\"}",
+          "observedAt": "2026-10-12T00:27:50Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:27:13Z",
+            "evmBlock": 48299963,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12000000",
+              "coreBlock": "1180475400"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764748"
+            },
+            "core.spot": {
+              "USDC": "10.8"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 10000000,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:27:35Z",
+            "evmBlock": 48299985,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12500000",
+              "coreBlock": "1180475708"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764748"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 10000000,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180467607
+        },
+        {
+          "id": "checkpoint-right-after-rise",
+          "title": "Checkpoint: crystallize HWM fee and refresh the rate (anyone)",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0x81f6dd23af98b26f4388fd8a655cf1300dd7753f2edabb4e434292d386edc99b",
+          "evmBlock": 48300026,
+          "observedAt": "2026-10-12T00:28:34Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:27:58Z",
+            "evmBlock": 48300008,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12500000",
+              "coreBlock": "1180476011"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764748"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 10000000,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:28:19Z",
+            "evmBlock": 48300030,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12500000",
+              "coreBlock": "1180476320"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764895"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 10000000,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180467607
+        },
+        {
+          "id": "spike-guard-observed",
+          "title": "Right after the +0.5 USDC rise: deposits closed (maxDeposit 0), fee 0, rate held at the window low 1.000",
+          "status": "done",
+          "layer": "evm",
+          "note": "{\"liveNav\":\"12.5 USDC (Core valuation)\",\"windowLow\":\"1.000e27 (records before the rise)\",\"quote\":{\"feeShares\":0,\"price\":\"1.000e27\"},\"maxDepositDemoUser\":0,\"checkpointTx\":\"0x81f6dd23af98b26f4388fd8a655cf1300dd7753f2edabb4e434292d386edc99b\"}",
+          "observedAt": "2026-10-12T00:29:13Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "after": {
+            "observedAt": "2026-10-12T00:28:58Z",
+            "evmBlock": 48300069,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12500000",
+              "coreBlock": "1180476840"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764895"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 10000000,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180467607
+        },
+        {
+          "id": "checkpoint-fee-crystallized",
+          "title": "Checkpoint: crystallize HWM fee and refresh the rate (anyone)",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0x9a34dcf9172fb8b1e6a1074f0206c2a95db45f4771fd76cdb370853f97115a67",
+          "evmBlock": 48300782,
+          "observedAt": "2026-10-12T00:40:56Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:40:22Z",
+            "evmBlock": 48300765,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12000000000",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12000000",
+            "vault.verifierNav": {
+              "assets": "12500000",
+              "coreBlock": "1180486450"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1000000000000000000000000000",
+              "rate": "1000000000000000000000000000",
+              "updatedAt": "1791764895"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9000000000",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 10000000,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:40:42Z",
+            "evmBlock": 48300785,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12048191803",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12499999",
+            "vault.verifierNav": {
+              "assets": "12500000",
+              "coreBlock": "1180486704"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080251662287413346600",
+              "updatedAt": "1791765639"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 10000000,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180467607
+        },
+        {
+          "id": "deposit-demo-user-active",
+          "title": "demo-user deposits 10.0 USDC (Active); shares minted at the verified price",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0x43b3564e006ab4ad2555eb4a8c0848c39cd9ec55bd33acc280cd0c507f39188c",
+          "evmBlock": 48300886,
+          "note": "{\"pricedAt\": {\"totalAssets\": \"12499999\", \"totalSupply\": \"12048191803\", \"previewDeposit\": \"9638553471\", \"phase\": \"Active\"}}",
+          "observedAt": "2026-10-12T00:42:36Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:41:51Z",
+            "evmBlock": 48300855,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "1200000",
+            "vault.accountedCash": "1200000",
+            "vault.totalSupply": "12048191803",
+            "vault.evmUsdc": 1200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "12499999",
+            "vault.verifierNav": {
+              "assets": "12500000",
+              "coreBlock": "1180487686"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080251662287413346600",
+              "updatedAt": "1791765639"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 10000000,
+            "demo-user.shares": "3000000000",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:42:21Z",
+            "evmBlock": 48300886,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "11200000",
+            "vault.accountedCash": "11200000",
+            "vault.totalSupply": "21686745274",
+            "vault.evmUsdc": 11200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "22499999",
+            "vault.verifierNav": {
+              "assets": "22500000",
+              "coreBlock": "1180488095"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080251662287413346600",
+              "updatedAt": "1791765741"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "12638553471",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180467607
+        },
+        {
+          "id": "request-redeem-demo-user",
+          "title": "demo-user requests redeem of all shares (12638553471)",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0x52345a4bd7542bcaa158401ad8d3ea712d324f9871a54f731b17064730abcc44",
+          "evmBlock": 48300944,
+          "observedAt": "2026-10-12T00:43:36Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:43:01Z",
+            "evmBlock": 48300927,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "11200000",
+            "vault.accountedCash": "11200000",
+            "vault.totalSupply": "21686745274",
+            "vault.evmUsdc": 11200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "22499999",
+            "vault.verifierNav": {
+              "assets": "22500000",
+              "coreBlock": "1180488644"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080251662287413346600",
+              "updatedAt": "1791765741"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "12638553471",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:43:22Z",
+            "evmBlock": 48300948,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "11200000",
+            "vault.accountedCash": "11200000",
+            "vault.totalSupply": "21686745274",
+            "vault.evmUsdc": 11200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "22499999",
+            "vault.verifierNav": {
+              "assets": "22500000",
+              "coreBlock": "1180488924"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080251662287413346600",
+              "updatedAt": "1791765741"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "1"
+          },
+          "coreBlock": 1180467607
+        },
+        {
+          "id": "begin-exit",
+          "title": "Owner seals epoch 1 and begins exit",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0xa6608fe666e8b95aa7359cf5593e512a56d1f87bf338d789d5f79f017a9add4b",
+          "evmBlock": 48300981,
+          "observedAt": "2026-10-12T00:44:14Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:43:39Z",
+            "evmBlock": 48300965,
+            "vault.phaseName": "Active",
+            "vault.availableCash": "11200000",
+            "vault.accountedCash": "11200000",
+            "vault.totalSupply": "21686745274",
+            "vault.evmUsdc": 11200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "22499999",
+            "vault.verifierNav": {
+              "assets": "22500000",
+              "coreBlock": "1180489167"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080251662287413346600",
+              "updatedAt": "1791765741"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "1"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:43:59Z",
+            "evmBlock": 48300985,
+            "vault.phaseName": "Exiting",
+            "vault.availableCash": "11200000",
+            "vault.accountedCash": "11200000",
+            "vault.totalSupply": "21686745274",
+            "vault.evmUsdc": 11200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "22499999",
+            "vault.verifierNav": {
+              "assets": "22500000",
+              "coreBlock": "1180489442"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080251662287413346600",
+              "updatedAt": "1791765741"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "1"
+          },
+          "coreBlock": 1180467607
+        },
+        {
+          "id": "recall-from-core",
+          "title": "CoreWriter sendAsset: recall 11.3 USDC Core->EVM",
+          "status": "pending",
+          "layer": "both",
+          "txHash": "0x8657ff511fe5d0fd7f4e1ea786564b384d5d73ad7db29b67bd445d49a2dbd7a1",
+          "evmBlock": 48301036,
+          "observedAt": "2026-10-12T00:45:08Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:44:32Z",
+            "evmBlock": 48301019,
+            "vault.phaseName": "Exiting",
+            "vault.availableCash": "11200000",
+            "vault.accountedCash": "11200000",
+            "vault.totalSupply": "21686745274",
+            "vault.evmUsdc": 11200000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "22499999",
+            "vault.verifierNav": {
+              "assets": "22500000",
+              "coreBlock": "1180489907"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080251662287413346600",
+              "updatedAt": "1791765741"
+            },
+            "core.spot": {
+              "USDC": "11.3",
+              "HYPE": "0.002"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "1"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:44:53Z",
+            "evmBlock": 48301040,
+            "vault.phaseName": "Exiting",
+            "vault.availableCash": "11200000",
+            "vault.accountedCash": "11200000",
+            "vault.totalSupply": "21686745274",
+            "vault.evmUsdc": 22500000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "3",
+              "submittedCoreBlock": "1180489945",
+              "kind": "Recall",
+              "assets": "11300000",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "22499999",
+            "vault.verifierNav": {
+              "assets": "11200000",
+              "coreBlock": "1180490183"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080251662287413346600",
+              "updatedAt": "1791765741"
+            },
+            "core.spot": {
+              "USDC": "0.0",
+              "HYPE": "0.00196318"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "1"
+          },
+          "coreBlock": 1180467607
+        },
+        {
+          "id": "sync-recall-3",
+          "title": "Confirm pending Recall action #3 from a later Core block",
+          "status": "done",
+          "layer": "both",
+          "txHash": "0xa13d262ff0ea1ca0312992376c52d5a3aa18c466b6420d2221e35aab5e14d329",
+          "evmBlock": 48301096,
+          "observedAt": "2026-10-12T00:46:09Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:45:26Z",
+            "evmBlock": 48301074,
+            "vault.phaseName": "Exiting",
+            "vault.availableCash": "11200000",
+            "vault.accountedCash": "11200000",
+            "vault.totalSupply": "21686745274",
+            "vault.evmUsdc": 22500000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "3",
+              "submittedCoreBlock": "1180489945",
+              "kind": "Recall",
+              "assets": "11300000",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "22499999",
+            "vault.verifierNav": {
+              "assets": "11200000",
+              "coreBlock": "1180490714"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080251662287413346600",
+              "updatedAt": "1791765741"
+            },
+            "core.spot": {
+              "USDC": "0.0",
+              "HYPE": "0.00196318"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "1"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:45:52Z",
+            "evmBlock": 48301100,
+            "vault.phaseName": "Exiting",
+            "vault.availableCash": "22500000",
+            "vault.accountedCash": "22500000",
+            "vault.totalSupply": "21686745274",
+            "vault.evmUsdc": 22500000,
+            "vault.managedPrincipal": "10800000",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "22499999",
+            "vault.verifierNav": {
+              "assets": "22500000",
+              "coreBlock": "1180491035"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080251662287413346600",
+              "updatedAt": "1791765741"
+            },
+            "core.spot": {
+              "USDC": "0.0",
+              "HYPE": "0.00196318"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "1"
+          },
+          "coreBlock": 1180490769
+        },
+        {
+          "id": "settle-epoch",
+          "title": "Settle the epoch at EVM cash after flat-Core verification (fee checked at cash: price = mark, no fee)",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0x1a3e28194060805d73312ef55847994b94e79e8d0ff68c7ee66fdedf95481c19",
+          "evmBlock": 48301157,
+          "note": "{\"EpochSettled\": {\"shares\": 12638553471, \"grossAssets\": 13112500}, \"recordedAfter\": \"the runner's receipt parse failed (cast printed two JSON documents); tx found by its EpochSettled log; parser fixed\"}",
+          "observedAt": "2026-10-12T00:50:35Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "after": {
+            "observedAt": "2026-10-12T00:50:07Z",
+            "evmBlock": 48301360,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "9387500",
+            "vault.accountedCash": "22500000",
+            "vault.totalSupply": "9048191803",
+            "vault.evmUsdc": 22500000,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "9387500",
+            "vault.verifierNav": {
+              "assets": "9387500",
+              "coreBlock": "1180494772"
+            },
+            "vault.reservedClaimAssets": "13112500",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080266766531360028397",
+              "updatedAt": "1791766008"
+            },
+            "core.spot": {
+              "USDC": "0.0",
+              "HYPE": "0.00196318"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "1"
+          },
+          "coreBlock": 1180490769
+        },
+        {
+          "id": "claim-demo-user",
+          "title": "demo-user claims settled redeem (12638553471 shares)",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0xe3cb57a0ad4d904ef557ca0e7215bbdec407e3bd0ffa28d9453da08aa1c765f6",
+          "evmBlock": 48301486,
+          "observedAt": "2026-10-12T00:52:27Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:52:00Z",
+            "evmBlock": 48301475,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "9387500",
+            "vault.accountedCash": "22500000",
+            "vault.totalSupply": "9048191803",
+            "vault.evmUsdc": 22500000,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "9387500",
+            "vault.verifierNav": {
+              "assets": "9387500",
+              "coreBlock": "1180496124"
+            },
+            "vault.reservedClaimAssets": "13112500",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080266766531360028397",
+              "updatedAt": "1791766008"
+            },
+            "core.spot": {
+              "USDC": "0.0",
+              "HYPE": "0.00196318"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 0,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "1"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:52:15Z",
+            "evmBlock": 48301490,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "9387500",
+            "vault.accountedCash": "9387500",
+            "vault.totalSupply": "9048191803",
+            "vault.evmUsdc": 9387500,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "9387500",
+            "vault.verifierNav": {
+              "assets": "9387500",
+              "coreBlock": "1180496362"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080266766531360028397",
+              "updatedAt": "1791766008"
+            },
+            "core.spot": {
+              "USDC": "0.0",
+              "HYPE": "0.00196318"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 13112500,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180490769
+        },
+        {
+          "id": "request-redeem-owner",
+          "title": "owner requests redeem of all shares (9048191803)",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0x83acfbea9a90e2524ee5768a33e4ec6e3753abe4ac57fcf0ae8a3ceff83d4fd2",
+          "evmBlock": 48301521,
+          "observedAt": "2026-10-12T00:53:01Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:52:32Z",
+            "evmBlock": 48301507,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "9387500",
+            "vault.accountedCash": "9387500",
+            "vault.totalSupply": "9048191803",
+            "vault.evmUsdc": 9387500,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "9387500",
+            "vault.verifierNav": {
+              "assets": "9387500",
+              "coreBlock": "1180496603"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500080266766531360028397",
+              "updatedAt": "1791766008"
+            },
+            "core.spot": {
+              "USDC": "0.0",
+              "HYPE": "0.00196318"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "9048191803",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 13112500,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:52:50Z",
+            "evmBlock": 48301524,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "0",
+            "vault.accountedCash": "9387500",
+            "vault.totalSupply": "0",
+            "vault.evmUsdc": 9387500,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "0",
+            "vault.verifierNav": {
+              "assets": "0",
+              "coreBlock": "1180496852"
+            },
+            "vault.reservedClaimAssets": "9387500",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500106859736640384231211",
+              "updatedAt": "1791766366"
+            },
+            "core.spot": {
+              "USDC": "0.0",
+              "HYPE": "0.00196318"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "0",
+            "owner.requestId": "2",
+            "demo-user.evmUsdc": 13112500,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180490769
+        },
+        {
+          "id": "claim-owner",
+          "title": "owner claims settled redeem (9048191803 shares)",
+          "status": "done",
+          "layer": "evm",
+          "txHash": "0xdd793e33509493ba9d4954efc36fe011b7628a22d83cc998a9ed3569e1eb8796",
+          "evmBlock": 48301550,
+          "observedAt": "2026-10-12T00:53:28Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units",
+          "before": {
+            "observedAt": "2026-10-12T00:53:02Z",
+            "evmBlock": 48301538,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "0",
+            "vault.accountedCash": "9387500",
+            "vault.totalSupply": "0",
+            "vault.evmUsdc": 9387500,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "0",
+            "vault.verifierNav": {
+              "assets": "0",
+              "coreBlock": "1180497013"
+            },
+            "vault.reservedClaimAssets": "9387500",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500106859736640384231211",
+              "updatedAt": "1791766366"
+            },
+            "core.spot": {
+              "USDC": "0.0",
+              "HYPE": "0.00196318"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 1302423,
+            "owner.shares": "0",
+            "owner.requestId": "2",
+            "demo-user.evmUsdc": 13112500,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          },
+          "after": {
+            "observedAt": "2026-10-12T00:53:18Z",
+            "evmBlock": 48301554,
+            "vault.phaseName": "Idle",
+            "vault.availableCash": "0",
+            "vault.accountedCash": "0",
+            "vault.totalSupply": "0",
+            "vault.evmUsdc": 0,
+            "vault.managedPrincipal": "0",
+            "vault.apiWallet": "0x0000000000000000000000000000000000000000",
+            "vault.pendingAction": {
+              "id": "0",
+              "submittedCoreBlock": "0",
+              "kind": "None",
+              "assets": "0",
+              "agent": "0x0000000000000000000000000000000000000000"
+            },
+            "vault.totalAssets": "0",
+            "vault.verifierNav": {
+              "assets": "0",
+              "coreBlock": "1180497251"
+            },
+            "vault.reservedClaimAssets": "0",
+            "vault.accountant": {
+              "highWaterMark": "1037500080251662287413346600",
+              "rate": "1037500106859736640384231211",
+              "updatedAt": "1791766366"
+            },
+            "core.spot": {
+              "USDC": "0.0",
+              "HYPE": "0.00196318"
+            },
+            "core.perp.accountValue": "0.0",
+            "core.perp.positions": [],
+            "core.abstraction": "default",
+            "owner.evmUsdc": 10689923,
+            "owner.shares": "0",
+            "owner.requestId": "0",
+            "demo-user.evmUsdc": 13112500,
+            "demo-user.shares": "0",
+            "demo-user.requestId": "0"
+          },
+          "coreBlock": 1180490769
+        },
+        {
+          "id": "run-summary",
+          "title": "v2 run 1 result: in 22.5 = out 22.5; fee 0.05 USDC (10% of the 0.5 synthetic gain) as 48,191,803 shares; demo-user 3 transferred shares + 10 deposit -> 13.1125",
+          "status": "done",
+          "layer": "evm",
+          "note": "{\"demoUser\":{\"transferredShares\":3000000000,\"deposit\":\"10.0 at price 1.0375 -> 9638553471 shares\",\"paid\":\"13.1125 = 3 x 1.0375 + 10.0\"},\"owner\":{\"shares\":\"9e9 + 48191803 fee shares\",\"paid\":\"9.3875 = 9 x 1.0375 + 0.05 fee\"},\"fee\":\"0.049999 USDC charged only after the window low caught up (spike guard observed first)\",\"coreGasHype\":\"0.00003682 for the recall\",\"synthetic\":\"the 0.5 USDC gain is an owner transfer on Core, not trading profit\",\"fundsReturned\":\"demo-user 13.1125 USDC sent back to owner\"}",
+          "observedAt": "2026-10-12T00:53:56Z",
+          "unit": "USDC raw 6 decimals; shares raw 9 decimals; Core amounts in token units"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Single USDC Vault, owner's own small funds (prototype cap 1,000 USDC). HYPE/UBTC Vaults are not deployed.",
+    "Portfolio Margin requires >$10k account value or >$5M weighted volume; this Vault is below that, so the hedge ran in Unified mode without USDC borrowing.",
+    "Valuation scope completeness is owner-trusted; holdings outside the registered scope are invisible to NAV.",
+    "Core actions are asynchronous; the verifier infers non-recall action success from a later Core block and cannot observe a Core-side rejection of agent/control actions.",
+    "Withdrawals need owner cooperation (unwind, recall, revoke agent) before settlement.",
+    "No independent security audit. Not a production launch."
+  ]
+}

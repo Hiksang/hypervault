@@ -1,0 +1,350 @@
+{
+ "schema": 1,
+ "observedAt": "2026-10-04T14:41:03.218101+00:00",
+ "network": "mainnet",
+ "rpc": "https://rpc.hyperliquid.xyz/evm",
+ "evmBlock": "0x2d71273",
+ "evmBlockHash": "0xad9014714b52628ac8f1c01afda42b3713c5a146394fb4861fad08a7e3de2c63",
+ "blockGasLimit": 3000000,
+ "scope": "read-only eth_call of creation code; nothing was signed, sent or deployed",
+ "documentedFormula": "2000 + 65 * (input_len + output_len)",
+ "accounts": {
+  "withLedger": "0x760a4290d854a9dd69dd63bf6cbe9503505a0266",
+  "withoutLedger": "0x7082771316e0a69876dbc8b8a50d103929f497fe"
+ },
+ "token": 150,
+ "cases": {
+  "lending:ledger": {
+   "to": "0x0000000000000000000000000000000000000811",
+   "data": "0x000000000000000000000000760a4290d854a9dd69dd63bf6cbe9503505a02660000000000000000000000000000000000000000000000000000000000000096",
+   "inputBytes": 64,
+   "outputBytes": 128,
+   "documentedCost": 14480,
+   "rows": [
+    {
+     "gasCap": 3668,
+     "ok": false,
+     "gasUsedByCaller": 3927,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 7335,
+     "ok": false,
+     "gasUsedByCaller": 7594,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 7336,
+     "ok": true,
+     "gasUsedByCaller": 7850,
+     "returnBytes": 128
+    },
+    {
+     "gasCap": 7337,
+     "ok": true,
+     "gasUsedByCaller": 7849,
+     "returnBytes": 128
+    },
+    {
+     "gasCap": 14479,
+     "ok": true,
+     "gasUsedByCaller": 7849,
+     "returnBytes": 128
+    },
+    {
+     "gasCap": 14480,
+     "ok": true,
+     "gasUsedByCaller": 7850,
+     "returnBytes": 128
+    },
+    {
+     "gasCap": 20000,
+     "ok": true,
+     "gasUsedByCaller": 7850,
+     "returnBytes": 128
+    },
+    {
+     "gasCap": 50000,
+     "ok": true,
+     "gasUsedByCaller": 7849,
+     "returnBytes": 128
+    }
+   ],
+   "minimalCap": 7336
+  },
+  "lending:noLedger": {
+   "to": "0x0000000000000000000000000000000000000811",
+   "data": "0x0000000000000000000000007082771316e0a69876dbc8b8a50d103929f497fe0000000000000000000000000000000000000000000000000000000000000096",
+   "inputBytes": 64,
+   "outputBytes": 128,
+   "documentedCost": 14480,
+   "rows": [
+    {
+     "gasCap": 7336,
+     "ok": false,
+     "gasUsedByCaller": 7595,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 14480,
+     "ok": false,
+     "gasUsedByCaller": 14739,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 20000,
+     "ok": false,
+     "gasUsedByCaller": 20259,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 50000,
+     "ok": false,
+     "gasUsedByCaller": 50259,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 200000,
+     "ok": false,
+     "gasUsedByCaller": 200259,
+     "returnBytes": 0
+    }
+   ],
+   "minimalCap": null
+  },
+  "accountMarginSummary:dex0": {
+   "to": "0x000000000000000000000000000000000000080f",
+   "data": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000760a4290d854a9dd69dd63bf6cbe9503505a0266",
+   "inputBytes": 64,
+   "outputBytes": 128,
+   "documentedCost": 14480,
+   "rows": [
+    {
+     "gasCap": 3668,
+     "ok": false,
+     "gasUsedByCaller": 3927,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 7335,
+     "ok": false,
+     "gasUsedByCaller": 7594,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 7336,
+     "ok": true,
+     "gasUsedByCaller": 7850,
+     "returnBytes": 128
+    },
+    {
+     "gasCap": 7337,
+     "ok": true,
+     "gasUsedByCaller": 7849,
+     "returnBytes": 128
+    },
+    {
+     "gasCap": 14479,
+     "ok": true,
+     "gasUsedByCaller": 7849,
+     "returnBytes": 128
+    },
+    {
+     "gasCap": 14480,
+     "ok": true,
+     "gasUsedByCaller": 7850,
+     "returnBytes": 128
+    },
+    {
+     "gasCap": 20000,
+     "ok": true,
+     "gasUsedByCaller": 7850,
+     "returnBytes": 128
+    },
+    {
+     "gasCap": 50000,
+     "ok": true,
+     "gasUsedByCaller": 7849,
+     "returnBytes": 128
+    }
+   ],
+   "minimalCap": 7336
+  },
+  "spotBalance": {
+   "to": "0x0000000000000000000000000000000000000801",
+   "data": "0x000000000000000000000000760a4290d854a9dd69dd63bf6cbe9503505a02660000000000000000000000000000000000000000000000000000000000000096",
+   "inputBytes": 64,
+   "outputBytes": 96,
+   "documentedCost": 12400,
+   "rows": [
+    {
+     "gasCap": 3140,
+     "ok": false,
+     "gasUsedByCaller": 3399,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 6279,
+     "ok": false,
+     "gasUsedByCaller": 6538,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 6280,
+     "ok": true,
+     "gasUsedByCaller": 6787,
+     "returnBytes": 96
+    },
+    {
+     "gasCap": 6281,
+     "ok": true,
+     "gasUsedByCaller": 6787,
+     "returnBytes": 96
+    },
+    {
+     "gasCap": 12399,
+     "ok": true,
+     "gasUsedByCaller": 6787,
+     "returnBytes": 96
+    },
+    {
+     "gasCap": 12400,
+     "ok": true,
+     "gasUsedByCaller": 6787,
+     "returnBytes": 96
+    },
+    {
+     "gasCap": 20000,
+     "ok": true,
+     "gasUsedByCaller": 6788,
+     "returnBytes": 96
+    },
+    {
+     "gasCap": 50000,
+     "ok": true,
+     "gasUsedByCaller": 6787,
+     "returnBytes": 96
+    }
+   ],
+   "minimalCap": 6280
+  },
+  "l1BlockNumber": {
+   "to": "0x0000000000000000000000000000000000000809",
+   "data": "0x",
+   "inputBytes": 0,
+   "outputBytes": 32,
+   "documentedCost": 4080,
+   "rows": [
+    {
+     "gasCap": 1028,
+     "ok": false,
+     "gasUsedByCaller": 1287,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 2055,
+     "ok": false,
+     "gasUsedByCaller": 2314,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 2056,
+     "ok": true,
+     "gasUsedByCaller": 2550,
+     "returnBytes": 32
+    },
+    {
+     "gasCap": 2057,
+     "ok": true,
+     "gasUsedByCaller": 2551,
+     "returnBytes": 32
+    },
+    {
+     "gasCap": 4079,
+     "ok": true,
+     "gasUsedByCaller": 2550,
+     "returnBytes": 32
+    },
+    {
+     "gasCap": 4080,
+     "ok": true,
+     "gasUsedByCaller": 2551,
+     "returnBytes": 32
+    },
+    {
+     "gasCap": 20000,
+     "ok": true,
+     "gasUsedByCaller": 2550,
+     "returnBytes": 32
+    },
+    {
+     "gasCap": 50000,
+     "ok": true,
+     "gasUsedByCaller": 2551,
+     "returnBytes": 32
+    }
+   ],
+   "minimalCap": 2056
+  },
+  "borrowLendReserveState": {
+   "to": "0x0000000000000000000000000000000000000812",
+   "data": "0x0000000000000000000000000000000000000000000000000000000000000096",
+   "inputBytes": 32,
+   "outputBytes": 256,
+   "documentedCost": 20720,
+   "rows": [
+    {
+     "gasCap": 5252,
+     "ok": false,
+     "gasUsedByCaller": 5511,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 10503,
+     "ok": false,
+     "gasUsedByCaller": 10762,
+     "returnBytes": 0
+    },
+    {
+     "gasCap": 10504,
+     "ok": true,
+     "gasUsedByCaller": 11042,
+     "returnBytes": 256
+    },
+    {
+     "gasCap": 10505,
+     "ok": true,
+     "gasUsedByCaller": 11043,
+     "returnBytes": 256
+    },
+    {
+     "gasCap": 20000,
+     "ok": true,
+     "gasUsedByCaller": 11043,
+     "returnBytes": 256
+    },
+    {
+     "gasCap": 20719,
+     "ok": true,
+     "gasUsedByCaller": 11043,
+     "returnBytes": 256
+    },
+    {
+     "gasCap": 20720,
+     "ok": true,
+     "gasUsedByCaller": 11044,
+     "returnBytes": 256
+    },
+    {
+     "gasCap": 50000,
+     "ok": true,
+     "gasUsedByCaller": 11044,
+     "returnBytes": 256
+    }
+   ],
+   "minimalCap": 10504
+  }
+ },
+ "blockHashStable": true,
+ "allMeasured": true
+}

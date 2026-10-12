@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "planning-example-1",
+  "status": "DRAFT_NOT_DEPLOYABLE",
+  "notice": "Template only. Null values are unknown, not zero. No deployment or signing authorization.",
+  "network": {
+    "name": null,
+    "chainId": null,
+    "rpcPublicUrl": null
+  },
+  "build": {
+    "solidityVersion": null,
+    "openzeppelinVersion": null,
+    "foundryVersion": null,
+    "optimizerRuns": null,
+    "viaIR": null,
+    "evmVersion": null,
+    "gitCommit": null,
+    "gitDirty": null,
+    "sourceManifestHash": null,
+    "abiBundleHash": null
+  },
+  "contracts": {
+    "vault": {
+      "address": null,
+      "runtimeCodeHash": null,
+      "creationCodeHash": null,
+      "transactionHash": null,
+      "blockNumber": null,
+      "blockHash": null
+    },
+    "strategy": {
+      "address": null,
+      "runtimeCodeHash": null,
+      "creationCodeHash": null,
+      "transactionHash": null,
+      "blockNumber": null,
+      "blockHash": null
+    },
+    "riskOracle": {
+      "address": null,
+      "runtimeCodeHash": null,
+      "creationCodeHash": null,
+      "transactionHash": null,
+      "blockNumber": null,
+      "blockHash": null
+    },
+    "actionObserver": {
+      "address": null,
+      "runtimeCodeHash": null,
+      "creationCodeHash": null,
+      "transactionHash": null,
+      "blockNumber": null,
+      "blockHash": null
+    },
+    "navReader": {
+      "address": null,
+      "runtimeCodeHash": null,
+      "creationCodeHash": null,
+      "transactionHash": null,
+      "blockNumber": null,
+      "blockHash": null
+    },
+    "balanceSheetSource": {
+      "address": null,
+      "runtimeCodeHash": null,
+      "creationCodeHash": null,
+      "transactionHash": null,
+      "blockNumber": null,
+      "blockHash": null
+    },
+    "factory": {
+      "address": null,
+      "runtimeCodeHash": null,
+      "creationCodeHash": null,
+      "transactionHash": null,
+      "blockNumber": null,
+      "blockHash": null
+    },
+    "vaultDeployer": {
+      "address": null,
+      "runtimeCodeHash": null,
+      "creationCodeHash": null,
+      "transactionHash": null,
+      "blockNumber": null,
+      "blockHash": null
+    },
+    "strategyDeployer": {
+      "address": null,
+      "runtimeCodeHash": null,
+      "creationCodeHash": null,
+      "transactionHash": null,
+      "blockNumber": null,
+      "blockHash": null
+    },
+    "creationCodeChunk0": {
+      "address": null,
+      "runtimeCodeHash": null,
+      "creationCodeHash": null,
+      "transactionHash": null,
+      "blockNumber": null,
+      "blockHash": null
+    },
+    "creationCodeChunk1": {
+      "address": null,
+      "runtimeCodeHash": null,
+      "creationCodeHash": null,
+      "transactionHash": null,
+      "blockNumber": null,
+      "blockHash": null
+    },
+    "router": {
+      "address": null,
+      "runtimeCodeHash": null,
+      "creationCodeHash": null,
+      "transactionHash": null,
+      "blockNumber": null,
+      "blockHash": null
+    }
+  },
+  "roles": {
+    "admin": null,
+    "manager": null,
+    "guardian": null,
+    "bootstrap": null,
+    "dustRecipient": null
+  },
+  "config": {
+    "strategyConfigHash": null,
+    "profilePath": null,
+    "profileHash": null,
+    "accountingAsset": null,
+    "quoteCurrencyId": null,
+    "metadataEvidence": []
+  },
+  "validation": {
+    "reportPaths": [],
+    "rawEvidencePaths": [],
+    "unresolvedBacklogIds": [],
+    "unresolvedListReviewed": false,
+    "fullRoundtripObserved": false,
+    "standardReviewComplete": false,
+    "independentSecurityReviewComplete": false
+  },
+  "activation": {
+    "eligible": false,
+    "actualScope": null,
+    "recordedAtUtc": null
+  }
+}

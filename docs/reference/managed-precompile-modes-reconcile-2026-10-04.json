@@ -1,0 +1,73 @@
+{
+  "sourceEvmBlock": "0x2d6d90c",
+  "sourceEvmBlockHash": "0x4732a2d3bc3da30978dc04aa85cd25983cdfda06a2803f389d0d56305fae274e",
+  "productionNavReady": false,
+  "activeDepositsAuthorized": false,
+  "notice": "Diagnostic identities only. HTTP is unpinned; other tokens/DEXs, funding timing and transition semantics remain unverified.",
+  "accounts": {
+    "0x8c625ff57d8a4374784c7eff585dfdc42ccec974": {
+      "pmObservedInBothApiReads": false,
+      "identities": {},
+      "missingReads": [
+        "HYPE",
+        "USDC"
+      ],
+      "position": {
+        "rawSzi": 0,
+        "pinnedSzDecimals": 2,
+        "humanSize": "0",
+        "coreWriterSize1e8": "0"
+      }
+    },
+    "0xab213e43714ce4a5863d155fe805bdb9d9572742": {
+      "pmObservedInBothApiReads": false,
+      "identities": {},
+      "missingReads": [
+        "HYPE",
+        "USDC"
+      ],
+      "position": {
+        "rawSzi": 0,
+        "pinnedSzDecimals": 2,
+        "humanSize": "0",
+        "coreWriterSize1e8": "0"
+      }
+    },
+    "0x760a4290d854a9dd69dd63bf6cbe9503505a0266": {
+      "pmObservedInBothApiReads": true,
+      "identities": {
+        "HYPE": {
+          "candidate": "1959.34874775",
+          "apiBefore": "1959.34874775",
+          "apiAfter": "1959.34874775",
+          "classification": "BracketCompatibleNotProof",
+          "differenceToApiAfter": "0E-8",
+          "formula": "rawSpot + lendingSupply - lendingDebt"
+        },
+        "USDC": {
+          "candidate": "-53898.4070852",
+          "apiBefore": "-53898.40694247",
+          "apiAfter": "-53898.40712301",
+          "classification": "BracketCompatibleNotProof",
+          "differenceToApiAfter": "0.00003781",
+          "formula": "rawSpot + lendingSupply - lendingDebt + defaultDexAccountValue"
+        }
+      },
+      "missingReads": [],
+      "position": {
+        "rawSzi": -195935,
+        "pinnedSzDecimals": 2,
+        "humanSize": "-1959.35",
+        "coreWriterSize1e8": "-195935000000.00",
+        "apiSziAfter": "-1959.35",
+        "matchesApiAfter": true,
+        "apiCumFundingNotAddedToNav": {
+          "allTime": "-1407.522139",
+          "sinceOpen": "-1407.522139",
+          "sinceChange": "-364.561065"
+        },
+        "apiUnrealizedPnlNotAddedAgain": "-16280.660825"
+      }
+    }
+  }
+}

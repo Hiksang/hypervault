@@ -1,0 +1,18 @@
+{
+ "pricedAt": {
+  "totalAssets": "15000000",
+  "totalSupply": "15000000000",
+  "previewDeposit": "10000000000",
+  "phase": "Active"
+ },
+ "minted": 10000000000,
+ "expectedFloor(10e6*(supply+1000)/(assets+1))": 10000000000,
+ "match": true,
+ "after": {
+  "nav": 25000000,
+  "supply": 25000000000,
+  "ownerShares": 15000000000,
+  "ownerValue": 15000000,
+  "demoValue": 10000000
+ }
+}

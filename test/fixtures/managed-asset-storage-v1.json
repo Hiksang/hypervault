@@ -1,0 +1,586 @@
+{
+  "storage": [
+    {
+      "astId": 1150,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "_balances",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 1156,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "_allowances",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))"
+    },
+    {
+      "astId": 1158,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "_totalSupply",
+      "offset": 0,
+      "slot": "2",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 1160,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "_name",
+      "offset": 0,
+      "slot": "3",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 1162,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "_symbol",
+      "offset": 0,
+      "slot": "4",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 3279,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "_status",
+      "offset": 0,
+      "slot": "5",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 18766,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "performanceFeeBps",
+      "offset": 0,
+      "slot": "6",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 18771,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "accountedCash",
+      "offset": 0,
+      "slot": "7",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 18773,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "reservedClaimAssets",
+      "offset": 0,
+      "slot": "8",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 18775,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "roundingReserve",
+      "offset": 0,
+      "slot": "9",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 18778,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "nextRequestId",
+      "offset": 0,
+      "slot": "10",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 18781,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "nextEpochId",
+      "offset": 0,
+      "slot": "11",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 18786,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "epochs",
+      "offset": 0,
+      "slot": "12",
+      "type": "t_mapping(t_uint256,t_struct(Epoch)18720_storage)"
+    },
+    {
+      "astId": 18791,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "requests",
+      "offset": 0,
+      "slot": "13",
+      "type": "t_mapping(t_uint256,t_struct(Request)18747_storage)"
+    },
+    {
+      "astId": 18795,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "controllerRequest",
+      "offset": 0,
+      "slot": "14",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 18799,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "basisUsdc",
+      "offset": 0,
+      "slot": "15",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 18803,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "lossCarry",
+      "offset": 0,
+      "slot": "16",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 18807,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "feeRemainder",
+      "offset": 0,
+      "slot": "17",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 18809,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "platformRemainder",
+      "offset": 0,
+      "slot": "18",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 18815,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "_operators",
+      "offset": 0,
+      "slot": "19",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_bool))"
+    },
+    {
+      "astId": 18817,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "_escrowing",
+      "offset": 0,
+      "slot": "20",
+      "type": "t_bool"
+    },
+    {
+      "astId": 8213,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "queuedAllocation",
+      "offset": 0,
+      "slot": "21",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 8314,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "minimumDeposit",
+      "offset": 0,
+      "slot": "22",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 8327,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "phase",
+      "offset": 0,
+      "slot": "23",
+      "type": "t_enum(Phase)8227"
+    },
+    {
+      "astId": 8329,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "coreActivated",
+      "offset": 1,
+      "slot": "23",
+      "type": "t_bool"
+    },
+    {
+      "astId": 8331,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "apiWallet",
+      "offset": 2,
+      "slot": "23",
+      "type": "t_address"
+    },
+    {
+      "astId": 8333,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "activeEpochId",
+      "offset": 0,
+      "slot": "24",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 8335,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "actionNonce",
+      "offset": 0,
+      "slot": "25",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 8337,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "lastConfirmedCoreBlock",
+      "offset": 0,
+      "slot": "26",
+      "type": "t_uint64"
+    },
+    {
+      "astId": 8339,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "managedPrincipal",
+      "offset": 0,
+      "slot": "27",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 8342,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "pendingAction",
+      "offset": 0,
+      "slot": "28",
+      "type": "t_struct(PendingAction)8283_storage"
+    },
+    {
+      "astId": 8346,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "usedAgents",
+      "offset": 0,
+      "slot": "33",
+      "type": "t_mapping(t_address,t_bool)"
+    },
+    {
+      "astId": 8348,
+      "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+      "label": "_vaultName",
+      "offset": 0,
+      "slot": "34",
+      "type": "t_string_storage"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_enum(ActionKind)8234": {
+      "encoding": "inplace",
+      "label": "enum ManagedAssetVault.ActionKind",
+      "numberOfBytes": "1"
+    },
+    "t_enum(Phase)8227": {
+      "encoding": "inplace",
+      "label": "enum ManagedAssetVault.Phase",
+      "numberOfBytes": "1"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => bool))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_bool)"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => uint256))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_uint256)"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_uint256,t_struct(Epoch)18720_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct ManagedRedeem.Epoch)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Epoch)18720_storage"
+    },
+    "t_mapping(t_uint256,t_struct(Request)18747_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct ManagedRedeem.Request)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Request)18747_storage"
+    },
+    "t_string_storage": {
+      "encoding": "bytes",
+      "label": "string",
+      "numberOfBytes": "32"
+    },
+    "t_struct(Epoch)18720_storage": {
+      "encoding": "inplace",
+      "label": "struct ManagedRedeem.Epoch",
+      "numberOfBytes": "192",
+      "members": [
+        {
+          "astId": 18707,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "requestedShares",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18709,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "unclaimedShares",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18711,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "numerator",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18713,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "denominator",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18715,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "reserve",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18717,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "isSealed",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_bool"
+        },
+        {
+          "astId": 18719,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "settled",
+          "offset": 1,
+          "slot": "5",
+          "type": "t_bool"
+        }
+      ]
+    },
+    "t_struct(PendingAction)8283_storage": {
+      "encoding": "inplace",
+      "label": "struct ManagedAssetVault.PendingAction",
+      "numberOfBytes": "160",
+      "members": [
+        {
+          "astId": 8271,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "id",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 8273,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "intentHash",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_bytes32"
+        },
+        {
+          "astId": 8275,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "submittedCoreBlock",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 8278,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "kind",
+          "offset": 8,
+          "slot": "2",
+          "type": "t_enum(ActionKind)8234"
+        },
+        {
+          "astId": 8280,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "assets",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 8282,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "agent",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_address"
+        }
+      ]
+    },
+    "t_struct(Request)18747_storage": {
+      "encoding": "inplace",
+      "label": "struct ManagedRedeem.Request",
+      "numberOfBytes": "384",
+      "members": [
+        {
+          "astId": 18722,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "controller",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 18724,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "epoch",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18726,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "shares",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18728,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "basis",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18730,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "consumedShares",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18732,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "paidNet",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18734,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "paidFee",
+          "offset": 0,
+          "slot": "6",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18736,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "paidPlatform",
+          "offset": 0,
+          "slot": "7",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18738,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "gross",
+          "offset": 0,
+          "slot": "8",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18740,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "fee",
+          "offset": 0,
+          "slot": "9",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18742,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "platformFee",
+          "offset": 0,
+          "slot": "10",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 18744,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "priced",
+          "offset": 0,
+          "slot": "11",
+          "type": "t_bool"
+        },
+        {
+          "astId": 18746,
+          "contract": "src/ManagedAssetVault.sol:ManagedAssetVault",
+          "label": "feeBps",
+          "offset": 1,
+          "slot": "11",
+          "type": "t_uint16"
+        }
+      ]
+    },
+    "t_uint16": {
+      "encoding": "inplace",
+      "label": "uint16",
+      "numberOfBytes": "2"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint64": {
+      "encoding": "inplace",
+      "label": "uint64",
+      "numberOfBytes": "8"
+    }
+  }
+}

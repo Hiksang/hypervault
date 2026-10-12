@@ -1,0 +1,55 @@
+{
+  "schema": "hypervault.evidence.v1",
+  "example": true,
+  "network": "local",
+  "chainId": 31337,
+  "generatedAt": "2026-10-12T00:00:00Z",
+  "vault": {
+    "name": "EXAMPLE HYPE Vault",
+    "asset": "HYPE",
+    "address": "0x0000000000000000000000000000000000000000",
+    "controller": "0x0000000000000000000000000000000000000000",
+    "implementation": "0x0000000000000000000000000000000000000000",
+    "implementationCodehash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "configHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "steps": [
+    {
+      "id": "deposit",
+      "title": "User deposits native HYPE through the router",
+      "status": "done",
+      "layer": "evm",
+      "txHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "evmBlock": 1,
+      "observedAt": "2026-10-12T00:00:00Z",
+      "unit": "HYPE",
+      "before": { "vaultCash": "0", "userShares": "0" },
+      "after": { "vaultCash": "1.0", "userShares": "1.0" },
+      "note": "Example only: no transaction was sent."
+    },
+    {
+      "id": "allocate",
+      "title": "Owner allocates cash to the vault's HyperCore account",
+      "status": "pending",
+      "layer": "both",
+      "unit": "HYPE",
+      "note": "EVM success is not Core success: the Core result is confirmed by syncCoreAction."
+    },
+    {
+      "id": "recall",
+      "title": "Recall from Core and settle the redeem epoch",
+      "status": "not-run",
+      "layer": "core"
+    },
+    {
+      "id": "claim",
+      "title": "User claims the settled redeem",
+      "status": "failed",
+      "layer": "evm",
+      "note": "Example of a failed step."
+    }
+  ],
+  "limitations": [
+    "Example file: it shows the format only and proves nothing about any network."
+  ]
+}

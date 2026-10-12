@@ -1,0 +1,53 @@
+{
+  "chainId": 999,
+  "deployer": "0x3e22D0Bc27dB631742B54Fb0Fa356Cbcad3842e0",
+  "owner": "0x3e22D0Bc27dB631742B54Fb0Fa356Cbcad3842e0",
+  "source": "0xf4094199a3a9556c0719e5ab75fdc6fa4f590dc1",
+  "bridge": "0x75798f2797e887be93f2d430e8a4a850ffa610b2",
+  "verifier": "0x72abc2bc36231e413974be2ee65bcd59afed5b5c",
+  "verifierParams": {
+    "recallTimeoutBlocks": 10000,
+    "idleDustUsdc6": 2000000,
+    "priceWindowSeconds": 600,
+    "maxDrawdownBps": 300
+  },
+  "moduleTxs": {
+    "source": "0x4d2333c0e37e2e817da16cfa51f9efef3f1cb77537acab43d38d4d5e8fda501b",
+    "bridge": "0x1c4bcce5ec95f7a3dced76534ff1618172809f3abee339c1e10037d40445329a",
+    "verifier": "0xc7949cdb472f992c7e4a822c4c30c941b728158686ddb6409f325520b5a7bcfc"
+  },
+  "modulesFrom": "v1 deployment (reused, unchanged)",
+  "version": "v2",
+  "share": "0xfe226ffa798dbce825b0f2aafe5218e0e134c065",
+  "accountant": "0x92221ddeba71ba16b08710e8b4c6e11238362a1b",
+  "controller": "0xc6caa4b5482f04000c33fa2920a2387edac93fac",
+  "vault": "0x4Dd7a7ECB3Bc91792b83e0Ee5fFb5b0E7fF9C58B",
+  "implementation": "0x44B7464749AEfC58AA353031275aD2c1C1C0d5ed",
+  "deployTxs": [
+    "0xe0bb5f961d5690f0f3360b9568e08fe460ce1208ff8b4fc5c0a7180aee87c7fa",
+    "0x6551fd6651cf73db7939e18f5b782f78f71beb9801d74d7c0f06f342197ea3aa",
+    "0xa6391ebf418876af4e1c2c7191f25e1eb4e2418e6e10d55f5a8aa1fb2784972d",
+    "0x91681bcefa2865bbd3f6d28ad0a59bbe1f761941ef298129e83bd0283e989a1c",
+    "0x10e8aea5ece2eb88d38380a9328be3d4a59097120eab85f0c86c23c448059866",
+    "0xc286809c341164608eec7a68614e10bd7d674cb4507569dcecb1a1b6ea4cb2ea",
+    "0x802520901b3555568a48b4c78b8bea802c8c1bdf14aafe1d38212c9cdafa7f29"
+  ],
+  "vaultParams": {
+    "performanceFeeBps": 1000,
+    "minimumDeposit": 10000000,
+    "maximumAssets": 1000000000,
+    "builder": "0x0000000000000000000000000000000000000000",
+    "builderFeeCap": 0
+  },
+  "implementationCodehash": "0x06e6e1f26b3f2c059cfe5ae98e3376c6fd3aaa344dace7d7b0f51de1d2868310",
+  "configHash": "0x76cc79466b621d6cb8b5caba6600e2ccfc98cebb595379de8525142f16dd0e6f",
+  "codehashes": {
+    "source": "0x240240900aedb720a7d939640321ffb9915f939a15fdc8f7735e9a515c51b988",
+    "bridge": "0x3726d7861c4b3772d578789ef4e8c5f654cfd6188ffbcb1c00cbb25fbb4a6b8a",
+    "verifier": "0xa8919626504bd6521e7e4b91d43450b65ffdf292184e97b1fb6c49d7a5897d64",
+    "controller": "0xb7349bd621e9381364a1aa8303ebed437704b0fd86847dd0152982a195ffa215",
+    "vault": "0xf410ea867ff786c116b92d126ceea77383ceb70c747d70111e854c82bd3c154c",
+    "share": "0x343c58c9f2a80eac1a1bbe0b6c852d11527b4600c3a7c299ad9d043df4982cd0",
+    "accountant": "0xfc30ea816aae3b7eba943be499bf72774ecb177ef31732c132dfcfbe92a9198a"
+  }
+}

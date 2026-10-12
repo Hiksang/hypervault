@@ -1,0 +1,7 @@
+{
+  "name": "hypercore-vault-research",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Integration-gated HyperCore HYPE carry vault prototype",
+  "dependencies": {"@openzeppelin/contracts": "5.4.0"}
+}

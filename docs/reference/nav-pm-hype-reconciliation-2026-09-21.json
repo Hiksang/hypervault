@@ -1,0 +1,45 @@
+{
+  "sourceEvmBlock": "0x2c4ef5d",
+  "sourceEvmBlockHash": "0xb91765d02e4402b4d2222527996567ef200646c9045fada29067ec0fc3b71551",
+  "productionNavReady": false,
+  "activeDepositsAuthorized": false,
+  "notice": "Diagnostic identities only. HTTP is unpinned; other tokens/DEXs, funding timing and transition semantics remain unverified.",
+  "accounts": {
+    "0x760a4290d854a9dd69dd63bf6cbe9503505a0266": {
+      "pmObservedInBothApiReads": true,
+      "identities": {
+        "HYPE": {
+          "candidate": "1416.43282556",
+          "apiBefore": "1416.43282556",
+          "apiAfter": "1416.43282556",
+          "classification": "BracketCompatibleNotProof",
+          "differenceToApiAfter": "0E-8",
+          "formula": "rawSpot + lendingSupply - lendingDebt"
+        },
+        "USDC": {
+          "candidate": "-30934.88378434",
+          "apiBefore": "-30934.88353609",
+          "apiAfter": "-30934.88378434",
+          "classification": "BracketCompatibleNotProof",
+          "differenceToApiAfter": "0E-8",
+          "formula": "rawSpot + lendingSupply - lendingDebt + defaultDexAccountValue"
+        }
+      },
+      "missingReads": [],
+      "position": {
+        "rawSzi": -141643,
+        "pinnedSzDecimals": 2,
+        "humanSize": "-1416.43",
+        "coreWriterSize1e8": "-141643000000.00",
+        "apiSziAfter": "-1416.43",
+        "matchesApiAfter": true,
+        "apiCumFundingNotAddedToNav": {
+          "allTime": "-795.056445",
+          "sinceOpen": "-795.056445",
+          "sinceChange": "-611.18248"
+        },
+        "apiUnrealizedPnlNotAddedAgain": "-21931.36854"
+      }
+    }
+  }
+}

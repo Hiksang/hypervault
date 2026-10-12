@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "planning-example-1",
+  "status": "DRAFT_NOT_DEPLOYABLE",
+  "chainId": null,
+  "accountingAsset": null,
+  "assetDecimals": null,
+  "quoteCurrencyId": null,
+  "metadataBlock": null,
+  "metadataHash": null,
+  "parameters": {
+    "maximumTotalAssets": {
+      "value": null,
+      "unit": "asset_base_units",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "recapitalizationCap": {
+      "value": null,
+      "unit": "asset_base_units_per_cycle",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "coreGasReserve": {
+      "value": null,
+      "unit": "verified_core_hype_base_units",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "openingTimeout": {
+      "value": null,
+      "unit": "seconds",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "cycleDuration": {
+      "value": null,
+      "unit": "seconds",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "maxSlippageBps": {
+      "value": null,
+      "unit": "basis_points",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "maxBboDeviationBps": {
+      "value": null,
+      "unit": "basis_points",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "minHedgeBps": {
+      "value": null,
+      "unit": "basis_points",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "maxHedgeBps": {
+      "value": null,
+      "unit": "basis_points",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "orderSizeLotPerp": {
+      "value": null,
+      "unit": "corewriter_size_1e8_step",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "targetBufferBps": {
+      "value": null,
+      "unit": "basis_points_of_shareholder_nav",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "maxUnhedgedExposure": {
+      "value": null,
+      "unit": "unit_to_be_selected",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "healthReduceThreshold": {
+      "value": null,
+      "unit": "metric_to_be_selected",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    },
+    "maxLiquidityRounds": {
+      "value": null,
+      "unit": "count",
+      "origin": "UNDECIDED",
+      "calibrationEvidence": [],
+      "decisionId": null
+    }
+  },
+  "requiredOpenDecisions": [
+    "OPEN-02",
+    "OPEN-03",
+    "OPEN-04",
+    "OPEN-05",
+    "OPEN-06",
+    "OPEN-07",
+    "OPEN-08"
+  ],
+  "notes": [
+    "Illustrative fields only; not a complete constructor argument list.",
+    "No production defaults are supplied. Include every actual constructor field in the finalized profile."
+  ]
+}
